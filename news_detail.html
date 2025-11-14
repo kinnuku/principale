@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
-    <title>Principale 公式サイト</title>
+    <title>ニュース詳細 - Principale</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <header>
@@ -21,19 +23,21 @@
     </nav>
 </header>
 
-<main>
-    <section class="news-section">
-        <h2>最新ニュース</h2>
-        <div class="news-cards home-news" id="latest-news">
-            <!-- JSで最新6件を2列×3行で表示 -->
-        </div>
-    </section>
+<main class="news-detail-wrapper">
+    <div id="news-detail">
+        <h2 id="news-title"></h2>
+        <p class="date" id="news-date"></p>
+        <img id="news-image" src="" alt="" class="news-image">
+        <p id="news-content"></p>
+        <button id="back-button">一覧に戻る</button>
+    </div>
 </main>
+
 
 <footer>
     <p>© 2025 Principale Official Website</p>
 </footer>
 
-<script src="js/latest-news.js"></script>
+<script src="js/news_detail.js"></script>
 </body>
 </html>

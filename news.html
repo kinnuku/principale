@@ -23,10 +23,15 @@
 
 <main>
     <section class="news-section">
-        <h2>最新ニュース</h2>
-        <div class="news-cards home-news" id="latest-news">
-            <!-- JSで最新6件を2列×3行で表示 -->
+        <h2>ニュース一覧</h2>
+        <div class="news-cards list-news" id="news-list">
+            <!-- JSでニュースカード作成 -->
         </div>
+    </section>
+
+    <section id="news" class="news-section" style="display:none;">
+        <button id="back-button" class="back-btn">← 一覧に戻る</button>
+        <div id="detail-content"></div>
     </section>
 </main>
 
@@ -34,6 +39,6 @@
     <p>© 2025 Principale Official Website</p>
 </footer>
 
-<script src="js/latest-news.js"></script>
+<script src="js/news.js"></script>
 </body>
 </html>
