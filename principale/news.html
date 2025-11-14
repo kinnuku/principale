@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Principale 公式サイト</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="title-area">
+        <img src="images/logo/principale.png" alt="Principale ロゴ" class="logo-small">
+        <h1>Principale 公式サイト</h1>
+    </div>
+
+    <nav class="main-nav">
+        <a href="index.html">ホーム</a>
+        <a href="results.html">試合結果</a>
+        <a href="players.html">選手紹介</a>
+        <a href="news.html">ニュース</a>
+    </nav>
+</header>
+
+<main>
+    <section class="news-section">
+        <h2>ニュース一覧</h2>
+        <div class="news-cards list-news" id="news-list">
+            <!-- JSでニュースカード作成 -->
+        </div>
+    </section>
+
+    <section id="news" class="news-section" style="display:none;">
+        <button id="back-button" class="back-btn">← 一覧に戻る</button>
+        <div id="detail-content"></div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 Principale Official Website</p>
+</footer>
+
+<script src="js/news.js"></script>
+</body>
+</html>

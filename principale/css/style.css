@@ -1,0 +1,566 @@
+/* ============================= */
+/* 全体設定 */
+/* ============================= */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #e9f6ff;
+    color: #222;
+    text-align: center;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* ============================= */
+/* メインコンテンツのスタイル */
+/* ============================= */
+main {
+    margin-bottom: 16px;  /* footerとの間に16pxのスペースを追加 */
+}
+
+/* ============================= */
+/* ヘッダー */
+/* ============================= */
+header {
+    padding: 40px 20px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.title-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 25px;
+}
+
+.logo-small {
+    width: 60px;
+    height: auto;
+    filter: drop-shadow(0 3px 5px rgba(0,0,0,0.2));
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #222;
+}
+
+/* ============================= */
+/* ナビゲーション */
+/* ============================= */
+nav {
+    margin: 30px 0 40px;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 12px 22px;
+    background: #72bce6;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+nav a:hover {
+    background: #5aaad7;
+    transform: translateY(-2px);
+}
+
+/* ============================= */
+/* 試合結果 */
+/* ============================= */
+/* ▼ 大会セレクトの余白はそのまま */
+
+#tournament-select {
+    margin: 6px 0;
+    padding: 6px 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* ▼ 試合カードレイアウトそのまま */
+
+.results-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.match-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 16px;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.match-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.match-card h2 {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 1.4rem; /* ほんの少し大きめに調整 */
+}
+
+.match-card h4 {
+    margin: 2px 0 6px 0 !important;
+    padding: 0 !important;
+}
+
+/* ▼ 元の設定はそのまま */
+.match-card h3 {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.team-logo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.match-card .score {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+}
+
+.team span {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #222;
+}
+
+.match-card .scorer {
+    font-size: 0.95rem;
+    color: #444;
+    align-items: center;
+    text-align: center;
+}
+
+.results-wrapper h2 {
+    font-size: 1.8rem;
+    padding: 40px 20px;
+    color: #333;
+    text-align: center;
+}
+
+.match-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.match-ha {
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.home-badge {
+    background: #d9534f;
+}
+
+.away-badge {
+    background: #0275d8;
+}
+
+.match-vs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0;
+}
+
+.score-box .score {
+    font-size: 2.6rem;
+    font-weight: 900;
+    align-items: center; 
+
+}
+
+.score-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.match-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* 左・中央・右 */
+    align-items: center;
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 12px; /* 下にスペース */
+    gap: 12px;
+}
+
+.match-header {
+    display: flex;
+    justify-content: space-between; /* 左右端に寄せる */
+    align-items: center;            /* 高さを揃える */
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.match-date {
+    flex: 0 0 auto; /* 左端 */
+}
+
+.match-ha {
+    flex: 0 0 auto; /* 右端 */
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+.match-title {
+    display: block; /* ブロックにして中央寄せ可能 */
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0 auto 4px auto; /* 上下マージン調整 */
+}
+
+.match-vs {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.score {
+    font-size: 2.6rem;
+    font-weight: 900;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.home-badge { background: #d9534f; }
+.away-badge { background: #0275d8; }
+
+
+/* ============================= */
+/* トップページ・ニュースカード */
+/* ============================= */
+.news-section {
+    padding: 40px 20px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.news-section h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.news-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.news-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 16px;
+    width: 100%;
+    max-width: 450px;
+    text-align: left;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.news-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.news-card h3 {
+    margin: 8px 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.news-date {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.news-summary {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+.read-more-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #e03e2d;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.read-more-btn:hover {
+    background-color: #b73223;
+}
+
+/* ============================= */
+/* ニュース一覧ページ */
+/* ============================= */
+.list-news-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 0;
+}
+
+.news-count {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #222;
+    margin: 4px 0;
+    text-align: center;
+}
+
+.pagination {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+
+.page-btn {
+    padding: 6px 12px;
+    background: #72bce6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.page-btn:hover {
+    background: #5aaad7;
+}
+
+.page-btn.active {
+    background: #e03e2d;
+}
+
+.list-news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.list-news .news-card {
+    width: 80%;
+    max-width: 700px;
+    text-align: left;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 16px;
+}
+
+.list-news .news-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ニュース詳細 */
+#news-detail {
+    padding: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#news-detail h2 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+#news-detail p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+#back-button {
+    margin-bottom: 16px;
+    padding: 6px 14px;
+    background: #e03e2d;
+    color: #fff;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#back-button:hover {
+    background: #e03e2d;
+}
+
+/* ============================= */
+/* 選手紹介ページ */
+/* ============================= */
+
+.position-section {
+    margin-bottom: 40px;
+}
+
+.position-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: #222;
+    text-align: left;
+    padding-left: 4px;
+}
+
+.players-wrapper {
+    margin-bottom: 12px;
+    max-width: 960px; /* 他ページと同じ最大幅 */
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.players-wrapper h2 {
+    font-size: 1.8rem; /* ニュースページと同じサイズに */
+    color: #333;
+    text-align: center;
+}
+
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px; /* カード間隔 */
+    justify-items: center;
+}
+
+.player-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 240px; /* カード幅を適度に */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* player-card 内のテキストをまとめてスタイル */
+.player-card h2,
+.player-card h3,
+.player-card p {
+    margin: 4px 0;
+    text-align: center;
+}
+
+.player-card img {
+    width: 90%;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+/* ============================= */
+/* フッター */
+/* ============================= */
+footer {
+    padding: 20px;
+    background: #72bce6;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* ============================= */
+/* レスポンシブ対応 */
+/* ============================= */
+@media (max-width: 900px) {
+    .players-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .players-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 800px) {
+    .news-cards {
+        grid-template-columns: 1fr;
+    }
+    .list-news .news-card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 500px) {
+    nav {
+        margin: 20px 0 30px;
+    }
+
+    nav a {
+        margin: 5px 5px;
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+
+    .title-area {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+}
