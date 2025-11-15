@@ -1,10 +1,10 @@
 [
   {
-    "id": "n1",
-    "date": "2025/11/12",
-    "title": "MF田中がハットトリック！",
-    "summary": "MF田中が3得点を決め、チームは快勝しました。",
-    "fullContent": "MF田中が3得点を決め、チームは快勝しました。試合の詳細は…（省略）",
-    "image": "images/news/n1.jpg"
+    "id": "news_number_0001",
+    "date": "2025/11/08",
+    "title": "もときちカムバック！",
+    "summary": "（自称）優勝請負人のもときちがPrincipaleに帰ってきました！",
+    "fullContent": "5年間付き合った彼女に「主体性がない」という理由で振られ、4か月ぶりに帰ってきました！Principaleではしっかり主体性を出して、プレーしてくれることを期待します。",
+    "image": "images/news/news_0001.png"
   }
 ]

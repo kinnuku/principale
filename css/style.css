@@ -276,6 +276,8 @@ nav a:hover {
 .away-badge { background: #0275d8; }
 
 
+
+
 /* ============================= */
 /* トップページ・ニュースカード */
 /* ============================= */
@@ -337,7 +339,7 @@ nav a:hover {
     display: inline-block;
     text-decoration: none;
     color: #fff;
-    background-color: #e03e2d;
+    background-color: #72bce6;
     padding: 6px 12px;
     border-radius: 4px;
     font-size: 0.9rem;
@@ -345,7 +347,7 @@ nav a:hover {
 }
 
 .read-more-btn:hover {
-    background-color: #b73223;
+    background-color: #72bce6;
 }
 
 /* ============================= */
@@ -390,7 +392,7 @@ nav a:hover {
 }
 
 .page-btn.active {
-    background: #e03e2d;
+    background: #72bce6;
 }
 
 .list-news {
@@ -434,20 +436,41 @@ nav a:hover {
     line-height: 1.6;
 }
 
+/* 改行のためのカスタムスタイル */
+#news-detail p br {
+    content: "\A"; /* 改行を強制 */
+}
+
 #back-button {
     margin-bottom: 16px;
     padding: 6px 14px;
-    background: #e03e2d;
+    background: #72bce6;
     color: #fff;
+    border: none;
+    outline: none;
     border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background-color 0.2s
 }
 
 #back-button:hover {
-    background: #e03e2d;
+    background: #72bce6;
+    margin: 10;
 }
+
+#back-button:focus {
+    outline: none;
+}
+
+/* 画像サイズの制限 */
+#news-detail img {
+    max-width: 100%; /* 親要素の幅に収める */
+    height: auto;    /* 高さを自動調整 */
+    display: block;  /* インライン要素ではなくブロック要素にすることで、下のスペースをきれいにする */
+    margin: 0 auto;  /* 画像を中央揃え */
+}
+
 
 /* ============================= */
 /* 選手紹介ページ */
@@ -563,4 +586,255 @@ footer {
     h1 {
         font-size: 1.6rem;
     }
+}
+
+/* スコアカード */
+#score-card {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+
+.score-card-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.stats-card-inner  h2 {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 1.4rem; /* ほんの少し大きめに調整 */
+}
+
+.stats-card-inner  h4 {
+    margin: 2px 0 6px 0 !important;
+    padding: 0 !important;
+}
+
+
+.team {
+    text-align: center;
+    flex: 1;
+}
+
+.team-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+
+.team-name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.match-score {
+    font-size: 44px;
+    font-weight: bold;
+    min-width: 80px;
+    text-align: center;
+}
+
+/* 得点者・アシスト */
+.scorers {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* スタッツ */
+#stats-area {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+}
+
+
+.stat-row {
+  display: flex;
+  align-items: center; /* 縦中央 */
+  justify-content: center;
+  gap: 8px; /* 数字と棒の距離 */
+  margin-bottom: 12px;
+}
+
+.stat-value {
+    width: 50px;       /* 数字の幅固定 */
+    text-align: center;
+    font-weight: bold;
+    color: #333;       /* 数字は黒固定 */
+}
+
+.stat-bar-wrapper {
+  position: relative;   /* 中央数字用 */
+  width: 200px;         /* 棒の幅固定 */
+  margin: 0 auto;       /* 横中央 */
+}
+
+.stat-name {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.stat-gauge {
+    display: flex;
+    height: 14px;           /* 棒の高さ */
+    width: 200px;            /* 棒の長さ */
+    background-color: #e6e6e6; /* 棒の背景色 */
+    border-radius: 4px;      /* 長方形っぽく小さめの丸み */
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.players-column, .stats-column {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.player-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.player-pos {
+  width: 30px;
+  text-align: center;
+}
+
+.player-name {
+  flex: 1;
+  margin-left: 4px;
+}
+
+.player-goals, .player-assists {
+  margin-left: 2px;
+}
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.stats-wrapper {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 0.3fr; 
+  gap: 12px;
+  align-items: stretch;
+}
+
+.players-column:last-child {
+  margin-left: -60px; /* 中央に寄せる量を調整 */
+}
+
+.players-column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between; /* 左右に均等に配置 */
+}
+
+.players-table {
+  width: 100%;          /* テーブルをカラム幅いっぱいに */
+  table-layout: fixed;  /* 列幅を固定して折り返し制御 */
+}
+
+.players-table td:nth-child(1) {
+  width: 35px;          /* ポジション列 */
+  text-align: center;
+}
+
+.players-table td:nth-child(2) {
+  width: 25px;          /* 評価点列 */
+}
+
+
+.players-table td:nth-child(3) {
+  width: 200px;
+  white-space: nowrap;
+  text-align: left; /* 左寄せ */
+}
+
+.players-table td {
+  border-bottom: 0.5px solid #bbb;  /* 中程度のグレー */
+}
+
+/* ニュース詳細のスタイル */
+.news-detail-wrapper {
+    max-width: 800px;
+    margin: 40px auto; /* コンテンツを中央に配置 */
+    padding: 20px;
+}
+
+#news-detail {
+    background-color: white; /* 白背景 */
+    padding: 20px; /* 本文に周りの余白を追加 */
+    border-radius: 8px; /* 角を丸くする */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 軽い影を追加 */
+}
+
+#news-title {
+    font-size: 24px;
+    margin-bottom: 10px; /* タイトルと他の要素の間隔 */
+    color: #333;
+}
+
+.date {
+    font-size: 14px;
+    color: #777; /* 日付の色 */
+}
+
+.news-image {
+    width: 100%; /* 画像がコンテナの幅に合わせて拡大 */
+    margin: 20px 0; /* 上下にスペースを追加 */
+    border-radius: 8px; /* 画像の角を丸くする */
+}
+
+#news-content {
+    font-size: 16px;
+    color: #555; /* 本文の色 */
+    line-height: 1.6; /* 行間を広げて読みやすく */
+}
+
+/* back-button クラスのスタイル */
+.back-button {
+    margin-bottom: 16px;
+    padding: 6px 14px;
+    background: #72bce6;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none; /* リンクの下線を削除 */
+    display: inline-block; /* ボタンのように扱う */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* フォーカス時のスタイル */
+.back-button:focus {
+    outline: none; /* フォーカス時の青い枠線を消す */
+}
+
+
+.back-button:hover {
+    background-color: #555; /* ボタンにマウスオーバー時の色 */
 }

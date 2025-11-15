@@ -11,7 +11,7 @@
     "name": "マキナ",
     "position": "DF",
     "psid": "makina_1",
-    "image": "images/player/p1.png"
+    "image": "images/player/makina_1.png"
   },
   {
     "number": 3,
@@ -39,7 +39,7 @@
     "name": "ばむ",
     "position": "MF",
     "psid": "xox-v-rn7",
-    "image": "images/player/p1.png"
+    "image": "images/player/xox-v-rn7.png"
   },
   {
     "number": 8,

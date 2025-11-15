@@ -6,13 +6,243 @@
     "home_away": "HOME",
     "tournament": "RAL 15th LIGA",
     "round": "6節",
-    "team_home": "Principale",
-    "team_home_logo": "images/logo/principale.png",
-    "team_away": "JOKERS",
-    "team_away_logo": "images/logo/jokers.png",
     "score": "1-1",
-    "scorers": ["B1g_Ke9"]
+    
+    "home": {
+      "team_name": "Principale",
+      "team_logo": "images/logo/principale.png",
+      "scorers": ["B1g_Ke9"],
+      "assists": [],
+      "players": [
+        {
+          "name": "lar9vls",
+          "position": "LS",
+          "goals": 0,
+          "assists": 0,
+          "rating": 6.8,
+          "height": 187,
+          "weight": 100
+        },
+        {
+          "name": "B1g_Ke9",
+          "position": "RS",
+          "goals": 1,
+          "assists": 0,
+          "rating": 7.2,
+          "height": 187,
+          "weight": 79
+        },
+        {
+          "name": "xox-v-rn7",
+          "position": "LM",
+          "goals": 0,
+          "assists": 0,
+          "rating": 6.7,
+          "height": 162,
+          "weight": 78
+        },
+        {
+          "name": "mq4mq6",
+          "position": "LCM",
+          "goals": 0,
+          "assists": 0,
+          "rating": 6.5,
+          "height": 179,
+          "weight": 66
+        },
+        {
+          "name": "Nekop_one",
+          "position": "RCM",
+          "goals": 0,
+          "assists": 0,
+          "rating": 6.9,
+          "height": 186,
+          "weight": 71
+        },
+        {
+          "name": "polunga-9s",
+          "position": "RM",
+          "goals": 0,
+          "assists": 0,
+          "rating": 6.6,
+          "height": 171,
+          "weight": 61
+        },
+        {
+          "name": "riku6qwe",
+          "position": "LB",
+          "goals": 0,
+          "assists": 0,
+          "rating": 6.6,
+          "height": 183,
+          "weight": 81
+        },
+        {
+          "name": "garethbale0318",
+          "position": "LCB",
+          "goals": 0,
+          "assists": 0,
+          "rating": 7.1,
+          "height": 192,
+          "weight": 80
+        },
+        {
+          "name": "toma-fly22",
+          "position": "RCB",
+          "goals": 0,
+          "assists": 0,
+          "rating": 8.0,
+          "height": 192,
+          "weight": 83
+        },
+        {
+          "name": "makina_1",
+          "position": "RB",
+          "goals": 0,
+          "assists": 0,
+          "rating": 8.0,
+          "height": 187,
+          "weight": 67
+        },
+        {
+          "name": "syachiku-syatiku",
+          "position": "GK",
+          "goals": 0,
+          "assists": 0,
+          "rating": 7.2,
+          "height": 200,
+          "weight": 91
+        }
+      ],
+      "team_stats": {
+        "saves": 2,
+        "possession": 55,
+        "shots": 6,
+        "shots_on_target": 3,
+        "successful_dribbles": 91,
+        "successful_passes": 87,
+        "pass_success": 150
+      }
+    },
+    
+    "away": {
+      "team_name": "JOKERS",
+      "team_logo": "images/logo/jokers.png",
+      "scorers": ["mera-ri85"],
+      "assists": [],
+      "players": [
+        {
+          "name": "platinum_dial25",
+          "position": "LW",
+          "goals": 0,
+          "assists": 0,
+          "rating": 5.8,
+          "height": 187,
+          "weight": 178
+        },
+        {
+          "name": "mera-ri85",
+          "position": "ST",
+          "goals": 1,
+          "assists": 0,
+          "rating": 7.7,
+          "height": 183,
+          "weight": 70
+        },
+        {
+          "name": "Ahn_Geum_fan",
+          "position": "RW",
+          "goals": 0,
+          "assists": 0,
+          "rating": 6.9,
+          "height": 181,
+          "weight": 79
+        },
+        {
+          "name": "zenex_okabini",
+          "position": "CAM",
+          "goals": 0,
+          "assists": 0,
+          "rating": 7.1,
+          "height": 168,
+          "weight": 65
+        },
+        {
+          "name": "TIKI-pes24",
+          "position": "LCM",
+          "goals": 0,
+          "assists": 0,
+          "rating": 6.8,
+          "height": 172,
+          "weight": 74
+        },
+        {
+          "name": "xxGUxx",
+          "position": "RCM",
+          "goals": 0,
+          "assists": 0,
+          "rating": 7.3,
+          "height": 172,
+          "weight": 74
+        },
+        {
+          "name": "F9T_mizutaku",
+          "position": "LB",
+          "goals": 0,
+          "assists": 0,
+          "rating": 6.7,
+          "height": 177,
+          "weight": 66
+        },
+        {
+          "name": "kittBlacky",
+          "position": "LCB",
+          "goals": 0,
+          "assists": 0,
+          "rating": 6.0,
+          "height": 192,
+          "weight": 93
+        },
+        {
+          "name": "The_Horth_Face",
+          "position": "RCB",
+          "goals": 0,
+          "assists": 0,
+          "rating": 6.9,
+          "height": 192,
+          "weight": 90
+        },
+        {
+          "name": "kabagonjp",
+          "position": "RB",
+          "goals": 0,
+          "assists": 0,
+          "rating": 6.8,
+          "height": 182,
+          "weight": 65
+        },
+        {
+          "name": "COM",
+          "position": "GK",
+          "goals": 0,
+          "assists": 0,
+          "rating": 6.8,
+          "height": 200,
+          "weight": 91
+        }
+      ],
+      "team_stats": {
+        "saves": 2,
+        "possession": 45,
+        "shots": 6,
+        "shots_on_target": 3,
+        "successful_dribbles": 89,
+        "successful_passes": 78,
+        "pass_success": 98
+      }
+    }
   },
+
 
   {
     "id": "match_number_0121",
@@ -87,5 +317,20 @@
     "team_away_logo": "images/logo/fantasma.png",
     "score": "3-0",
     "scorers": ["lar9vls", "B1g_Ke9", "lar9vls"]
+  },
+
+    {
+    "id": "match_number_0116",
+    "date": "2025-08-29",
+    "time": "24:00",
+    "home_away": "HOME",
+    "tournament": "COPA RAL25 Summer",
+    "round": "決勝",
+    "team_home": "Principale",
+    "team_home_logo": "images/logo/principale.png",
+    "team_away": "EL Brigada",
+    "team_away_logo": "images/logo/elbrigada.png",
+    "score": "1-2",
+    "scorers": ["lar9vls"]
   }
 ]
