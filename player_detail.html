@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>選手詳細 - Principale</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="title-area">
+        <img src="images/logo/principale.png" alt="Principale ロゴ" class="logo-small">
+        <h1>Principale 公式サイト</h1>
+    </div>
+
+    <nav>
+        <a href="index.html">ホーム</a>
+        <a href="results.html">試合結果</a>
+        <a href="players.html">選手紹介</a>
+        <a href="news.html">ニュース</a>
+    </nav>
+</header>
+
+<main class="player-detail-wrapper">
+    <h2 class="page-title">選手詳細</h2>
+    <div id="player-detail"></div>
+
+    <!-- 戻るボタン -->
+    <button class="page-btn" onclick="window.history.back();">戻る</button>
+</main>
+
+<footer>
+    <p>© 2025 Principale Official Website</p>
+</footer>
+
+<script>
+// URLパラメータからID取得
+const params = new URLSearchParams(window.location.search);
+const playerId = params.get('id');
+
+// 選手情報と試合結果のデータを読み込み
+Promise.all([
+    fetch('data/players.json').then(res => res.json()),
+    fetch('data/matches.json').then(res => res.json())
+])
+.then(([players, matches]) => {
+    const player = players.find(p => p.psid === playerId);  // playerId (psid) を使って選手を特定
+    const container = document.getElementById('player-detail');
+
+    if (!player) {
+        container.innerHTML = "<p>選手が見つかりません。</p>";
+        return;
+    }
+
+    // 試合結果から選手の出場試合数、得点数、アシスト数を取得
+    let matchCount = 0;
+    let goals = 0;
+    let assists = 0;
+
+    // 試合結果をループして選手が出場しているかチェック
+    matches.forEach(result => {
+        // ホームチームの選手をチェック
+        result.home.players.forEach(p => {
+            if (p.name === player.psid) {  // nameで突合
+                matchCount++;
+                goals += p.goals;
+                assists += p.assists;
+            }
+        });
+    });
+
+    // プレイヤー詳細を表示
+    container.innerHTML = `
+        <div class="player-detail-card">
+            <div class="player-image">
+                <img src="${player.image}" alt="${player.name}">
+            </div>
+
+            <div class="player-info">
+                <table>
+                    <tr>
+                        <td><strong>名前</strong></td>
+                        <td>${player.name}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ポジション</strong></td>
+                        <td>${player.position}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>背番号</strong></td>
+                        <td>${player.number}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PSID</strong></td>
+                        <td>${player.psid}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>出場数</strong></td>
+                        <td>${matchCount}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>得点数</strong></td>
+                        <td>${goals}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>アシスト数</strong></td>
+                        <td>${assists}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>加入日</strong></td>
+                        <td>${player.joinDate|| "不明"}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>前所属</strong></td>
+                        <td>${player.previousTeam || "不明"}</td>
+                    </tr>
+                    ${player.outDate ? `
+                    <tr>
+                        <td><strong>退団日</strong></td>
+                        <td>${player.outDate}</td>
+                    </tr>
+                    ` : ''}
+                </table>
+            </div>
+        </div>
+    `;
+})
+.catch(err => {
+    console.error('選手情報または試合結果の読み込みエラー:', err);
+    const container = document.getElementById('player-detail');
+    container.innerHTML = "<p>選手情報または試合結果の読み込みに失敗しました。</p>";
+});
+</script>
+
+</body>
+</html>

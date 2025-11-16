@@ -56,10 +56,12 @@ fetch('data/players.json')
                 const card = document.createElement('div');
                 card.className = 'player-card';
                 card.innerHTML = `
-                    <img src="${player.image}" alt="${player.name}">
-                    <h2>${player.number}</h2>
-                    <p>${player.psid}</p>
-                    <h3>${player.name}</h3>
+                    <a href="player_detail.html?id=${player.psid}" class="player-link">
+                        <img src="${player.image}" alt="${player.name}">
+                        <h2>${player.number}</h2>
+                        <p>${player.psid}</p>
+                        <h3>${player.name}</h3>
+                    </a>
                 `;
                 grid.appendChild(card);
             });

@@ -87,7 +87,7 @@ function loadMatch(id) {
                     <strong>${p.rating !== undefined ? p.rating.toFixed(1) : 'N/A'}</strong>
                     </td>
                     <td>
-                    <strong>${p.name} ${p.goals > 0 ? `⚽×${p.goals}` : ''}${p.assists > 0 ? ` 👟×${p.assists}` : ''} </strong>
+                    <strong>${p.name} ${p.goals > 0 ? `<span style="color: #e6ad01;">⚽×${p.goals}</span>` : ''}${p.assists > 0 ? ` 👟×${p.assists}` : ''} </strong>
                     </td>
                 </tr>
                 `).join('')}

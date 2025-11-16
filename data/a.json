@@ -241,6 +241,96 @@
         "pass_success": 98
       }
     }
-  }
+  },
 
+
+  {
+    "id": "match_number_0121",
+    "date": "2025-11-14",
+    "time": "23:00",
+    "home_away": "HOME",
+    "tournament": "RAL 15th LIGA",
+    "round": "5節",
+    "team_home": "Principale",
+    "team_home_logo": "images/logo/principale.png",
+    "team_away": "Kemari FC",
+    "team_away_logo": "images/logo/kemarifc.png",
+    "score": "2-2",
+    "scorers": ["xox-v-rn7", "lar9vls"]
+  },
+
+  {
+    "id": "match_number_0120",
+    "date": "2025-11-07",
+    "time": "23:30",
+    "home_away": "AWAY",
+    "tournament": "RAL 15th LIGA",
+    "round": "4節",
+    "team_home": "Principale",
+    "team_home_logo": "images/logo/principale.png",
+    "team_away": "Aldebaran FC",
+    "team_away_logo": "images/logo/aldebaranfc.png",
+    "score": "2-2",
+    "scorers": ["lar9vls", "B1g_Ke9"]
+  },
+
+  {
+    "id": "match_number_0119",
+    "date": "2025-11-07",
+    "time": "23:00",
+    "home_away": "AWAY",
+    "tournament": "RAL 15th LIGA",
+    "round": "3節",
+    "team_home": "Principale",
+    "team_home_logo": "images/logo/principale.png",
+    "team_away": "FC LAGOON",
+    "team_away_logo": "images/logo/fclagoon.png",
+    "score": "1-0",
+    "scorers": ["lar9vls"]
+  },
+
+  {
+    "id": "match_number_0118",
+    "date": "2025-10-31",
+    "time": "23:30",
+    "home_away": "AWAY",
+    "tournament": "RAL 15th LIGA",
+    "round": "2節",
+    "team_home": "Principale",
+    "team_home_logo": "images/logo/principale.png",
+    "team_away": "ALMOND CHOCO",
+    "team_away_logo": "images/logo/alomondchoco.png",
+    "score": "1-0",
+    "scorers": ["lar9vls"]
+  },
+
+  {
+    "id": "match_number_0117",
+    "date": "2025-10-31",
+    "time": "23:00",
+    "home_away": "AWAY",
+    "tournament": "RAL 15th LIGA",
+    "round": "1節",
+    "team_home": "Principale",
+    "team_home_logo": "images/logo/principale.png",
+    "team_away": "FANTASMA",
+    "team_away_logo": "images/logo/fantasma.png",
+    "score": "3-0",
+    "scorers": ["lar9vls", "B1g_Ke9", "lar9vls"]
+  },
+
+    {
+    "id": "match_number_0116",
+    "date": "2025-08-29",
+    "time": "24:00",
+    "home_away": "HOME",
+    "tournament": "COPA RAL25 Summer",
+    "round": "決勝",
+    "team_home": "Principale",
+    "team_home_logo": "images/logo/principale.png",
+    "team_away": "EL Brigada",
+    "team_away_logo": "images/logo/elbrigada.png",
+    "score": "1-2",
+    "scorers": ["lar9vls"]
+  }
 ]

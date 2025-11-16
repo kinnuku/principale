@@ -541,53 +541,6 @@ footer {
     font-weight: bold;
 }
 
-/* ============================= */
-/* レスポンシブ対応 */
-/* ============================= */
-@media (max-width: 900px) {
-    .players-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-}
-
-@media (max-width: 600px) {
-    .players-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-}
-
-@media (max-width: 800px) {
-    .news-cards {
-        grid-template-columns: 1fr;
-    }
-    .list-news .news-card {
-        width: 90%;
-    }
-}
-
-@media (max-width: 500px) {
-    nav {
-        margin: 20px 0 30px;
-    }
-
-    nav a {
-        margin: 5px 5px;
-        padding: 10px 16px;
-        font-size: 0.9rem;
-    }
-
-    .title-area {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    h1 {
-        font-size: 1.6rem;
-    }
-}
-
 /* スコアカード */
 #score-card {
     width: 90%;
@@ -837,4 +790,116 @@ footer {
 
 .back-button:hover {
     background-color: #555; /* ボタンにマウスオーバー時の色 */
+}
+
+
+/* player-detail.htmlのスタイル */
+/* プレイヤー詳細セクション */
+.player-detail-wrapper {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.page-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* プレイヤー詳細カード */
+.player-detail-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* 顔写真 */
+.player-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* 円形 */
+    object-fit: cover;
+}
+
+/* プレイヤー情報 */
+.player-info {
+    margin-left: 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.player-info table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.player-info td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.player-info td:first-child {
+    font-weight: bold;
+}
+
+.player-info tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.player-info tr:last-child {
+    border-bottom: none;
+}
+
+/* 戻るボタンのスタイル */
+.page-btn {
+    padding: 6px 12px;
+    background: #72bce6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 20px;  /* ボタンの上にスペースを追加 */
+}
+
+.page-btn:hover {
+    background: #5aaad7;
+}
+
+.page-btn.active {
+    background: #72bce6;
+}
+
+.player-link {
+    text-decoration: none; /* 下線を削除 */
+    color: inherit;        /* 親要素の文字色を継承 */
+}
+
+/* リンクにホバー時のスタイル（下線なし、色変更） */
+.player-link:hover {
+    text-decoration: none; /* ホバー時も下線を表示しない */
+    color: #72bce6;         /* お好みでホバー時の色を変更 */
+}
+
+#news-content {
+  font-size: 1.2em;         /* 少し大きめ */
+  margin: 30px 0;           /* 上下の間隔を広く */
+  line-height: 1.6;         /* 行間を少し広めに */
+}
+
+.player-image img {
+    border: 1px solid rgba(0, 0, 0, 0.2); /* 薄い黒の枠線 */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* 薄い影で立体感 */
+    border-radius: 5px; /* 角を少し丸くする場合 */
 }
