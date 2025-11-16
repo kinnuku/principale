@@ -794,8 +794,7 @@ footer {
 }
 
 
-/* player-detail.htmlのスタイル */
-/* プレイヤー詳細セクション */
+/* プレイヤー詳細ラッパー */
 .player-detail-wrapper {
     width: 80%;
     max-width: 900px;
@@ -807,49 +806,58 @@ footer {
     text-align: center;
 }
 
-.page-title {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
 
-/* プレイヤー詳細カード */
+/* ▼ メイン構造：左右に分ける */
 .player-detail-card {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row; /* 左右配置 */
+    gap: 25px;
     margin-top: 30px;
+    align-items: flex-start; /* 上揃え */
 }
 
-/* 顔写真 */
+
+/* ▼ 左側：画像＋円グラフ */
+.player-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 260px; /* 画像幅に合わせて固定 */
+}
+
+
+/* 画像 */
 .player-image img {
     width: 250px;
     height: 250px;
-    border-radius: 50%; /* 円形 */
-    border: 1px solid rgba(0, 0, 0, 0.2); /* 薄い黒の枠線 */
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* 薄い影で立体感 */
-    border-radius: 5px; /* 角を少し丸くする場合 */
+    border-radius: 10px; /* 角丸 */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
     object-fit: cover;
 }
 
 
-/* プレイヤー情報 */
+/* 円グラフ */
+.player-chart {
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+/* ▼ 右側：詳細テーブル */
 .player-info {
-    margin-left: 30px;
+    flex: 1;
     text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .player-info table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .player-info td {
     padding: 8px;
-    text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
@@ -861,9 +869,6 @@ footer {
     background-color: #f9f9f9;
 }
 
-.player-info tr:last-child {
-    border-bottom: none;
-}
 
 /* 戻るボタンのスタイル */
 .page-btn {

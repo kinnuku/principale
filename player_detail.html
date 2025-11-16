@@ -59,88 +59,92 @@ Promise.all([
     let goals = 0;
     let assists = 0;
 
-    // ★ 出場ポジション集計（matches の p.position を使用）
+    // 出場ポジション集計
     let positionCount = {};
 
-    matches.forEach(result => {
-        result.home.players.forEach(p => {
+    // 初出場・初得点・初アシスト
+    let firstMatch = null;
+    let firstGoal = null;
+    let firstAssist = null;
+
+    // 最高評価点
+    let bestRating = null;
+
+    // 最新データ優先でループ
+    matches.slice().reverse().forEach(match => {
+        // homeチーム
+        match.home.players.forEach(p => {
             if (p.name === player.psid) {
                 matchCount++;
                 goals += p.goals;
                 assists += p.assists;
 
-                // ★ p.position を使用して集計
                 const pos = p.position || player.position;
                 positionCount[pos] = (positionCount[pos] || 0) + 1;
+
+                if (!firstMatch) firstMatch = match;
+                if (p.goals > 0 && !firstGoal) firstGoal = match;
+                if (p.assists > 0 && !firstAssist) firstAssist = match;
+
+                if (!bestRating || p.rating > bestRating.p.rating) {
+                    bestRating = { p, match };
+                }
             }
         });
     });
 
+    // 日付表示用
+    function matchLabel(match) {
+        return `${match.date}（${match.tournament} ${match.round}）`;
+    }
+
+    function bestRatingValue(br) {
+        return `${br.p.rating.toFixed(1)}（${br.p.position}）`;
+    }
+    function bestRatingDate(br) {
+        return `${br.match.date}（${br.match.tournament} ${br.match.round}）`;
+    }
+
     // プレイヤー詳細を表示
     container.innerHTML = `
         <div class="player-detail-card">
-            <div class="player-image">
-                <img src="${player.image}" alt="${player.name}">
+            <!-- 左側：画像 + 円グラフ -->
+            <div class="player-left">
+                <div class="player-image">
+                    <img src="${player.image}" alt="${player.name}">
+                </div>
+
+                <div class="player-chart">
+                    <h3>出場ポジション比率</h3>
+                    <canvas id="positionChart"></canvas>
+                </div>
             </div>
 
             <div class="player-info">
                 <table>
-                    <tr>
-                        <td><strong>名前</strong></td>
-                        <td>${player.name}</td>
-                    </tr>
-                    <tr>
-                        <td><strong>ポジション</strong></td>
-                        <td>${player.position}</td>
-                    </tr>
-                    <tr>
-                        <td><strong>背番号</strong></td>
-                        <td>${player.number}</td>
-                    </tr>
-                    <tr>
-                        <td><strong>PSID</strong></td>
-                        <td>${player.psid}</td>
-                    </tr>
-                    <tr>
-                        <td><strong>出場数</strong></td>
-                        <td>${matchCount}</td>
-                    </tr>
-                    <tr>
-                        <td><strong>得点数</strong></td>
-                        <td>${goals}</td>
-                    </tr>
-                    <tr>
-                        <td><strong>アシスト数</strong></td>
-                        <td>${assists}</td>
-                    </tr>
-                    <tr>
-                        <td><strong>加入日</strong></td>
-                        <td>${player.joinDate || "不明"}</td>
-                    </tr>
-                    <tr>
-                        <td><strong>前所属</strong></td>
-                        <td>${player.previousTeam || "不明"}</td>
-                    </tr>
-                    ${player.outDate ? `
-                    <tr>
-                        <td><strong>退団日</strong></td>
-                        <td>${player.outDate}</td>
-                    </tr>
-                    ` : ''}
-                </table>
-            </div>
+                    <tr><td><strong>名前</strong></td><td>${player.name}</td></tr>
+                    <tr><td><strong>ポジション</strong></td><td>${player.position}</td></tr>
+                    <tr><td><strong>背番号</strong></td><td>${player.number}</td></tr>
+                    <tr><td><strong>PSID</strong></td><td>${player.psid}</td></tr>
+                    <tr><td><strong>初出場日</strong></td><td>${firstMatch ? matchLabel(firstMatch) : "出場無し"}</td></tr>
+                    <tr><td><strong>出場数</strong></td><td>${matchCount}</td></tr>
+                    <tr><td><strong>最高評価点日</strong></td><td>${bestRating ? bestRatingDate(bestRating) : "出場無し"}</td></tr>
+                    <tr><td><strong>最高評価点</strong></td><td>${bestRating ? bestRatingValue(bestRating) : "なし"}</td></tr>
+                    <tr><td><strong>初得点日</strong></td><td>${firstGoal ? matchLabel(firstGoal) : "得点無し"}</td></tr>
+                    <tr><td><strong>得点数</strong></td><td>${goals}</td></tr>
+                    <tr><td><strong>初アシスト日</strong></td><td>${firstAssist ? matchLabel(firstAssist) : "アシスト無し"}</td></tr>
+                    <tr><td><strong>アシスト数</strong></td><td>${assists}</td></tr>
+                    <tr><td><strong>加入日</strong></td><td>${player.joinDate || "不明"}</td></tr>
+                    <tr><td><strong>前所属</strong></td><td>${player.previousTeam || "不明"}</td></tr>
+                    ${player.outDate ? `<tr><td><strong>退団日</strong></td><td>${player.outDate}</td></tr>` : ''}
 
-            <!-- ★ 円グラフを表示するエリア -->
-            <div class="player-chart">
-                <h3>出場ポジション比率</h3>
-                <canvas id="positionChart"></canvas>
+                </table>
             </div>
         </div>
     `;
 
-    // ★ Chart.js 円グラフ描画
+    // Chart.js 円グラフ描画
     const ctx = document.getElementById('positionChart');
-
     new Chart(ctx, {
         type: 'pie',
         data: {
