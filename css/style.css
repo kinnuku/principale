@@ -904,6 +904,21 @@ footer {
     border-radius: 5px; /* 角を少し丸くする場合 */
 }
 
+.player-detail-card {
+    display: flex;
+    flex-direction: row; /* PCは横並び */
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.player-image img {
+    max-width: 150px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.2); /* 薄い黒の枠 */
+}
+
 /* スマホ対応 */
 @media (max-width: 768px) {
     .player-detail-card {
