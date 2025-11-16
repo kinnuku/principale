@@ -58,13 +58,15 @@ function loadMatch(id) {
         function getRatingStyle(rating) {
         let style = '';
 
-        if (rating <= 5.9) {
+        if (rating <= 4.9) {
+            style = 'background-color: #f3274b; color: white; padding: 1px 2px; border-radius: 8px; font-size: 12px;';
+        } else if (rating >= 5.0 && rating <= 5.9) {
             style = 'background-color: #fc7f1c; color: white; padding: 1px 2px; border-radius: 8px; font-size: 12px;';
         } else if (rating >= 6.0 && rating <= 6.9) {
             style = 'background-color: #e6ad01; color: white; padding: 1px 2px; border-radius: 8px; font-size: 12px;';
         } else if (rating >= 7.0 && rating <= 8.4) {
             style = 'background-color: #32cd31; color: white; padding: 1px 2px; border-radius: 8px; font-size: 12px;';
-        } else if (rating >= 8.5 && rating <= 9.9) {
+        } else if (rating >= 8.5 && rating <= 10.0) {
             style = 'background-color: #10ab15; color: white; padding: 1px 2px; border-radius: 8px; font-size: 12px;';
         }
 
@@ -135,14 +137,6 @@ function loadMatch(id) {
         const total = stat.home + stat.away;
         const homeWidth = total ? (stat.home / total * 100) : 50;
         const awayWidth = total ? (stat.away / total * 100) : 50;
-
-        function getRatingStyle(rating) {
-        if (rating <= 5.9) return 'background-color: orange; color: white;';
-        if (rating >= 6.0 && rating <= 6.9) return 'background-color: yellow; color: white;';
-        if (rating >= 7.0 && rating <= 8.4) return 'background-color: green; color: white;';
-        if (rating >= 8.5 && rating <= 9.9) return 'background-color: darkgreen; color: white;';
-        return '';
-        }
 
         row.innerHTML = `
           <div class="stat-value" style="position: relative; left: 250px; top: -7px;">${stat.away}</div>

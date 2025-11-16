@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>選手詳細 - Principale</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Chart.js 追加 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
@@ -44,7 +46,7 @@ Promise.all([
     fetch('data/matches.json').then(res => res.json())
 ])
 .then(([players, matches]) => {
-    const player = players.find(p => p.psid === playerId);  // playerId (psid) を使って選手を特定
+    const player = players.find(p => p.psid === playerId);
     const container = document.getElementById('player-detail');
 
     if (!player) {
@@ -57,14 +59,19 @@ Promise.all([
     let goals = 0;
     let assists = 0;
 
-    // 試合結果をループして選手が出場しているかチェック
+    // ★ 出場ポジション集計（matches の p.position を使用）
+    let positionCount = {};
+
     matches.forEach(result => {
-        // ホームチームの選手をチェック
         result.home.players.forEach(p => {
-            if (p.name === player.psid) {  // nameで突合
+            if (p.name === player.psid) {
                 matchCount++;
                 goals += p.goals;
                 assists += p.assists;
+
+                // ★ p.position を使用して集計
+                const pos = p.position || player.position;
+                positionCount[pos] = (positionCount[pos] || 0) + 1;
             }
         });
     });
@@ -108,7 +115,7 @@ Promise.all([
                     </tr>
                     <tr>
                         <td><strong>加入日</strong></td>
-                        <td>${player.joinDate|| "不明"}</td>
+                        <td>${player.joinDate || "不明"}</td>
                     </tr>
                     <tr>
                         <td><strong>前所属</strong></td>
@@ -122,8 +129,38 @@ Promise.all([
                     ` : ''}
                 </table>
             </div>
+
+            <!-- ★ 円グラフを表示するエリア -->
+            <div class="player-chart">
+                <h3>出場ポジション比率</h3>
+                <canvas id="positionChart"></canvas>
+            </div>
         </div>
     `;
+
+    // ★ Chart.js 円グラフ描画
+    const ctx = document.getElementById('positionChart');
+
+    new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: Object.keys(positionCount),
+            datasets: [{
+                data: Object.values(positionCount),
+                backgroundColor: [
+                    '#ff6384', '#36a2eb', '#ffcd56', '#4bc0c0', '#9966ff'
+                ]
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }
+    });
 })
 .catch(err => {
     console.error('選手情報または試合結果の読み込みエラー:', err);

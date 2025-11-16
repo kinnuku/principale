@@ -715,7 +715,7 @@ footer {
 }
 
 .players-table td:nth-child(2) {
-  width: 25px;          /* 評価点列 */
+  width: 30px;          /* 評価点列 */
 }
 
 
@@ -758,6 +758,7 @@ footer {
     width: 100%; /* 画像がコンテナの幅に合わせて拡大 */
     margin: 20px 0; /* 上下にスペースを追加 */
     border-radius: 8px; /* 画像の角を丸くする */
+    border: 1px solid rgba(0,0,0,0.2); /* 薄い黒の枠 */
 }
 
 #news-content {
@@ -821,11 +822,15 @@ footer {
 
 /* 顔写真 */
 .player-image img {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%; /* 円形 */
+    border: 1px solid rgba(0, 0, 0, 0.2); /* 薄い黒の枠線 */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* 薄い影で立体感 */
+    border-radius: 5px; /* 角を少し丸くする場合 */
     object-fit: cover;
 }
+
 
 /* プレイヤー情報 */
 .player-info {
@@ -898,12 +903,6 @@ footer {
   line-height: 1.6;         /* 行間を少し広めに */
 }
 
-.player-image img {
-    border: 1px solid rgba(0, 0, 0, 0.2); /* 薄い黒の枠線 */
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* 薄い影で立体感 */
-    border-radius: 5px; /* 角を少し丸くする場合 */
-}
-
 .player-detail-card {
     display: flex;
     flex-direction: row; /* PCは横並び */
@@ -911,12 +910,6 @@ footer {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
-}
-
-.player-image img {
-    max-width: 150px;
-    border-radius: 10px;
-    border: 1px solid rgba(0,0,0,0.2); /* 薄い黒の枠 */
 }
 
 /* スマホ対応 */

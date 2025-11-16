@@ -1,10 +1,375 @@
 [
   {
-    "id": "news_number_0001",
+    "id": "news_id=0999",
+    "date": "2025/11/14",
+    "title": "RAL 15th LIGA 6節",
+    "summary": "vsJOKERS",
+    "fullContent": [
+      "59分に、左サイドを突破され、一度はブロックするも、相手前にボールがこぼれ失点。",
+      "72分にねこぷのコーナーをとまにもが反らし、らーくが折り返し、だいきがヘディングで流し込み同点！",
+      "しかし、試合はこのまま終了。先週から3試合連続引き分けとなりました。",
+      "",
+      "▼試合動画",
+      "https://www.youtube.com/live/spaScTUDcZY?si=mW3YuuHOLZLKFiOE",
+      "https://www.youtube.com/live/vJ8ucJoBoQM?si=_qCvzvBQa6oHm3U6",
+      "https://www.youtube.com/live/r_GsdcezNyA?si=p-QVtZdKRxE7FQ31"
+    ],
+    "image": "images/news/news_0999.png"
+  },
+  {
+    "id": "news_id=0998",
+    "date": "2025/11/14",
+    "title": "RAL 15th LIGA 5節",
+    "summary": "vsKemari FC",
+    "fullContent": [
+      "20分に、ばむが自身で仕掛け、1度は奪われるも、こぼれ球を拾い得点！",
+      "44分には、ねこぷの前プレから、らーくへ繋ぎ、得点！",
+      "しかし、66分、88分に連続で失点を許し、痛い引き分け。",
+      "1失点目以降に消極的なプレーが目立ち、課題が残る試合となりました。",
+      "",
+      "▼試合動画",
+      "https://www.youtube.com/live/0nb3EnDK9Tg?si=HA0QRPWgzUxBDtm3",
+      "https://www.youtube.com/live/UzkT2BgTL-8?si=7D0n0DgqMTYTB076"
+    ],
+    "image": "images/news/news_0998.png"
+  },
+  {
+    "id": "news_id=0997",
     "date": "2025/11/08",
     "title": "もときちカムバック！",
     "summary": "（自称）優勝請負人のもときちがPrincipaleに帰ってきました！",
-    "fullContent": "5年間付き合った彼女に「主体性がない」という理由で振られ、4か月ぶりに帰ってきました！Principaleではしっかり主体性を出して、プレーしてくれることを期待します。",
-    "image": "images/news/news_0001.png"
+    "fullContent": [
+      "5年間付き合った彼女に「主体性がない」という理由で振られ、4か月ぶりに帰ってきました！",
+      "Principaleではしっかり主体性を出して、プレーしてくれることを期待します。"
+    ],
+    "image": "images/news/news_0997.png"
+  },
+
+
+
+
+
+
+
+  {
+    "id": "news_id=19",
+    "date": "2024/03/01",
+    "title": "COPA RAL24 Spring GroupB 1節",
+    "summary": "vsPROGRESSO",
+    "fullContent": [
+      "チームとして初の公式戦の相手は、SEGUNDA所属のPROGRESSO！",
+      "",
+      "9分：ロンがPA内で倒され、獲得したPKを左上に蹴りこみ、1-0！",
+      "21分：右サイドを抜け出したばむのクロスをかなまるがヘディングで合わせ、2-0！",
+      "32分：ロンが放ったシュートは相手GKにセーブされたが、こぼれ球をばむが押し込み、3-0！",
+      "40分：左サイドからのクロスにヘディングで合わせられたが、リーフがブロック！",
+      "56分：cilmのパスカットから、ロンが抜け出しシュートを放つも、惜しくも枠外。",
+      "57分：相手GKのパスミスをばむがカットし、クロスをかなまるが蹴りこみ、4-0！",
+      "64分：ばむ→ロンと繋ぎ、ねこぷがニアサイドをぶち抜き、5-0！",
+      "66分：ロン→ばむ→ねこぷ繋ぎ、追い越してきた9がニアサイドをぶち抜き、6-0！",
+      "69分：左サイドを突破され、中に折り返されるもババがセーブ！",
+      "75分：相手に中央を突破され、ベイルがブロックするも押し込まれ、6-1。",
+      "76分：かなまるの落としをロンがばむにつなぎ、冷静にニアに決め、7-1！",
+      "85分：ばむが右サイドで粘り、中で待っていたねこぷが決め、8-1！",
+      "",
+      "攻撃陣が爆発し、シュート11本で8得点できましたが、クリーンシートは達成することができませんでした。",
+      "防げた失点だっただけに守備陣は悔しかったと思いますが、粘り強いDFでした！",
+      "",
+      "▼試合動画",
+      "https://youtu.be/8ZTcGIRUyN4",
+      "https://youtu.be/O2GEfezrPVU"
+    ],
+    "image": "images/news/news19.png"
+  },  
+  {
+    "id": "news_number18",
+    "date": "2024/02/28",
+    "title": "みらい新加入！",
+    "summary": "新規メンバーである、みらいの紹介です！",
+    "fullContent": [
+      "Esprite Clusterより、みらいが新加入しました！",
+      "",
+      "名前：みらい",
+      "PSID：mirai-3-3",
+      "希望ポジ：CB、GK以外",
+      "可能ポジ：無し",
+      "所属クラブ経歴：FC Pikachu → Esprite Cluster → Principale",
+      "一言：サポメンで入ることになりました！よろしくお願いします！！"
+    ],
+    "image": "images/news/news18.png"
+  },
+  {
+    "id": "news_number17",
+    "date": "2024/02/19",
+    "title": "なうビーチ新加入！",
+    "summary": "新規メンバーである、なうビーチの紹介です！",
+    "fullContent": [
+      "なうビーチが新加入しました！",
+      "",
+      "名前：なうビーチ",
+      "PSID：TRADER_JOES99",
+      "希望ポジ：CAM",
+      "可能ポジ：SB、CM、ST",
+      "所属クラブ経歴：無所属 → Principale",
+      "一言：以前から体験で参加させていただいていたなうビーチと申します。チームに所属するのは初めてで不慣れな部分もありますが、よろしくお願いします。"
+    ],
+    "image": "images/news/news17.png"
+  },
+
+  {
+    "id": "news_number16",
+    "date": "2024/02/18",
+    "title": "リンギオ新加入！",
+    "summary": "新規メンバーである、リンギオの紹介です！",
+    "fullContent": [
+      "Esprite Clusterより、リンギオが新加入しました！",
+      "",
+      "名前：リンギオ",
+      "PSID：ringhio33",
+      "希望ポジ：CB、SB",
+      "可能ポジ：GK以外",
+      "所属クラブ経歴：Galbe UD → Guanchale United → Keseran Pasaran → Hookar → Esprite Cluster → Principale",
+      "一言：サポメンで入団しました。お声がけいただきありがとうございました。仕事忙しくて死にそうです。"
+    ],
+    "image": "images/news/news16.png"
+  },
+  {
+    "id": "news_number15",
+    "date": "2024/02/16",
+    "title": "りく新加入！",
+    "summary": "新規メンバーである、りくの紹介です！",
+    "fullContent": [
+      "Esprite Clusterより、りくが新加入しました！",
+      "",
+      "名前：りく",
+      "PSID：riku6qwe",
+      "希望ポジ：DF",
+      "可能ポジ：無し",
+      "所属クラブ経歴：redēmarrage → Esprite Cluster → Principale",
+      "一言：よろしくお願いします"
+    ],
+    "image": "images/news/news15.png"
+  },
+  {
+    "id": "news_number14",
+    "date": "2024/02/13",
+    "title": "かなまる新加入！",
+    "summary": "新規メンバーである、かなまるの紹介です！",
+    "fullContent": [
+      "Ra VIRDYより、かなまるが新加入しました！",
+      "",
+      "名前：かなまる",
+      "PSID：KANAMARUU",
+      "希望ポジ：アンカー",
+      "可能ポジ：GK以外",
+      "所属クラブ経歴：FC Apricot → Ra VIRDY → Principale",
+      "一言：サポメンで入団しました。よろしくお願い致します。"
+    ],
+    "image": "images/news/news14.png"
+  },
+
+  {
+    "id": "news_number13",
+    "date": "2024/02/05",
+    "title": "リーフ新加入！",
+    "summary": "新規メンバーである、リーフの紹介です！",
+    "fullContent": [
+      "Ra VIRDYより、リーフが新加入しました！",
+      "",
+      "名前：リーフ",
+      "PSID：Leaf-N-A",
+      "希望ポジ：CB、SB",
+      "可能ポジ：無し",
+      "所属クラブ経歴：FC Apricot → Ra VIRDY → Principale",
+      "一言：下手くそですが、よろしくお願い致します"
+    ],
+    "image": "images/news/news13.png"
+  },
+ {
+    "id": "news_number12",
+    "date": "2024/02/05",
+    "title": "もときち新加入！",
+    "summary": "新規メンバーである、もときちの紹介です！",
+    "fullContent": [
+      "Esprite Clusterより、もときちが新加入しました！",
+      "",
+      "名前：もときち",
+      "PSID：GOD_GK_motokichi",
+      "希望ポジ：CB、SB",
+      "可能ポジ：GK",
+      "所属クラブ経歴：Esprite Cluster → Principale",
+      "一言：下手くそですが指摘された所は精一杯取り組む所存です。"
+    ],
+    "image": "images/news/news12.png"
+  },
+ {
+    "id": "news_number11",
+    "date": "2024/02/05",
+    "title": "ねこぷ新加入！",
+    "summary": "新規メンバーである、ねこぷの紹介です！",
+    "fullContent": [
+      "PECORANERAより、ねこぷが新加入しました！",
+      "",
+      "名前：ねこぷ",
+      "PSID：Nekop_one",
+      "希望ポジ：GK、中盤より前ならどこでも",
+      "可能ポジ：SB",
+      "所属クラブ経歴：Ahura Mazda → PECORANERA → FC Onions → Esprite Cluster → KARAS → PECORANERA → Principale",
+      "一言：ご挨拶遅れて申し訳ありません！よろしくお願いします"
+    ],
+    "image": "images/news/news11.png"
+  },
+  {
+    "id": "news_number10",
+    "date": "2024/02/03",
+    "title": "初期メンバー紹介（らーく）",
+    "summary": "初期メンバーである、らーくの紹介です！",
+    "fullContent": [
+      "名前：らーく",
+      "PSID：lark6v",
+      "希望ポジ：ST",
+      "可能ポジ：GK以外",
+      "所属クラブ経歴：FC RayBan → LA VOⒶGUE → Esprite Cluster → Principale",
+      "一言：7大会連続得点王でイキリ散らかしてました。対戦よろしくお願いします"
+    ],
+    "image": "images/news/news10.png"
+  },
+  {
+    "id": "news_number9",
+    "date": "2024/02/03",
+    "title": "初期メンバー紹介（ぽんぞう）",
+    "summary": "初期メンバーである、ぽんぞうの紹介です！",
+    "fullContent": [
+      "名前：ぽんぞう",
+      "PSID：pon-zoucity",
+      "希望ポジ：CAM、CM、ST",
+      "可能ポジ：SB、CB",
+      "所属クラブ経歴：JOKERS → Principale",
+      "一言：ばむに誘ってもらいました。のほほんと頑張ります。よろしくお願いします。"
+    ],
+    "image": "images/news/news9.png"
+  },
+  {
+    "id": "news_number8",
+    "date": "2024/02/03",
+    "title": "初期メンバー紹介（くりむ）",
+    "summary": "初期メンバーである、くりむの紹介です！",
+    "fullContent": [
+      "名前：くりむ",
+      "PSID：climelt-39",
+      "希望ポジ：CM、CDM",
+      "可能ポジ：SB、WB",
+      "所属クラブ経歴：FC Apricot → Pampers → FV Bambini → Ra VIRDY → Principale",
+      "一言：まなやんに誘ってもらいました。ちゃんとした活動は久々ですが頑張ります。よろしくお願いします。"
+    ],
+    "image": "images/news/news8.png"
+  },
+    {
+    "id": "news_number7",
+    "date": "2024/02/03",
+    "title": "初期メンバー紹介（9）",
+    "summary": "初期メンバーである、9の紹介です！",
+    "fullContent": [
+      "名前：9",
+      "PSID：cyberdog009",
+      "希望ポジ：CAM、CM、CDM",
+      "可能ポジ：WG、WB",
+      "所属クラブ経歴：ROBOKOP → OKUTAMA FC → Esprite Cluster → Principale",
+      "一言：vaamさんから誘って頂きました。ベイルさんに殺されるその時まで、よろしくお願いします！"
+    ],
+    "image": "images/news/news7.png"
+  },
+  {
+    "id": "news_number6",
+    "date": "2024/02/03",
+    "title": "初期メンバー紹介（まなやん）",
+    "summary": "初期メンバーである、まなやんの紹介です！",
+    "fullContent": [
+      "名前：まなやん",
+      "PSID：Birdie99",
+      "希望ポジ：SB",
+      "可能ポジ：一列目より後ろなら",
+      "所属クラブ経歴：FC Apricot → FV Bambini → Ra VIRDY → Esprite Cluster → Principale",
+      "一言：バム、ベイルさんの友達です。"
+    ],
+    "image": "images/news/news6.png"
+  },
+  {
+    "id": "news_number5",
+    "date": "2024/02/03",
+    "title": "初期メンバー紹介（ガンバロン）",
+    "summary": "初期メンバーである、ガンバロンの紹介です！",
+    "fullContent": [
+      "名前：ガンバロン",
+      "PSID：GAMBALON39",
+      "希望ポジ：前線",
+      "可能ポジ：どこでも",
+      "所属クラブ経歴：FC Pikachu → KOHARA OUT（掛け持ち） → Principale",
+      "一言：KHRと掛け持ちになります。よろしくお願いします。"
+    ],
+    "image": "images/news/news5.png"
+  },
+  {
+    "id": "news_number4",
+    "date": "2024/02/03",
+    "title": "初期メンバー紹介（ババ）",
+    "summary": "副キャプテンである、ババの紹介です！",
+    "fullContent": [
+      "名前：ババ",
+      "PSID：syachiku-syatiku",
+      "希望ポジ：GK",
+      "可能ポジ：どこでもやります！",
+      "所属クラブ経歴：YASHIO JETS → DOGSO → Esprite Cluster → Hookar → Principale",
+      "一言：拾っていただきありがとうございます"
+    ],
+    "image": "images/news/news4.png"
+  },
+  {
+    "id": "news_number3",
+    "date": "2024/02/03",
+    "title": "初期メンバー紹介（ベイル）",
+    "summary": "副キャプテンである、ベイルの紹介です！",
+    "fullContent": [
+      "名前：ベイル",
+      "PSID：garethbale0318",
+      "希望ポジ：SB、CB",
+      "可能ポジ：CDM、RW",
+      "所属クラブ経歴：FC RayBan → LA VOⒶGUE → Esprite Cluster → Principale",
+      "一言：よろしくお願いします"
+    ],
+    "image": "images/news/news3.png"
+  },
+  {
+    "id": "news_number2",
+    "date": "2024/02/03",
+    "title": "初期メンバー紹介（ばむ）",
+    "summary": "キャプテンである、ばむの紹介です！",
+    "fullContent": [
+      "名前：ばむ",
+      "PSID：xox-v-rn7",
+      "希望ポジ：FW、MF",
+      "可能ポジ：GK以外",
+      "所属クラブ経歴：JOKERS → Esprite Cluster → Principale",
+      "一言：僕のわがままにお付き合い頂きありがとうございます。考えてる人数まで、一緒にやりたいなとか、上手いよ、この人！みたいな方いれば誘ってください！"
+    ],
+    "image": "images/news/news2.png"
+  },
+  {
+    "id": "news_number1",
+    "date": "2024/02/02",
+    "title": "Principale設立！",
+    "summary": "新しいプロクラブチームPrincipaleが誕生しました！",
+    "fullContent": [
+      "ばむの呼びかけで新しいプロクラブチームPrincipaleが誕生しました！",
+      "早速、本日に初回の活動を実施しました。",
+      "",
+      "▼初期メンバー",
+      "キャプテン：ばむ",
+      "副キャプテン：ベイル、ババ",
+      "他初期メンバー：まなやん、ろん、くりむ、9、ぽんぞう、らーく",
+      "",
+      "RAL参入を視野に活動していきます！"
+    ],
+    "image": "images/news/news1.png"
   }
 ]
