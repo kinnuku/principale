@@ -903,3 +903,25 @@ footer {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* 薄い影で立体感 */
     border-radius: 5px; /* 角を少し丸くする場合 */
 }
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+    .player-detail-card {
+        flex-direction: column; /* 画像と情報を縦並び */
+        align-items: center;
+    }
+
+    .player-info table {
+        width: 100%;
+    }
+
+    .player-info table td {
+        display: block;
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    .player-info table td:first-child {
+        font-weight: bold;
+    }
+}
