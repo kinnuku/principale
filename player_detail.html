@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Chart.js 追加 -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 </head>
 <body>
 
@@ -54,32 +55,40 @@ Promise.all([
         return;
     }
 
-    // 試合結果から選手の出場試合数、得点数、アシスト数を取得
     let matchCount = 0;
     let goals = 0;
     let assists = 0;
 
-    // 出場ポジション集計
     let positionCount = {};
-
-    // 初出場・初得点・初アシスト
     let firstMatch = null;
     let firstGoal = null;
     let firstAssist = null;
-
-    // 最高評価点
     let bestRating = null;
+
+    const positionMap = {
+        'LCB': 'CB',
+        'RCB': 'CB',
+        'LB': 'SB',
+        'RB': 'SB',
+        'LDM': 'CDM',
+        'RDM': 'CDM',
+        'LAM': 'SH',
+        'RAM': 'SH',
+        'LM': 'SH',
+        'RM': 'SH',
+        'LS': 'ST',
+        'RS': 'ST'
+    };
 
     // 最新データ優先でループ
     matches.slice().reverse().forEach(match => {
-        // homeチーム
-        match.home.players.forEach(p => {
+        match.home.players.concat(match.away.players).forEach(p => {
             if (p.name === player.psid) {
                 matchCount++;
                 goals += p.goals;
                 assists += p.assists;
 
-                const pos = p.position || player.position;
+                const pos = positionMap[p.position || player.position] || (p.position || player.position);
                 positionCount[pos] = (positionCount[pos] || 0) + 1;
 
                 if (!firstMatch) firstMatch = match;
@@ -93,7 +102,6 @@ Promise.all([
         });
     });
 
-    // 日付表示用
     function matchLabel(match) {
         return `${match.date}（${match.tournament} ${match.round}）`;
     }
@@ -108,12 +116,10 @@ Promise.all([
     // プレイヤー詳細を表示
     container.innerHTML = `
         <div class="player-detail-card">
-            <!-- 左側：画像 + 円グラフ -->
             <div class="player-left">
                 <div class="player-image">
                     <img src="${player.image}" alt="${player.name}">
                 </div>
-
                 <div class="player-chart">
                     <h3>出場ポジション比率</h3>
                     <canvas id="positionChart"></canvas>
@@ -137,22 +143,26 @@ Promise.all([
                     <tr><td><strong>加入日</strong></td><td>${player.joinDate || "不明"}</td></tr>
                     <tr><td><strong>前所属</strong></td><td>${player.previousTeam || "不明"}</td></tr>
                     ${player.outDate ? `<tr><td><strong>退団日</strong></td><td>${player.outDate}</td></tr>` : ''}
-
                 </table>
             </div>
         </div>
     `;
 
-    // Chart.js 円グラフ描画
+    // 出場数多い順にソート
+    const sortedPositions = Object.entries(positionCount).sort((a, b) => b[1] - a[1]);
+    const labels = sortedPositions.map(e => e[0]);
+    const data = sortedPositions.map(e => e[1]);
+
     const ctx = document.getElementById('positionChart');
     new Chart(ctx, {
         type: 'pie',
         data: {
-            labels: Object.keys(positionCount),
+            labels: labels,
             datasets: [{
-                data: Object.values(positionCount),
+                data: data,
                 backgroundColor: [
-                    '#ff6384', '#36a2eb', '#ffcd56', '#4bc0c0', '#9966ff'
+                    '#ff6384', '#36a2eb', '#ffcd56', '#4bc0c0', '#9966ff',
+                    '#ff9f40', '#c9cbcf'
                 ]
             }]
         },
@@ -161,15 +171,21 @@ Promise.all([
             plugins: {
                 legend: {
                     position: 'bottom'
+                },
+                datalabels: {
+                    color: '#fff',
+                    formatter: (value, ctx) => value,
+                    font: { weight: 'bold', size: 14 }
                 }
             }
-        }
+        },
+        plugins: [ChartDataLabels]
     });
+
 })
 .catch(err => {
     console.error('選手情報または試合結果の読み込みエラー:', err);
-    const container = document.getElementById('player-detail');
-    container.innerHTML = "<p>選手情報または試合結果の読み込みに失敗しました。</p>";
+    document.getElementById('player-detail').innerHTML = "<p>選手情報または試合結果の読み込みに失敗しました。</p>";
 });
 </script>
 
