@@ -1,0 +1,264 @@
+[
+  {
+    "number": 1,
+    "name": "ババ",
+    "position": "GK",
+    "psid": "syachiku-syatiku",
+    "image": "images/player/syachiku-syatiku.png",
+    "previousTeam": "Hookar",
+    "joinDate": "2024/02/02",
+    "outDate": ""
+  },
+  {
+    "number": 2,
+    "name": "マキナ",
+    "position": "DF",
+    "psid": "makina_1",
+    "image": "images/player/makina_1.png",
+    "previousTeam": "Shooting Star Boy FC",
+    "joinDate": "2024/07/29",
+    "outDate": ""
+  },
+  {
+    "number": 3,
+    "name": "ベイル",
+    "position": "DF",
+    "psid": "garethbale0318",
+    "image": "images/player/garethbale0318.png",
+    "previousTeam": "Esprite Cluster",
+    "joinDate": "2024/02/02",
+    "outDate": ""
+  },
+  {
+    "number": 4,
+    "name": "まなやん",
+    "position": "DF",
+    "psid": "Birdie99",
+    "image": "images/player/Birdie99.png",
+    "previousTeam": "Esprite Cluster",
+    "joinDate": "2024/02/02",
+    "outDate": ""
+  },
+  {
+    "number": 6,
+    "name": "りく",
+    "position": "DF",
+    "psid": "riku6qwe",
+    "image": "images/player/riku6qwe.png",
+    "previousTeam": "Esprite Cluster",
+    "joinDate": "2024/02/16",
+    "outDate": ""
+  },
+  {
+    "number": 7,
+    "name": "ばむ",
+    "position": "MF",
+    "psid": "xox-v-rn7",
+    "image": "images/player/xox-v-rn7.png",
+    "previousTeam": "Esprite Cluster",
+    "joinDate": "2024/02/02",
+    "outDate": ""
+  },
+  {
+    "number": 8,
+    "name": "ねこぷ",
+    "position": "MF",
+    "psid": "Nekop_one",
+    "image": "images/player/Nekop_one.png",
+    "previousTeam": "Esprite Cluster",
+    "joinDate": "2024/02/05",
+    "outDate": ""
+  },
+  {
+    "number": 10,
+    "name": "らーく",
+    "position": "FW",
+    "psid": "lar9vls",
+    "image": "images/player/lar9vls.png",
+    "previousTeam": "Esprite Cluster",
+    "joinDate": "2024/02/02",
+    "outDate": ""
+  },
+  {
+    "number": 11,
+    "name": "だいき",
+    "position": "FW",
+    "psid": "B1g_Ke9",
+    "image": "images/player/B1g_Ke9.png",
+    "previousTeam": "無し",
+    "joinDate": "2024/02/17",
+    "outDate": ""
+  },
+  {
+    "number": 17,
+    "name": "ぽんぞう",
+    "position": "MF",
+    "psid": "pon-zoucity",
+    "image": "images/player/pon-zoucity.png",
+    "previousTeam": "JOKERS",
+    "joinDate": "2024/02/02",
+    "outDate": ""
+  },
+  {
+    "number": 18,
+    "name": "マシュマロ",
+    "position": "MF",
+    "psid": "mq4mq6",
+    "image": "images/player/mq4mq6.png",
+    "previousTeam": "Ra VIRDY",
+    "joinDate": "2025/10/17",
+    "outDate": ""
+  },
+  {
+    "number": 20,
+    "name": "9",
+    "position": "MF",
+    "psid": "cyberdog009",
+    "image": "images/player/cyberdog009.png",
+    "previousTeam": "Esprite Cluster",
+    "joinDate": "2024/02/02",
+    "outDate": ""
+  },
+  {
+    "number": 22,
+    "name": "とまにも",
+    "position": "DF",
+    "psid": "toma-fly22",
+    "image": "images/player/toma-fly22.png",
+    "previousTeam": "Hookar",
+    "joinDate": "2025/05/20",
+    "outDate": ""
+  },
+  {
+    "number": 23,
+    "name": "かなまる",
+    "position": "MF",
+    "psid": "KANAMARUU",
+    "image": "images/player/KANAMARUU.png",
+    "previousTeam": "Ra VIRDY",
+    "joinDate": "2024/02/13",
+    "outDate": ""
+  },
+  {
+    "number": 24,
+    "name": "ポルンガ",
+    "position": "MF",
+    "psid": "polunga-9s",
+    "image": "images/player/polunga-9s.png",
+    "previousTeam": "WOLF GANG",
+    "joinDate": "2025/06/26",
+    "outDate": ""
+  },
+  {
+    "number": 34,
+    "name": "clim",
+    "position": "MF",
+    "psid": "climelt-39",
+    "image": "images/player/climelt-39.png",
+    "previousTeam": "Ra VIRDY",
+    "joinDate": "2024/02/02",
+    "outDate": ""
+  },
+  {
+    "number": 37,
+    "name": "アサ",
+    "position": "DF",
+    "psid": "Xx-asa-xX7",
+    "image": "images/player/Xx-asa-xX7.png",
+    "previousTeam": "WOLF GANG",
+    "joinDate": "2025/05/22",
+    "outDate": ""
+  },
+  {
+    "number": 38,
+    "name": "Leaf",
+    "position": "DF",
+    "psid": "Leaf-N-A",
+    "image": "images/player/Leaf-N-A.png",
+    "previousTeam": "Ra VIRDY",
+    "joinDate": "2024/02/05",
+    "outDate": ""
+  },
+  {
+    "number": 42,
+    "name": "もときち",
+    "position": "DF",
+    "psid": "GOD_GK_motokichi",
+    "image": "images/player/GOD_GK_motokichi.png",
+    "previousTeam": "Esprite Cluster",
+    "joinDate": "2024/02/05",
+    "outDate": ""
+  },
+  {
+    "number": 47,
+    "name": "もりうち",
+    "position": "DF",
+    "psid": "tmgokdbmc17",
+    "image": "images/player/tmgokdbmc17.png",
+    "previousTeam": "WOLF GANG",
+    "joinDate": "2024/08/23",
+    "outDate": ""
+  },
+  {
+    "number": 97,
+    "name": "ロン",
+    "position": "FW",
+    "psid": "GAMBALON39",
+    "image": "images/player/GAMBALON39.png",
+    "previousTeam": "KOHARA OUT",
+    "joinDate": "2024/02/02",
+    "outDate": ""
+  },
+
+
+ {
+    "number": "-",
+    "name": "みらい",
+    "position": "退団",
+    "psid": "mirai-3-3",
+    "image": "images/player/mirai-3-3.png",
+    "previousTeam": "Esprite Cluster",
+    "joinDate": "2024/02/17",
+    "outDate": "2025/07/16"
+  },
+  {
+    "number": "-",
+    "name": "リンギオ",
+    "position": "退団",
+    "psid": "ringhio33",
+    "image": "images/player/ringhio33.png",
+    "previousTeam": "Esprite Cluster",
+    "joinDate": "2024/02/18",
+    "outDate": "2024/02/27"
+  },
+  {
+    "number": "-",
+    "name": "なうビーチ",
+    "position": "退団",
+    "psid": "TRADER_JOES99",
+    "image": "images/player/TRADER_JOES99.png",
+    "previousTeam": "無し",
+    "joinDate": "2024/02/19",
+    "outDate": "2025/09/29"
+  },
+  {
+    "number": "-",
+    "name": "まつ",
+    "position": "退団",
+    "psid": "matu615__",
+    "image": "images/player/matu615__.png",
+    "previousTeam": "KytOhara3000IN",
+    "joinDate": "2025/02/17",
+    "outDate": "2025/05/06"
+  },
+  {
+    "number": "-",
+    "name": "ゴリ",
+    "position": "退団",
+    "psid": "gori_55_",
+    "image": "images/player/gori_55_.png",
+    "previousTeam": "Fc fumée",
+    "joinDate": "2025/07/02",
+    "outDate": "2025/07/25"
+  }
+]
