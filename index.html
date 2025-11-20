@@ -55,7 +55,7 @@ fetch('data/news.json')
 
       latestSix.forEach(news => {
           const card = document.createElement('div');
-          card.className = 'w-full md:w-1/3 p-4'; // スマホ縦1列、PC横2列
+          card.className = 'w-full md:w-1/2 p-4'; // スマホ縦1列、PC横2列
           card.innerHTML = `
             <div class="bg-gray-100 p-6 rounded-lg w-full">
               <div class="aspect-[16/10] mb-4">
