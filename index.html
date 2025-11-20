@@ -12,15 +12,26 @@
   <main>
     <section class="text-gray-600 body-font">
       <div class="container max-w-full px-5 py-24 mx-auto">
-        <h1 class="sm:text-3xl text-2xl font-black title-font mb-6 text-gray-900 text-center">NEWS</h1>
 
-        <!-- ニュースカードコンテナ -->
+        <!-- 最新試合結果 -->
+         <h1 class="sm:text-3xl text-2xl font-black title-font mb-6 text-gray-900 text-center">MATCH RESULT</h1>
+        <div id="latest-match" class="max-w-[75%] mx-auto mb-12"></div>
+
+        <div class="text-center mb-20">
+            <a href="match.html" class="inline-block bg-[#72bce6] text-white px-6 py-2 rounded font-bold hover:bg-[#5aa8d1] transition-colors duration-200">
+                MORE
+            </a>
+        </div>
+
+        <!-- ニュースカード -->
+        <h1 class="sm:text-3xl text-2xl font-black title-font mb-6 text-gray-900 text-center">NEWS</h1>
         <div id="latest-news" class="flex flex-wrap justify-center max-w-[75%] mx-auto mb-8"></div>
 
         <div class="text-center mb-12">
             <a href="news.html" class="inline-block bg-[#72bce6] text-white px-6 py-2 rounded font-bold hover:bg-[#5aa8d1] transition-colors duration-200">
             MORE
             </a>
+
         </div>
       </div>
     </section>
@@ -59,21 +70,106 @@ fetch('data/news.json')
     latestSix.forEach(news => {
       const card = document.createElement('a');
       card.href = `news_detail.html?id=${news.id}`;
-      card.className =
-        'w-full md:w-1/3 p-3 block no-underline';
+      card.className = 'w-full md:w-1/3 p-3 block no-underline';
 
-        card.innerHTML = `
+      card.innerHTML = `
         <div class="bg-gray-100 p-2 rounded-lg shadow-md w-full 
-                    hover:-translate-y-1 hover:shadow-xl transition-transform duration-300">
+                    hover:-translate-y-1 hover:shadow-xl transition-transform duration-300 font-sans">
             <div class="aspect-[16/9] mb-2">
-            <img class="w-full h-full object-cover rounded" src="${news.image}" alt="${news.title}">
+              <img class="w-full h-full object-cover rounded" src="${news.image}" alt="${news.title}">
             </div>
-            <p class="tracking-widest text-gray-900 text-xs font-medium mb-1 flex justify-end">${news.date}</p>
-            <h2 class="text-lg text-gray-900 font-medium title-font mb-1">${news.title}</h2>
+            <p class="tracking-widest text-gray-600 text-xs font-medium mb-1 flex justify-end">
+              ${news.date}
+            </p>
+            <h2 class="text-lg font-bold text-gray-900 mb-1">
+              ${news.title}
+            </h2>
         </div>
-        `;
+      `;
       container.appendChild(card);
     });
   })
   .catch(err => console.error('ニュース読み込みエラー:', err));
+</script>
+
+
+<script>
+fetch('data/matches.json')
+  .then(res => res.json())
+  .then(matchList => {
+
+    matchList.sort((a, b) => new Date(b.date + " " + b.time) - new Date(a.date + " " + a.time));
+    const latestMatches = matchList.slice(0, 2);
+
+    const container = document.getElementById('latest-match');
+    container.innerHTML = `<div class="flex flex-col md:flex-row gap-6 justify-center"></div>`;
+    const wrapper = container.querySelector('div');
+
+    // 英語曜日
+    const getWeekdayEn = (dateStr) => {
+      const weekEn = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      const d = new Date(dateStr);
+      return weekEn[d.getDay()];
+    };
+
+    latestMatches.forEach(match => {
+      const isHome = match.home.team_name === "Principale";
+      const myTeam = isHome ? match.home : match.away;
+      const opponent = isHome ? match.away : match.home;
+
+      const labelColor = isHome
+        ? "bg-blue-600 text-white"
+        : "bg-red-600 text-white";
+
+      const weekdayEn = getWeekdayEn(match.date);
+      const dateFormatted = `${match.date} (${weekdayEn})`;
+
+      const card = document.createElement('a');
+      card.href = `match_detail.html?id=${match.id}`;
+      card.className = "block no-underline w-full md:w-1/2";
+
+      card.innerHTML = `
+        <div class="bg-gray-100 p-4 rounded-lg shadow-md
+                    hover:-translate-y-1 hover:shadow-xl transition transform duration-300 h-full">
+
+          <!-- 大会名 黒背景 -->
+          <p class="text-base font-bold text-white bg-black py-1 px-2 rounded mb-3 text-center">
+            ${match.tournament}｜${match.round}
+          </p>
+
+          <div class="flex items-center justify-center gap-8 mb-4">
+            <!-- 自チーム -->
+            <div class="text-center">
+              <img src="${myTeam.team_logo}" class="w-16 h-16 mx-auto mb-1">
+              <p class="text-base font-bold text-gray-900">${myTeam.team_name}</p>
+            </div>
+
+            <!-- スコア、日付、時間 -->
+            <div class="text-center">
+              <p class="text-4xl font-black">${match.score}</p>
+              <p class="text-sm text-gray-600 mt-1">${dateFormatted}</p>
+              <p class="text-sm text-gray-600">${match.time}</p>
+            </div>
+
+            <!-- 相手チーム -->
+            <div class="text-center">
+              <img src="${opponent.team_logo}" class="w-16 h-16 mx-auto mb-1">
+              <p class="text-base font-bold text-gray-900">${opponent.team_name}</p>
+            </div>
+          </div>
+
+          <!-- HOME/AWAY ラベル（カード下部中央） -->
+          <div class="text-center mt-2">
+            <span class="text-xs font-bold px-2 py-1 ${labelColor}">
+              ${match.home_away}
+            </span>
+          </div>
+
+        </div>
+      `;
+
+      wrapper.appendChild(card);
+    });
+  })
+  .catch(err => console.error('試合結果読み込みエラー:', err));
 </script>

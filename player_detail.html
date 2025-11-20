@@ -1,203 +1,163 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>選手詳細 - Principale</title>
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Chart.js 追加 -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <meta charset="UTF-8">
+  <title>選手詳細 - Principale</title>
+  <link rel="icon" href="images/logo/Principale.png" type="image/png">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
+<body class="bg-gray-50">
 
-<header>
-    <div class="title-area">
-        <img src="images/logo/principale.png" alt="Principale ロゴ" class="logo-small">
-        <h1>Principale 公式サイト</h1>
-    </div>
+  <!-- ヘッダー -->
+  <div id="header" class="pt-24"></div>
 
-    <nav>
-        <a href="index.html">ホーム</a>
-        <a href="results.html">試合結果</a>
-        <a href="players.html">選手紹介</a>
-        <a href="news.html">ニュース</a>
-    </nav>
-</header>
+  <main>
+    <section class="text-gray-600 body-font">
+      <div class="container max-w-full px-5 py-24 mx-auto">
 
-<main class="player-detail-wrapper">
-    <h2 class="page-title">選手詳細</h2>
-    <div id="player-detail"></div>
+        <h1 class="sm:text-3xl text-2xl font-black title-font mb-6 text-gray-900 text-center">
+          PLAYER DETAIL
+        </h1>
 
-    <!-- 戻るボタン -->
-    <button class="page-btn" onclick="window.history.back();">戻る</button>
-</main>
+        <!-- 選手詳細表示 -->
+        <div id="player-detail" class="max-w-[75%] mx-auto"></div>
 
-<footer>
-    <p>© 2025 Principale Official Website</p>
-</footer>
+        <!-- 戻るボタン -->
+        <div class="text-center mt-8">
+          <button onclick="history.back()" class="inline-block bg-[#72bce6] text-white px-6 py-2 rounded font-bold hover:bg-[#5aa8d1] transition-colors duration-200">
+            BACK
+          </button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <div id="footer" class="pt-4"></div>
 
 <script>
-// URLパラメータからID取得
+// ヘッダーとフッター読み込み
+fetch('header.html').then(r => r.text()).then(html => document.getElementById('header').innerHTML = html);
+fetch('footer.html').then(r => r.text()).then(html => document.getElementById('footer').innerHTML = html);
+
+// URLパラメータ取得
 const params = new URLSearchParams(window.location.search);
 const playerId = params.get('id');
 
-// 選手情報と試合結果のデータを読み込み
 Promise.all([
-    fetch('data/players.json').then(res => res.json()),
-    fetch('data/matches.json').then(res => res.json())
+  fetch('data/players.json').then(r => r.json()),
+  fetch('data/matches.json').then(r => r.json())
 ])
 .then(([players, matches]) => {
-    const player = players.find(p => p.psid === playerId);
-    const container = document.getElementById('player-detail');
+  const player = players.find(p => p.psid === playerId);
+  const container = document.getElementById('player-detail');
+  if (!player) {
+    container.innerHTML = "<p class='text-center'>選手が見つかりません。</p>";
+    return;
+  }
 
-    if (!player) {
-        container.innerHTML = "<p>選手が見つかりません。</p>";
-        return;
-    }
+  // 集計
+  let matchCount = 0, goals = 0, assists = 0;
+  let firstMatch = null, firstGoal = null, firstAssist = null;
+  let bestRating = null;
+  const positionCount = {};
+  const positionMap = {
+    'LCB':'CB','RCB':'CB','LB':'SB','RB':'SB','LWB':'SB','RWB':'SB',
+    'LDM':'CDM','RDM':'CDM','LCM':'CM','RCM':'CM','LAM':'SH','RAM':'SH',
+    'LM':'SH','RM':'SH','LW':'WG','RW':'WG','LF':'CF','RF':'CF','LS':'ST','RS':'ST'
+  };
 
-    let matchCount = 0;
-    let goals = 0;
-    let assists = 0;
+  matches.slice().reverse().forEach(match => {
+    match.home.players.concat(match.away.players).forEach(p => {
+      if (p.name === player.psid) {
+        matchCount++;
+        goals += p.goals || 0;
+        assists += p.assists || 0;
 
-    let positionCount = {};
-    let firstMatch = null;
-    let firstGoal = null;
-    let firstAssist = null;
-    let bestRating = null;
+        const pos = positionMap[p.position || player.position] || (p.position || player.position);
+        positionCount[pos] = (positionCount[pos] || 0) + 1;
 
-    const positionMap = {
-        'LCB': 'CB',
-        'RCB': 'CB',
-        'LB': 'SB',
-        'RB': 'SB',
-        'LWB': 'SB',
-        'RWB': 'SB',
-        'LDM': 'CDM',
-        'RDM': 'CDM',
-        'LCM': 'CM',
-        'RCM': 'CM',
-        'LAM': 'SH',
-        'RAM': 'SH',
-        'LM': 'SH',
-        'RM': 'SH',
-        'LW': 'WG',
-        'RW': 'WG',
-        'LF': 'CF',
-        'RF': 'CF',
-        'LS': 'ST',
-        'RS': 'ST'
-    };
-
-    // 最新データ優先でループ
-    matches.slice().reverse().forEach(match => {
-        match.home.players.concat(match.away.players).forEach(p => {
-            if (p.name === player.psid) {
-                matchCount++;
-                goals += p.goals;
-                assists += p.assists;
-
-                const pos = positionMap[p.position || player.position] || (p.position || player.position);
-                positionCount[pos] = (positionCount[pos] || 0) + 1;
-
-                if (!firstMatch) firstMatch = match;
-                if (p.goals > 0 && !firstGoal) firstGoal = match;
-                if (p.assists > 0 && !firstAssist) firstAssist = match;
-
-                if (!bestRating || p.rating > bestRating.p.rating) {
-                    bestRating = { p, match };
-                }
-            }
-        });
+        if (!firstMatch) firstMatch = match;
+        if (p.goals > 0 && !firstGoal) firstGoal = match;
+        if (p.assists > 0 && !firstAssist) firstAssist = match;
+        if (!bestRating || p.rating > bestRating.p.rating) bestRating = { p, match };
+      }
     });
+  });
 
-    function matchLabel(match) {
-        return `${match.date}（${match.tournament} ${match.round}）`;
-    }
+  function matchLabel(match) { return `${match.date}（${match.tournament} ${match.round}）`; }
+  function bestRatingValue(br) { return `${br.p.rating.toFixed(1)}（${br.p.position}）`; }
+  function bestRatingDate(br) { return `${br.match.date}（${br.match.tournament} ${br.match.round}）`; }
 
-    function bestRatingValue(br) {
-        return `${br.p.rating.toFixed(1)}（${br.p.position}）`;
-    }
-    function bestRatingDate(br) {
-        return `${br.match.date}（${br.match.tournament} ${br.match.round}）`;
-    }
-
-    // プレイヤー詳細を表示
-    container.innerHTML = `
-        <div class="player-detail-card">
-            <div class="player-left">
-                <div class="player-image">
-                    <img src="${player.image}" alt="${player.name}">
-                </div>
-                <div class="player-chart">
-                    <h3>出場ポジション比率</h3>
-                    <canvas id="positionChart"></canvas>
-                </div>
-            </div>
-
-            <div class="player-info">
-                <table>
-                    <tr><td><strong>名前</strong></td><td>${player.name}</td></tr>
-                    <tr><td><strong>ポジション</strong></td><td>${player.position}</td></tr>
-                    <tr><td><strong>背番号</strong></td><td>${player.number}</td></tr>
-                    <tr><td><strong>PSID</strong></td><td>${player.psid}</td></tr>
-                    <tr><td><strong>初出場日</strong></td><td>${firstMatch ? matchLabel(firstMatch) : "出場無し"}</td></tr>
-                    <tr><td><strong>出場数</strong></td><td>${matchCount}</td></tr>
-                    <tr><td><strong>最高評価点日</strong></td><td>${bestRating ? bestRatingDate(bestRating) : "出場無し"}</td></tr>
-                    <tr><td><strong>最高評価点</strong></td><td>${bestRating ? bestRatingValue(bestRating) : "なし"}</td></tr>
-                    <tr><td><strong>初得点日</strong></td><td>${firstGoal ? matchLabel(firstGoal) : "得点無し"}</td></tr>
-                    <tr><td><strong>得点数</strong></td><td>${goals}</td></tr>
-                    <tr><td><strong>初アシスト日</strong></td><td>${firstAssist ? matchLabel(firstAssist) : "アシスト無し"}</td></tr>
-                    <tr><td><strong>アシスト数</strong></td><td>${assists}</td></tr>
-                    <tr><td><strong>加入日</strong></td><td>${player.joinDate || "不明"}</td></tr>
-                    <tr><td><strong>前所属</strong></td><td>${player.previousTeam || "不明"}</td></tr>
-                    ${player.outDate ? `<tr><td><strong>退団日</strong></td><td>${player.outDate}</td></tr>` : ''}
-                </table>
-            </div>
+  // HTML生成
+  container.innerHTML = `
+    <div class="flex flex-col md:flex-row gap-10">
+      <!-- 左：画像 + ポジションチャート -->
+      <div class="flex flex-col items-center md:w-1/3 gap-4">
+        <img src="${player.image}" alt="${player.name}" class="w-40 h-40 rounded-full object-cover shadow">
+        <h3 class="font-semibold text-lg">出場ポジション比率</h3>
+        <div class="w-48 h-48">
+          <canvas id="positionChart"></canvas>
         </div>
-    `;
+      </div>
 
-    // 出場数多い順にソート
-    const sortedPositions = Object.entries(positionCount).sort((a, b) => b[1] - a[1]);
-    const labels = sortedPositions.map(e => e[0]);
-    const data = sortedPositions.map(e => e[1]);
+      <!-- 右：選手情報テーブル -->
+      <div class="md:w-2/3">
+        <table class="table-auto w-full border-collapse border border-gray-200 text-left text-sm">
+          <tbody>
+            <tr class="bg-gray-100"><td class="border px-3 py-1 font-bold w-32">名前</td><td class="border px-3 py-1">${player.name}</td></tr>
+            <tr><td class="border px-3 py-1 font-bold">ポジション</td><td class="border px-3 py-1">${player.position}</td></tr>
+            <tr class="bg-gray-100"><td class="border px-3 py-1 font-bold">背番号</td><td class="border px-3 py-1">${player.number}</td></tr>
+            <tr><td class="border px-3 py-1 font-bold">PSID</td><td class="border px-3 py-1">${player.psid}</td></tr>
+            <tr class="bg-gray-100"><td class="border px-3 py-1 font-bold">初出場日</td><td class="border px-3 py-1">${firstMatch ? matchLabel(firstMatch) : "出場無し"}</td></tr>
+            <tr><td class="border px-3 py-1 font-bold">出場数</td><td class="border px-3 py-1">${matchCount}</td></tr>
+            <tr class="bg-gray-100"><td class="border px-3 py-1 font-bold">最高評価点</td><td class="border px-3 py-1">${bestRating ? bestRatingValue(bestRating) : "なし"}</td></tr>
+            <tr><td class="border px-3 py-1 font-bold">最高評価点日</td><td class="border px-3 py-1">${bestRating ? bestRatingDate(bestRating) : "出場無し"}</td></tr>
+            <tr class="bg-gray-100"><td class="border px-3 py-1 font-bold">初得点日</td><td class="border px-3 py-1">${firstGoal ? matchLabel(firstGoal) : "得点無し"}</td></tr>
+            <tr><td class="border px-3 py-1 font-bold">得点数</td><td class="border px-3 py-1">${goals}</td></tr>
+            <tr class="bg-gray-100"><td class="border px-3 py-1 font-bold">初アシスト日</td><td class="border px-3 py-1">${firstAssist ? matchLabel(firstAssist) : "アシスト無し"}</td></tr>
+            <tr><td class="border px-3 py-1 font-bold">アシスト数</td><td class="border px-3 py-1">${assists}</td></tr>
+            <tr class="bg-gray-100"><td class="border px-3 py-1 font-bold">加入日</td><td class="border px-3 py-1">${player.joinDate || "不明"}</td></tr>
+            <tr><td class="border px-3 py-1 font-bold">前所属</td><td class="border px-3 py-1">${player.previousTeam || "不明"}</td></tr>
+            ${player.outDate ? `<tr class="bg-gray-100"><td class="border px-3 py-1 font-bold">退団日</td><td class="border px-3 py-1">${player.outDate}</td></tr>` : ''}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  `;
 
-    const ctx = document.getElementById('positionChart');
-    new Chart(ctx, {
-        type: 'pie',
-        data: {
-            labels: labels,
-            datasets: [{
-                data: data,
-                backgroundColor: [
-                    '#ff6384', '#36a2eb', '#ffcd56', '#4bc0c0', '#9966ff',
-                    '#ff9f40', '#c9cbcf'
-                ]
-            }]
-        },
-        options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                    position: 'bottom'
-                },
-                datalabels: {
-                    color: '#fff',
-                    formatter: (value, ctx) => value,
-                    font: { weight: 'bold', size: 14 }
-                }
-            }
-        },
-        plugins: [ChartDataLabels]
-    });
+  // Chart.js 初期化
+  const sortedPositions = Object.entries(positionCount).sort((a,b)=>b[1]-a[1]);
+  const labels = sortedPositions.map(e=>e[0]);
+  const data = sortedPositions.map(e=>e[1]);
+
+  new Chart(document.getElementById('positionChart'), {
+    type:'pie',
+    data:{
+      labels:labels,
+      datasets:[{
+        data:data,
+        backgroundColor:['#FF6384','#36A2EB','#FFCE56','#4BC0C0','#9966FF','#FF9F40','#C9CBCF']
+      }]
+    },
+    options:{
+      responsive:true,
+      plugins:{
+        legend:{position:'bottom', labels:{boxWidth:12, padding:10}},
+        datalabels:{color:'#fff', formatter:v=>v, font:{weight:'bold', size:12}}
+      }
+    },
+    plugins:[ChartDataLabels]
+  });
 
 })
 .catch(err => {
-    console.error('選手情報または試合結果の読み込みエラー:', err);
-    document.getElementById('player-detail').innerHTML = "<p>選手情報または試合結果の読み込みに失敗しました。</p>";
+  console.error('選手情報読み込みエラー:', err);
+  document.getElementById('player-detail').innerHTML = "<p class='text-center'>選手情報読み込みに失敗しました。</p>";
 });
 </script>
-
 </body>
 </html>
-
-

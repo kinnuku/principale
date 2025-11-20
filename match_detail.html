@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Match Detail - Principale</title>
+  <link rel="icon" href="images/logo/Principale.png" type="image/png">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    .bar-container {
+      display: flex;
+      height: 16px;
+      background-color: #e5e7eb;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 2px;
+    }
+    .rating {
+      display: inline-block;
+      padding: 1px 4px;
+      border-radius: 4px;
+      color: white;
+      font-size: 12px;
+      text-align: center;
+    }
+    .bg-red-600 { background-color: #f3274b; }
+    .bg-orange-500 { background-color: #fc7f1c; }
+    .bg-yellow-500 { background-color: #e6ad01; }
+    .bg-green-400 { background-color: #32cd31; }
+    .bg-green-700 { background-color: #10ab15; }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+<div id="header" class="pt-24"></div>
+
+<main class="container max-w-4xl mx-auto px-5 py-10">
+  <h1 id="tournament-round" class="text-2xl font-bold text-center mb-6"></h1>
+  <div id="match-card" class="bg-gray-100 rounded-lg shadow-lg p-6 mb-6"></div>
+  <div id="match-stats" class="bg-gray-100 rounded-lg shadow-lg p-6 mb-6"></div>
+  <div id="player-stats" class="bg-gray-100 rounded-lg shadow-lg p-6 mb-6"></div>
+</main>
+
+<div id="footer" class="pt-4"></div>
+
+<script>
+fetch('header.html').then(r => r.text()).then(html => document.getElementById('header').innerHTML = html);
+fetch('footer.html').then(r => r.text()).then(html => document.getElementById('footer').innerHTML = html);
+
+// JSON読み込み
+Promise.all([
+  fetch('data/matches.json').then(r => r.json()),
+  fetch('data/teams.json').then(r => r.json())
+]).then(([matches, teams]) => {
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const matchId = urlParams.get('id');
+  const match = matches.find(m => m.id === matchId);
+  if(!match) return;
+
+  // チームカラー取得
+  const homeColor = teams.find(t => t.team_name === match.home.team_name)?.color || '#3b82f6';
+  const awayColor = teams.find(t => t.team_name === match.away.team_name)?.color || '#ef4444';
+
+  document.getElementById('tournament-round').textContent = `${match.tournament}｜${match.round}`;
+
+  function countGoals(scorers){
+    let firstHalf=0, secondHalf=0, extraFirst=0, extraSecond=0;
+    scorers.forEach(s=>{
+      const mt = s.match(/\((\d+(?:\+\d+)?)'/);
+      if(mt){
+        let t = mt[1].includes('+') ? mt[1].split('+')[0] : mt[1];
+        const min = parseInt(t,10);
+        if(min <=45) firstHalf++;
+        else if(min<=90) secondHalf++;
+        else if(min<=105) extraFirst++;
+        else if(min<=120) extraSecond++;
+      }
+    });
+    return {firstHalf, secondHalf, extraFirst, extraSecond};
+  }
+
+  const homeHalf = countGoals(match.home.scorers);
+  const awayHalf = countGoals(match.away.scorers);
+
+  let extraFirstHome = homeHalf.extraFirst;
+  let extraSecondHome = homeHalf.extraSecond;
+  let extraFirstAway = awayHalf.extraFirst;
+  let extraSecondAway = awayHalf.extraSecond;
+  if(match.pk_score){
+    extraFirstHome = extraSecondHome = extraFirstAway = extraSecondAway = 0;
+  }
+
+  // マッチカード
+  const card = document.getElementById('match-card');
+  card.innerHTML = `
+  <div class="flex flex-col gap-6">
+    <div class="flex flex-col md:flex-row justify-center items-center gap-20">
+      <div class="flex flex-col items-center">
+        <img src="${match.home.team_logo}" class="w-24 h-24 mb-4">
+        <p class="font-bold text-center">${match.home.team_name}</p>
+      </div>
+      <div class="text-5xl font-black text-center mx-12">
+        ${match.score.replace('-', ' - ')}
+        <div class="text-sm font-bold mt-4">${homeHalf.firstHalf} 前半 ${awayHalf.firstHalf}</div>
+        <div class="text-sm font-bold">${homeHalf.secondHalf} 後半 ${awayHalf.secondHalf}</div>
+        ${
+          (extraFirstHome + extraSecondHome + extraFirstAway + extraSecondAway > 0 || match.pk_score)
+          ? `<div class="text-sm font-bold">${extraFirstHome} 延前 ${extraFirstAway}</div>
+             <div class="text-sm font-bold">${extraSecondHome} 延後 ${extraSecondAway}</div>`
+          : ''
+        }
+        ${match.pk_score ? `<div class="text-sm font-bold">${match.pk_score.replace('-', ' ＰＫ ')}</div>` : ''}
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="${match.away.team_logo}" class="w-24 h-24 mb-4">
+        <p class="font-bold text-center">${match.away.team_name}</p>
+      </div>
+    </div>
+    <div class="flex justify-center gap-56 mt-4">
+      <div id="home-scorers" class="text-left"></div>
+      <div id="away-scorers" class="text-right"></div>
+    </div>
+  </div>
+  `;
+
+  match.home.scorers.forEach(s=>{
+    const p = document.createElement('p');
+    p.textContent = s;
+    document.getElementById('home-scorers').appendChild(p);
+  });
+  match.away.scorers.forEach(s=>{
+    const p = document.createElement('p');
+    p.textContent = s;
+    document.getElementById('away-scorers').appendChild(p);
+  });
+
+  const statsCard = document.getElementById('match-stats');
+
+  // チームスタッツ
+  const stats = [
+    {label:'ボール支配率', home:match.home.team_stats.possession, away:match.away.team_stats.possession},
+    {label:'シュート', home:match.home.team_stats.shots, away:match.away.team_stats.shots},
+    {label:'枠内シュート', home:match.home.team_stats.shots_on_target, away:match.away.team_stats.shots_on_target},
+    {label:'ドリブル成功率', home:match.home.team_stats.successful_dribbles, away:match.away.team_stats.successful_dribbles},
+    {label:'パス成功率', home:match.home.team_stats.successful_passes, away:match.away.team_stats.successful_passes},
+    {label:'パス成功数', home:match.home.team_stats.pass_success, away:match.away.team_stats.pass_success},
+    {label:'セーブ', home:match.home.team_stats.saves, away:match.away.team_stats.saves},
+  ];
+
+  statsCard.innerHTML = `
+  <div class="flex flex-col gap-4">
+    <h2 class="text-lg font-bold text-center mb-4">試合スタッツ</h2>
+    <div class="flex justify-between items-center mb-4">
+      <div class="flex items-center gap-2">
+        <img src="${match.home.team_logo}" class="w-6 h-6">
+        <span class="font-bold">${match.home.team_name}</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <img src="${match.away.team_logo}" class="w-6 h-6">
+        <span class="font-bold">${match.away.team_name}</span>
+      </div>
+    </div>
+    ${stats.map(s => {
+      const max = Math.max(s.home, s.away);
+      const homeWidth = max ? (s.home/max*100) : 0;
+      const awayWidth = max ? (s.away/max*100) : 0;
+      return `
+        <div>
+          <div class="flex justify-between mb-1 text-sm font-bold items-center">
+            <span>${s.home}</span>
+            <span class="text-center flex-1">${s.label}</span>
+            <span>${s.away}</span>
+          </div>
+          <div class="bar-container">
+            <div style="width:${homeWidth}%; background-color:${homeColor};"></div>
+            <div style="width:${awayWidth}%; background-color:${awayColor};"></div>
+          </div>
+        </div>
+      `;
+    }).join('')}
+  </div>
+  `;
+
+
+  // 個人スタッツ
+  const playerCard = document.getElementById('player-stats');
+  const homePlayers = match.home.players;
+  const awayPlayers = match.away.players;
+
+  function getRatingStyle(r){
+    if(r <= 4.9) return 'bg-red-600';
+    if(r <= 5.9) return 'bg-orange-500';
+    if(r <= 6.9) return 'bg-yellow-500';
+    if(r <= 8.4) return 'bg-green-400';
+    return 'bg-green-700';
+  }
+
+  playerCard.innerHTML = `
+  <h2 class="text-lg font-bold text-center mb-4">選手スタッツ</h2>
+  <div class="flex gap-4">
+    <div class="flex-1">
+      <div class="flex items-center justify-center mb-2 gap-2">
+        <img src="${match.home.team_logo}" class="w-6 h-6">
+        <span class="font-bold">${match.home.team_name}</span>
+      </div>
+      ${homePlayers.map(p => {
+        const rating = parseFloat(p.rating).toFixed(1);
+        return `
+        <div class="flex justify-between items-center border-b py-1 px-2 text-center" style="width:100%; table-layout:fixed;">
+          <div class="w-1/5">${p.position}</div>
+          <div class="w-1/5"><span class="rating ${getRatingStyle(rating)}">${rating}</span></div>
+          <div class="w-2/5">${p.name}</div>
+          <div class="w-1/5">${p.height}/${p.weight}</div>
+        </div>`;
+      }).join('')}
+    </div>
+    <div class="flex-1">
+      <div class="flex items-center justify-center mb-2 gap-2">
+        <img src="${match.away.team_logo}" class="w-6 h-6">
+        <span class="font-bold">${match.away.team_name}</span>
+      </div>
+      ${awayPlayers.map(p => {
+        const rating = parseFloat(p.rating).toFixed(1);
+        return `
+        <div class="flex justify-between items-center border-b py-1 px-2 text-center" style="width:100%; table-layout:fixed;">
+          <div class="w-1/5">${p.position}</div>
+          <div class="w-1/5"><span class="rating ${getRatingStyle(rating)}">${rating}</span></div>
+          <div class="w-2/5">${p.name}</div>
+          <div class="w-1/5">${p.height}/${p.weight}</div>
+        </div>`;
+      }).join('')}
+    </div>
+  </div>
+`;
+});
+</script>
+</body>
+</html>

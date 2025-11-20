@@ -3,7 +3,7 @@
     "id": "match_id=122",
     "date": "2025-11-14",
     "time": "23:30",
-    "home_away": "HOME",
+    "home_away": "AWAY",
     "tournament": "RAL 15th LIGA",
     "round": "6節",
     "score": "1-1",
@@ -245,7 +245,7 @@
     "date": "2025/11/14",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL15th LIGA",
+    "tournament": "RAL 15th LIGA",
     "round": "5節",
     "score": "2-2",
     "home": {
@@ -481,7 +481,7 @@
     "date": "2025/11/07",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL15th LIGA",
+    "tournament": "RAL 15th LIGA",
     "round": "4節",
     "score": "2-2",
     "home": {
@@ -726,7 +726,7 @@
     "date": "2025/11/07",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL15th LIGA",
+    "tournament": "RAL 15th LIGA",
     "round": "3節",
     "score": "1-0",
     "home": {
@@ -967,7 +967,7 @@
     "date": "2025/10/31",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL15th LIGA",
+    "tournament": "RAL 15th LIGA",
     "round": "2節",
     "score": "1-0",
     "home": {
@@ -1208,7 +1208,7 @@
     "date": "2025/10/31",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL15th LIGA",
+    "tournament": "RAL 15th LIGA",
     "round": "1節",
     "score": "3-0",
     "home": {
@@ -3800,7 +3800,7 @@
     "date": "2025/07/25",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL14th LIGA",
+    "tournament": "RAL 14th LIGA",
     "round": "22節",
     "score": "4-0",
     "home": {
@@ -4035,7 +4035,7 @@
     "date": "2025/07/25",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL14th LIGA",
+    "tournament": "RAL 14th LIGA",
     "round": "21節",
     "score": "4-1",
     "home": {
@@ -4263,7 +4263,7 @@
     "date": "2025/07/18",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL14th LIGA",
+    "tournament": "RAL 14th LIGA",
     "round": "20節",
     "score": "1-0",
     "home": {
@@ -4495,7 +4495,7 @@
     "date": "2025/07/18",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL14th LIGA",
+    "tournament": "RAL 14th LIGA",
     "round": "19節",
     "score": "2-3",
     "home": {
@@ -4741,7 +4741,7 @@
     "date": "2025/07/11",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL14th LIGA",
+    "tournament": "RAL 14th LIGA",
     "round": "18節",
     "score": "1-2",
     "home": {
@@ -4985,7 +4985,7 @@
     "date": "2025/07/11",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL14th LIGA",
+    "tournament": "RAL 14th LIGA",
     "round": "17節",
     "score": "3-0",
     "home": {
@@ -5219,7 +5219,7 @@
     "date": "2025/07/04",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL14th LIGA",
+    "tournament": "RAL 14th LIGA",
     "round": "16節",
     "score": "2-1",
     "home": {
@@ -5463,7 +5463,7 @@
     "date": "2025/07/04",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL14th LIGA",
+    "tournament": "RAL 14th LIGA",
     "round": "15節",
     "score": "2-1",
     "home": {
@@ -5707,7 +5707,7 @@
     "date": "2025/06/27",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL14th LIGA",
+    "tournament": "RAL 14th LIGA",
     "round": "12節",
     "score": "1-0",
     "home": {
@@ -5948,7 +5948,7 @@
     "date": "2025/06/27",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL14th LIGA",
+    "tournament": "RAL 14th LIGA",
     "round": "14節",
     "score": "1-0",
     "home": {
@@ -6189,7 +6189,7 @@
     "date": "2025/06/27",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL14th LIGA",
+    "tournament": "RAL 14th LIGA",
     "round": "13節",
     "score": "1-0",
     "home": {
@@ -6421,7 +6421,7 @@
     "date": "2025/06/20",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL14th LIGA",
+    "tournament": "RAL 14th LIGA",
     "round": "11節",
     "score": "3-2",
     "home": {
@@ -6667,7 +6667,7 @@
     "date": "2025/06/20",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL14th LIGA",
+    "tournament": "RAL 14th LIGA",
     "round": "10節",
     "score": "1-0",
     "home": {
@@ -6890,7 +6890,7 @@
     "date": "2025/06/13",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL14th LIGA",
+    "tournament": "RAL 14th LIGA",
     "round": "8節",
     "score": "1-0",
     "home": {
@@ -7131,7 +7131,7 @@
     "date": "2025/06/13",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL14th LIGA",
+    "tournament": "RAL 14th LIGA",
     "round": "9節",
     "score": "1-1",
     "home": {
@@ -7374,7 +7374,7 @@
     "date": "2025/06/13",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL14th LIGA",
+    "tournament": "RAL 14th LIGA",
     "round": "7節",
     "score": "1-2",
     "home": {
@@ -7618,7 +7618,7 @@
     "date": "2025/06/06",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL14th LIGA",
+    "tournament": "RAL 14th LIGA",
     "round": "6節",
     "score": "1-1",
     "home": {
@@ -7861,7 +7861,7 @@
     "date": "2025/06/06",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL14th LIGA",
+    "tournament": "RAL 14th LIGA",
     "round": "5節",
     "score": "2-0",
     "home": {
@@ -8076,7 +8076,7 @@
     "date": "2025/05/30",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL14th LIGA",
+    "tournament": "RAL 14th LIGA",
     "round": "3節",
     "score": "0-1",
     "home": {
@@ -8317,7 +8317,7 @@
     "date": "2025/05/30",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL14th LIGA",
+    "tournament": "RAL 14th LIGA",
     "round": "4節",
     "score": "3-0",
     "home": {
@@ -8542,7 +8542,7 @@
     "date": "2025/05/23",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL14th LIGA",
+    "tournament": "RAL 14th LIGA",
     "round": "1節",
     "score": "2-0",
     "home": {
@@ -8775,7 +8775,7 @@
     "date": "2025/05/23",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL14th LIGA",
+    "tournament": "RAL 14th LIGA",
     "round": "2節",
     "score": "1-0",
     "home": {
@@ -12375,7 +12375,7 @@
     "date": "2025/01/24",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL13th LIGA",
+    "tournament": "RAL 13th LIGA",
     "round": "22節",
     "score": "1-2",
     "home": {
@@ -12619,7 +12619,7 @@
     "date": "2025/01/24",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL13th LIGA",
+    "tournament": "RAL 13th LIGA",
     "round": "21節",
     "score": "3-0",
     "home": {
@@ -12862,7 +12862,7 @@
     "date": "2025/01/17",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL13th LIGA",
+    "tournament": "RAL 13th LIGA",
     "round": "20節",
     "score": "1-1",
     "home": {
@@ -13105,7 +13105,7 @@
     "date": "2025/01/17",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL13th LIGA",
+    "tournament": "RAL 13th LIGA",
     "round": "19節",
     "score": "3-0",
     "home": {
@@ -13348,7 +13348,7 @@
     "date": "2024/12/20",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL13th LIGA",
+    "tournament": "RAL 13th LIGA",
     "round": "16節",
     "score": "2-0",
     "home": {
@@ -13581,7 +13581,7 @@
     "date": "2024/12/20",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL13th LIGA",
+    "tournament": "RAL 13th LIGA",
     "round": "17節",
     "score": "1-1",
     "home": {
@@ -13815,7 +13815,7 @@
     "date": "2024/12/20",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL13th LIGA",
+    "tournament": "RAL 13th LIGA",
     "round": "18節",
     "score": "3-0",
     "home": {
@@ -14049,7 +14049,7 @@
     "date": "2024/12/13",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL13th LIGA",
+    "tournament": "RAL 13th LIGA",
     "round": "14節",
     "score": "0-1",
     "home": {
@@ -14281,7 +14281,7 @@
     "date": "2024/12/13",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL13th LIGA",
+    "tournament": "RAL 13th LIGA",
     "round": "15節",
     "score": "3-0",
     "home": {
@@ -14515,7 +14515,7 @@
     "date": "2024/12/06",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL13th LIGA",
+    "tournament": "RAL 13th LIGA",
     "round": "13節",
     "score": "1-0",
     "home": {
@@ -14747,7 +14747,7 @@
     "date": "2024/12/06",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL13th LIGA",
+    "tournament": "RAL 13th LIGA",
     "round": "12節",
     "score": "3-0",
     "home": {
@@ -14981,7 +14981,7 @@
     "date": "2024/12/06",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL13th LIGA",
+    "tournament": "RAL 13th LIGA",
     "round": "11節",
     "score": "2-1",
     "home": {
@@ -15207,7 +15207,7 @@
     "date": "2024/11/29",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL13th LIGA",
+    "tournament": "RAL 13th LIGA",
     "round": "10節",
     "score": "5-0",
     "home": {
@@ -15452,7 +15452,7 @@
     "date": "2024/11/29",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL13th LIGA",
+    "tournament": "RAL 13th LIGA",
     "round": "9節",
     "score": "1-0",
     "home": {
@@ -15675,7 +15675,7 @@
     "date": "2024/11/22",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL13th LIGA",
+    "tournament": "RAL 13th LIGA",
     "round": "7節",
     "score": "2-1",
     "home": {
@@ -15919,7 +15919,7 @@
     "date": "2024/11/22",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL13th LIGA",
+    "tournament": "RAL 13th LIGA",
     "round": "8節",
     "score": "0-0",
     "home": {
@@ -16158,7 +16158,7 @@
     "date": "2024/11/22",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL13th LIGA",
+    "tournament": "RAL 13th LIGA",
     "round": "6節",
     "score": "3-0",
     "home": {
@@ -16392,7 +16392,7 @@
     "date": "2024/11/15",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL13th LIGA",
+    "tournament": "RAL 13th LIGA",
     "round": "5節",
     "score": "3-0",
     "home": {
@@ -16635,7 +16635,7 @@
     "date": "2024/11/15",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL13th LIGA",
+    "tournament": "RAL 13th LIGA",
     "round": "4節",
     "score": "0-0",
     "home": {
@@ -16874,7 +16874,7 @@
     "date": "2024/11/08",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL13th LIGA",
+    "tournament": "RAL 13th LIGA",
     "round": "3節",
     "score": "0-1",
     "home": {
@@ -17115,7 +17115,7 @@
     "date": "2024/11/08",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL13th LIGA",
+    "tournament": "RAL 13th LIGA",
     "round": "2節",
     "score": "1-1",
     "home": {
@@ -17358,7 +17358,7 @@
     "date": "2024/11/08",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL13th LIGA",
+    "tournament": "RAL 13th LIGA",
     "round": "1節",
     "score": "2-0",
     "home": {
@@ -20705,7 +20705,7 @@
     "date": "2024/08/02",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL12th LIGA",
+    "tournament": "RAL 12th LIGA",
     "round": "22節",
     "score": "3-1",
     "home": {
@@ -20950,7 +20950,7 @@
     "date": "2024/08/02",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL12th LIGA",
+    "tournament": "RAL 12th LIGA",
     "round": "21節",
     "score": "0-1",
     "home": {
@@ -21191,7 +21191,7 @@
     "date": "2024/07/26",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL12th LIGA",
+    "tournament": "RAL 12th LIGA",
     "round": "19節",
     "score": "1-0",
     "home": {
@@ -21432,7 +21432,7 @@
     "date": "2024/07/26",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL12th LIGA",
+    "tournament": "RAL 12th LIGA",
     "round": "20節",
     "score": "2-0",
     "home": {
@@ -21674,7 +21674,7 @@
     "date": "2024/07/19",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL12th LIGA",
+    "tournament": "RAL 12th LIGA",
     "round": "18節",
     "score": "1-0",
     "home": {
@@ -21915,7 +21915,7 @@
     "date": "2024/07/19",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL12th LIGA",
+    "tournament": "RAL 12th LIGA",
     "round": "17節",
     "score": "2-1",
     "home": {
@@ -22159,7 +22159,7 @@
     "date": "2024/07/19",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL12th LIGA",
+    "tournament": "RAL 12th LIGA",
     "round": "16節",
     "score": "1-2",
     "home": {
@@ -22403,7 +22403,7 @@
     "date": "2024/07/12",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL12th LIGA",
+    "tournament": "RAL 12th LIGA",
     "round": "14節",
     "score": "2-2",
     "home": {
@@ -22639,7 +22639,7 @@
     "date": "2024/07/12",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL12th LIGA",
+    "tournament": "RAL 12th LIGA",
     "round": "15節",
     "score": "2-0",
     "home": {
@@ -22872,7 +22872,7 @@
     "date": "2024/07/05",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL12th LIGA",
+    "tournament": "RAL 12th LIGA",
     "round": "12節",
     "score": "3-0",
     "home": {
@@ -23115,7 +23115,7 @@
     "date": "2024/07/05",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL12th LIGA",
+    "tournament": "RAL 12th LIGA",
     "round": "13節",
     "score": "2-1",
     "home": {
@@ -23359,7 +23359,7 @@
     "date": "2024/06/28",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL12th LIGA",
+    "tournament": "RAL 12th LIGA",
     "round": "11節",
     "score": "2-0",
     "home": {
@@ -23592,7 +23592,7 @@
     "date": "2024/06/28",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL12th LIGA",
+    "tournament": "RAL 12th LIGA",
     "round": "10節",
     "score": "1-0",
     "home": {
@@ -23833,7 +23833,7 @@
     "date": "2024/06/21",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL12th LIGA",
+    "tournament": "RAL 12th LIGA",
     "round": "9節",
     "score": "2-0",
     "home": {
@@ -24075,7 +24075,7 @@
     "date": "2024/06/21",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL12th LIGA",
+    "tournament": "RAL 12th LIGA",
     "round": "8節",
     "score": "1-1",
     "home": {
@@ -24318,7 +24318,7 @@
     "date": "2024/06/21",
     "time": "",
     "home_away": "AWAY",
-    "tournament": "RAL12th LIGA",
+    "tournament": "RAL 12th LIGA",
     "round": "7節",
     "score": "1-1",
     "home": {
@@ -24561,7 +24561,7 @@
     "date": "2024/06/14",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL12th LIGA",
+    "tournament": "RAL 12th LIGA",
     "round": "6節",
     "score": "1-0",
     "home": {
@@ -24802,7 +24802,7 @@
     "date": "2024/06/14",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL12th LIGA",
+    "tournament": "RAL 12th LIGA",
     "round": "5節",
     "score": "2-1",
     "home": {
@@ -25046,7 +25046,7 @@
     "date": "2024/06/07",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL12th LIGA",
+    "tournament": "RAL 12th LIGA",
     "round": "4節",
     "score": "4-1",
     "home": {
@@ -25292,7 +25292,7 @@
     "date": "2024/06/07",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL12th LIGA",
+    "tournament": "RAL 12th LIGA",
     "round": "3節",
     "score": "2-0",
     "home": {
@@ -25525,7 +25525,7 @@
     "date": "2024/05/31",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL12th LIGA",
+    "tournament": "RAL 12th LIGA",
     "round": "1節",
     "score": "4-0",
     "home": {
@@ -25769,7 +25769,7 @@
     "date": "2024/05/31",
     "time": "",
     "home_away": "HOME",
-    "tournament": "RAL12th LIGA",
+    "tournament": "RAL 12th LIGA",
     "round": "2節",
     "score": "3-2",
     "home": {
@@ -28897,6 +28897,7 @@
     "tournament": "COPA RAL24 Spring",
     "round": "GroupB 1節",
     "score": "8-1",
+    "pk_score": "1-3",
     
     "home": {
       "team_name": "Principale",
