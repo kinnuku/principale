@@ -1,44 +1,158 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>Principale 公式サイト</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Principale | ニュース一覧</title>
+  <link rel="icon" href="images/logo/Principale.png" type="image/png">
 </head>
 <body>
+  <div id="header" class="pt-24"></div>
 
-<header>
-    <div class="title-area">
-        <img src="images/logo/principale.png" alt="Principale ロゴ" class="logo-small">
-        <h1>Principale 公式サイト</h1>
-    </div>
+    <main class="container mx-auto px-5 py-24 max-w-3xl">
+    <h1 class="text-3xl font-bold text-center mb-6">NEWS</h1>
 
-    <nav class="main-nav">
-        <a href="index.html">ホーム</a>
-        <a href="results.html">試合結果</a>
-        <a href="players.html">選手紹介</a>
-        <a href="news.html">ニュース</a>
-    </nav>
-</header>
+    <!-- 件数表示 -->
+    <p id="news-count" class="text-gray-600 mb-4 text-center"></p>
 
-<main>
-    <section class="news-section">
-        <h2>ニュース一覧</h2>
-        <div class="news-cards list-news" id="news-list">
-            <!-- JSでニュースカード作成 -->
-        </div>
-    </section>
+    <!-- 上ページャー -->
+    <div id="pager-top" class="flex justify-center gap-2 mb-8"></div>
 
-    <section id="news" class="news-section" style="display:none;">
-        <button id="back-button" class="back-btn">← 一覧に戻る</button>
-        <div id="detail-content"></div>
-    </section>
-</main>
+    <!-- ニュースリスト -->
+    <div id="news-list" class="flex flex-col gap-6 mb-6"></div>
 
-<footer>
-    <p>© 2025 Principale Official Website</p>
-</footer>
+    <!-- 下ページャー -->
+    <div id="pager-bottom" class="flex justify-center gap-2 mb-12"></div>
+    </main>
 
-<script src="js/news.js"></script>
+  <div id="footer" class="pt-4"></div>
 </body>
 </html>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- headerの呼び出し -->
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(html => document.getElementById('header').innerHTML = html);
+  </script>
+
+  <!-- footerの呼び出し -->
+  <script>
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(html => document.getElementById('footer').innerHTML = html);
+  </script>
+
+  <!-- ニュース一覧表示 -->
+  <script>
+    const ITEMS_PER_PAGE = 10;
+    let currentPage = 1;
+    let newsListGlobal = [];
+
+    function renderPage(page) {
+      const start = (page - 1) * ITEMS_PER_PAGE;
+      const end = start + ITEMS_PER_PAGE;
+      const newsPage = newsListGlobal.slice(start, end);
+
+      // 件数表示
+      const total = newsListGlobal.length;
+      document.getElementById('news-count').textContent =
+        `全${total}件中 ${start+1}～${Math.min(end, total)}件を表示`;
+
+      // ニュースリスト
+      const container = document.getElementById('news-list');
+      container.innerHTML = '';
+      newsPage.forEach(news => {
+        const card = document.createElement('a');
+        card.href = `news_detail.html?id=${news.id}`;
+        card.className = 'block no-underline';
+
+        card.innerHTML = `
+          <div class="bg-gray-100 p-4 rounded-lg shadow-md w-full hover:-translate-y-1 hover:shadow-xl transition-transform duration-300">
+            <div class="aspect-[16/9] mb-2">
+              <img class="w-full h-full object-cover rounded" src="${news.image}" alt="${news.title}">
+            </div>
+            <p class="tracking-widest text-gray-900 text-xs font-medium mb-1 flex justify-end">${news.date}</p>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-1">${news.title}</h2>
+            <p class="text-gray-700 text-sm">${news.summary || ''}</p>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+
+      renderPager(page);
+    }
+
+    function renderPager(current) {
+    const totalPages = Math.ceil(newsListGlobal.length / ITEMS_PER_PAGE);
+    const MAX_BUTTONS = 10;
+    let half = Math.floor(MAX_BUTTONS / 2);
+    let startPage = current - half + 1;
+    let endPage = startPage + MAX_BUTTONS - 1;
+
+    if (startPage < 1) {
+        startPage = 1;
+        endPage = Math.min(MAX_BUTTONS, totalPages);
+    }
+    if (endPage > totalPages) {
+        endPage = totalPages;
+        startPage = Math.max(1, endPage - MAX_BUTTONS + 1);
+    }
+
+    // 描画用関数
+    function drawPager(container) {
+        container.innerHTML = '';
+
+        // 「前へ」
+        if (current > 1) {
+        const prevBtn = document.createElement('button');
+        prevBtn.textContent = '前へ';
+        prevBtn.className = 'px-3 py-1 rounded border bg-white text-gray-700';
+        prevBtn.addEventListener('click', () => {
+            currentPage = current - 1;
+            renderPage(currentPage);
+        });
+        container.appendChild(prevBtn);
+        }
+
+        // ページ番号
+        for (let i = startPage; i <= endPage; i++) {
+        const btn = document.createElement('button');
+        btn.textContent = i;
+        btn.className = `px-3 py-1 rounded border ${i === current ? 'bg-blue-500 text-white' : 'bg-white text-gray-700'}`;
+        btn.addEventListener('click', () => {
+            currentPage = i;
+            renderPage(currentPage);
+        });
+        container.appendChild(btn);
+        }
+
+        // 「次へ」
+        if (current < totalPages) {
+        const nextBtn = document.createElement('button');
+        nextBtn.textContent = '次へ';
+        nextBtn.className = 'px-3 py-1 rounded border bg-white text-gray-700';
+        nextBtn.addEventListener('click', () => {
+            currentPage = current + 1;
+            renderPage(currentPage);
+        });
+        container.appendChild(nextBtn);
+        }
+    }
+
+    // 上下両方に描画
+    drawPager(document.getElementById('pager-top'));
+    drawPager(document.getElementById('pager-bottom'));
+    }
+
+    // データ読み込み
+    fetch('data/news.json')
+      .then(res => res.json())
+      .then(newsList => {
+        newsListGlobal = newsList.sort((a,b) => new Date(b.date) - new Date(a.date));
+        renderPage(currentPage);
+      })
+      .catch(err => console.error('ニュース一覧読み込みエラー:', err));
+  </script>

@@ -1,43 +1,88 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
-    <title>ニュース詳細 - Principale</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Principale | ニュース詳細</title>
+    <link rel="icon" href="images/logo/Principale.png" type="image/png">
 </head>
 
 <body>
+  <div id="header" class="pt-24"></div>
 
-<header>
-    <div class="title-area">
-        <img src="images/logo/principale.png" alt="Principale ロゴ" class="logo-small">
-        <h1>Principale 公式サイト</h1>
+  <main class="container mx-auto px-5 py-24 max-w-3xl">
+    <div id="news-detail" class="bg-gray-100 p-6 rounded-lg shadow-md">
+      <p id="news-date" class="text-gray-500 text-sm mb-2 text-right"></p>
+      <h1 id="news-title" class="text-2xl font-bold mb-4"></h1>
+      <div id="news-image" class="mb-6"></div>
+      <div id="news-summary" class="text-black text-base mb-2"></div>
+
+      <div id="news-content" class="space-y-6 text-gray-700"></div>
+    </div>
+    <div class="text-center mt-12 mb-12"> <!-- 上の余白を広げる -->
+        <a href="news.html" class="inline-block bg-[#72bce6] text-white px-6 py-2 rounded font-bold hover:bg-[#5aa8d1] transition-colors duration-200">
+            NEWS一覧
+        </a>
     </div>
 
-    <nav class="main-nav">
-        <a href="index.html">ホーム</a>
-        <a href="results.html">試合結果</a>
-        <a href="players.html">選手紹介</a>
-        <a href="news.html">ニュース</a>
-    </nav>
-</header>
 
-<main class="news-detail-wrapper">
-    <div id="news-detail">
-        <h2 id="news-title"></h2>
-        <p class="date" id="news-date"></p>
-        <img id="news-image" src="" alt="" class="news-image">
-        <p id="news-content"></p>
-        <button id="back-button">一覧に戻る</button>
-    </div>
-</main>
+  </main>
 
-
-<footer>
-    <p>© 2025 Principale Official Website</p>
-</footer>
-
-<script src="js/news_detail.js"></script>
+  <div id="footer" class="pt-4"></div>
 </body>
-</html>
+
+<!-- Tailwind CSS v4の呼び出し -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<!-- headerの呼び出し -->
+<script>
+  fetch('header.html')
+    .then(res => res.text())
+    .then(html => document.getElementById('header').innerHTML = html);
+</script>
+
+<!-- footerの呼び出し -->
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(html => document.getElementById('footer').innerHTML = html);
+</script>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const newsId = params.get('id');
+
+fetch('data/news.json')
+    .then(res => res.json())
+    .then(newsList => {
+    const news = newsList.find(n => n.id == newsId);
+    if (!news) {
+        document.getElementById('news-detail').innerHTML = '<p>ニュースが見つかりません。</p>';
+        return;
+    }
+
+    document.getElementById('news-date').textContent = news.date;
+    document.getElementById('news-title').textContent = news.title;
+    document.getElementById('news-image').innerHTML = `<img class="w-full h-auto rounded" src="${news.image}" alt="${news.title}">`;
+    document.getElementById('news-summary').textContent = news.summary;
+
+    const contentDiv = document.getElementById('news-content');
+
+    news.content.forEach(block => {
+        const blockDiv = document.createElement('div');
+        blockDiv.className = "bg-white p-4 rounded shadow-sm";
+
+        const titleEl = document.createElement('h2');
+        titleEl.className = "text-lg font-semibold mb-2";
+        titleEl.textContent = block.title;
+
+        const messageEl = document.createElement('pre'); // 改行を保持
+        messageEl.className = "whitespace-pre-wrap text-gray-700 leading-loose";
+        messageEl.textContent = block.message;
+
+        blockDiv.appendChild(titleEl);
+        blockDiv.appendChild(messageEl);
+        contentDiv.appendChild(blockDiv);
+    });
+    })
+    .catch(err => console.error('ニュース詳細読み込みエラー:', err));
+</script>
