@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Match Detail - Principale</title>
+  <title>Principale | 試合詳細</title>
   <link rel="icon" href="images/logo/Principale.png" type="image/png">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <style>
@@ -29,7 +29,7 @@
     .bg-green-700 { background-color: #10ab15; }
   </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50" style="font-family: 'Noto Sans JP', sans-serif;"></body>
 
 <div id="header" class="pt-24"></div>
 
@@ -38,6 +38,9 @@
   <div id="match-card" class="bg-gray-100 rounded-lg shadow-lg p-6 mb-6"></div>
   <div id="match-stats" class="bg-gray-100 rounded-lg shadow-lg p-6 mb-6"></div>
   <div id="player-stats" class="bg-gray-100 rounded-lg shadow-lg p-6 mb-6"></div>
+
+  <div id="youtube" class="bg-gray-100 rounded-lg shadow-lg p-6 mb-6"></div>
+  <div id="live-text" class="bg-gray-100 rounded-lg shadow-lg p-6 mb-6"></div>
 </main>
 
 <div id="footer" class="pt-4"></div>
@@ -116,7 +119,7 @@ Promise.all([
         <p class="font-bold text-center">${match.away.team_name}</p>
       </div>
     </div>
-    <div class="flex justify-center gap-56 mt-4">
+    <div class="flex justify-center gap-56">
       <div id="home-scorers" class="text-left"></div>
       <div id="away-scorers" class="text-right"></div>
     </div>
@@ -181,7 +184,6 @@ Promise.all([
   </div>
   `;
 
-
   // 個人スタッツ
   const playerCard = document.getElementById('player-stats');
   const homePlayers = match.home.players;
@@ -231,7 +233,73 @@ Promise.all([
       }).join('')}
     </div>
   </div>
-`;
+  `;
+
+  // テキスト速報
+  if (match.live_text && match.live_text.length > 0) {
+    const live = document.getElementById("live-text");
+    live.innerHTML = `
+      <h2 class="text-lg font-bold text-center mb-4">テキスト速報</h2>
+      <table class="w-full border-collapse">
+        <tbody>
+          ${match.live_text.map(t => `
+            <tr class="border-b ${t.logo === "images/logo/Principale.png" ? 'bg-blue-100' : ''} py-2">
+              <!-- 時間 -->
+              <td class="w-18 py-2 text-center align-middle font-bold text-sm">
+                ${t.time}
+              </td>
+
+              <!-- アイコン -->
+              <td class="w-12 px-2 border-l border-gray-400 text-center align-middle py-2">
+                ${t.icon ? `<img src="${t.icon}" class="w-6 h-6 inline-block align-middle">` : `<span class="w-6 h-6 inline-block"></span>`}
+              </td>
+            
+              <!-- スコア -->
+              <td class="w-12 py-2 border-l border-gray-400 text-center align-middle font-bold text-sm">
+                ${t.score}
+              </td>
+
+              <!-- イベント（アイコン＋文章） -->
+              <td class="pl-2 border-l border-gray-400 align-middle py-2">
+                <div class="flex items-center gap-2">
+                  ${t.logo 
+                    ? `<img src="${t.logo}" class="w-8 h-8">` 
+                    : `<span class="w-8 h-8 inline-block"></span>`}
+                  <span class="text-sm">${t.text}</span>
+                </div>
+              </td>
+            </tr>
+          `).join("")}
+        </tbody>
+      </table>
+    `;
+  }
+
+  // YouTube埋め込み
+  if (match.youtube && match.youtube.length > 0) {
+    const youtubeContainer = document.getElementById("youtube");
+    youtubeContainer.innerHTML = `<h2 class="text-lg font-bold text-center mb-4">ハイライト動画</h2>`;
+
+    match.youtube.forEach(url => {
+      const youtubeID = url.includes("watch?v=")
+        ? url.split("watch?v=")[1]
+        : url.split("/").pop();
+
+      const iframeWrapper = document.createElement("div");
+      iframeWrapper.className = "aspect-video w-full mb-4";
+      iframeWrapper.innerHTML = `
+        <iframe 
+          class="w-full h-full rounded-xl"
+          src="https://www.youtube.com/embed/${youtubeID}"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      `;
+      youtubeContainer.appendChild(iframeWrapper);
+    });
+  }
+
+
 });
 </script>
 </body>

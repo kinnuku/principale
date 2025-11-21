@@ -1,5 +1,5 @@
 [
-    {
+  {
     "id": "match_id=122",
     "date": "2025-11-14",
     "time": "23:30",
@@ -28905,53 +28905,16 @@
 
     "live_text": [
       {
-        "time": "試合開始",
-        "icon": "images/icon/kickoff.png",
-        "score": "0-0",
-        "logo": "",
-        "text": ""
+        "time": "前半5分",
+        "icon": "images/logo/JOKERS.png",
+        "logo": "images/logo/JOKERS.png",
+        "text": "本田がシュート！"
       },
       {
-        "time": "前半8分",
+        "time": "延長後半15+1分",
         "icon": "",
-        "score": "0-0",
         "logo": "images/logo/Principale.png",
-        "text": "かなまるのボールを受けたロンがPA内で倒され、PK獲得。"
-      },
-      {
-        "time": "前半9分",
-        "icon": "images/icon/soccerball.png",
-        "score": "1-0",
-        "logo": "images/logo/Principale.png",
-        "text": "ロンがPKを左上に蹴りこみ、先制！"
-      },
-      {
-        "time": "前半16分",
-        "icon": "",
-        "score": "1-0",
-        "logo": "images/logo/Principale.png",
-        "text": "ロンが果敢にロングシュートを放つも、相手GKの正面。"
-      },
-      {
-        "time": "前半18分",
-        "icon": "",
-        "score": "1-0",
-        "logo": "images/logo/Principale.png",
-        "text": "ねこぷが左サイドを抜けたかなまるへパス。PA内でシュートを放つも、枠を外れる。"
-      },
-      {
-        "time": "前半21分",
-        "icon": "images/icon/soccerball.png",
-        "score": "2-0", 
-        "logo": "images/logo/Principale.png",
-        "text": "中央でボールを受けたねこぷが右サイドの裏を取ったばむへパス。ばむのクロスをかなまるがヘディングで合わせ、追加点！"
-      },
-      {
-        "time": "前半32分",
-        "icon": "images/icon/soccerball.png",
-        "score": "3-0", 
-        "logo": "images/logo/Principale.png",
-        "text": "左サイドでボールを受けたねこぷが中にカットインし、climへパス。パスを受けたclimはすぐさまロンに当て、ロンがシュートを放つ。相手GKに防がれるも、ばむが押し込み、追加点！"
+        "text": "相手のファウル。"
       }
     ],
 

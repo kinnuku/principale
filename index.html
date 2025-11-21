@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <title>Principale</title>
     <link rel="icon" href="images/logo/Principale.png" type="image/png">
 </head>
 
-<body>
+<body style="font-family: 'Noto Sans JP', sans-serif;">
   <div id="header" class="pt-24"></div>
 
   <main>
@@ -117,9 +118,21 @@ fetch('data/matches.json')
       const myTeam = isHome ? match.home : match.away;
       const opponent = isHome ? match.away : match.home;
 
-      const labelColor = isHome
-        ? "bg-blue-600 text-white"
-        : "bg-red-600 text-white";
+      const myScore = parseInt(isHome ? match.score.split('-')[0] : match.score.split('-')[1], 10);
+      const oppScore = parseInt(isHome ? match.score.split('-')[1] : match.score.split('-')[0], 10);
+
+      let resultLabel = '';
+      let labelColor = '';
+      if (myScore > oppScore) {
+        resultLabel = 'WIN';
+        labelColor = 'bg-green-600 text-white';
+      } else if (myScore < oppScore) {
+        resultLabel = 'LOSE';
+        labelColor = 'bg-red-600 text-white';
+      } else {
+        resultLabel = 'DRAW';
+        labelColor = 'bg-gray-500 text-white';
+      }
 
       const weekdayEn = getWeekdayEn(match.date);
       const dateFormatted = `${match.date} (${weekdayEn})`;
@@ -158,10 +171,10 @@ fetch('data/matches.json')
             </div>
           </div>
 
-          <!-- HOME/AWAY ラベル（カード下部中央） -->
+          <!-- 勝敗ラベル（カード下部中央） -->
           <div class="text-center mt-2">
             <span class="text-xs font-bold px-2 py-1 ${labelColor}">
-              ${match.home_away}
+              ${resultLabel}
             </span>
           </div>
 

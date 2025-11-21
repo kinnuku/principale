@@ -6,7 +6,7 @@
     <link rel="icon" href="images/logo/Principale.png" type="image/png">
 </head>
 
-<body>
+<body class="bg-gray-50" style="font-family: 'Noto Sans JP', sans-serif;">
   <div id="header" class="pt-24"></div>
 
   <main class="container mx-auto px-5 py-24 max-w-3xl">
@@ -69,14 +69,17 @@ fetch('data/news.json')
 
     news.content.forEach(block => {
         const blockDiv = document.createElement('div');
-        blockDiv.className = "bg-white p-4 rounded shadow-sm";
+        blockDiv.className = "bg-white p-4 rounded shadow-sm font-sans"; // ← ここでフォント指定
+        blockDiv.style.fontFamily = "'Noto Sans JP', sans-serif"; // 直接指定
 
         const titleEl = document.createElement('h2');
         titleEl.className = "text-lg font-semibold mb-2";
+        titleEl.style.fontFamily = "'Noto Sans JP', sans-serif"; // タイトルも
         titleEl.textContent = block.title;
 
         const messageEl = document.createElement('pre'); // 改行を保持
         messageEl.className = "whitespace-pre-wrap text-gray-700 leading-loose";
+        messageEl.style.fontFamily = "'Noto Sans JP', sans-serif"; // 本文も
         messageEl.textContent = block.message;
 
         blockDiv.appendChild(titleEl);

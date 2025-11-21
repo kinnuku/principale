@@ -280,21 +280,6 @@
     ],
     "image": "images/news/news9.png"
   },
-    {
-    "id": "news_number7",
-    "date": "2024/01/28",
-    "title": "初期メンバー紹介（9）",
-    "summary": "初期メンバーである、9の紹介です！",
-    "fullContent": [
-      "名前：9",
-      "PSID：cyberdog009",
-      "希望ポジ：CAM、CM、CDM",
-      "可能ポジ：WG、WB",
-      "所属クラブ経歴：ROBOKOP → OKUTAMA FC → Esprite Cluster → Principale",
-      "一言：vaamさんから誘って頂きました。ベイルさんに殺されるその時まで、よろしくお願いします！"
-    ],
-    "image": "images/news/news8.png"
-  },
   {
     "id": "news_number1",
     "date": "2024/02/02",
