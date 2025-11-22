@@ -199,23 +199,6 @@
     ],
     "image": "images/news/news15.png"
   },
- {
-    "id": "news_number11",
-    "date": "2024/02/03",
-    "title": "ねこぷ新加入！",
-    "summary": "新規メンバーである、ねこぷの紹介です！",
-    "fullContent": [
-      "PECORANERAより、ねこぷが新加入しました！",
-      "",
-      "名前：ねこぷ",
-      "PSID：Nekop_one",
-      "希望ポジ：GK、中盤より前ならどこでも",
-      "可能ポジ：SB",
-      "所属クラブ経歴：Ahura Mazda → PECORANERA → FC Onions → Esprite Cluster → KARAS → PECORANERA → Principale",
-      "一言：ご挨拶遅れて申し訳ありません！よろしくお願いします"
-    ],
-    "image": "images/news/news11.png"
-  },
   {
     "id": "news_number1",
     "date": "2024/02/02",
