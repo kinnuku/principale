@@ -1,5 +1,73 @@
 [
   {
+    "id": "news_number13",
+    "date": "2024/02/05",
+    "title": "ねこぷ PECORANERAより完全移籍加入のお知らせ",
+    "summary": "この度、ねこぷがPECORANERAより完全移籍で加入することが決まりましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "選手詳細",
+        "message": "■ 名前：ねこぷ\n■ PSID：Nekop_one\n■ 希望ポジ：GK、中盤より前ならどこでも\n■ 可能ポジ：SB\n■ 所属クラブ経歴：Ahura Mazda → PECORANERA → FC Onions → Esprite Cluster → KARAS → PECORANERA → Principale"
+      },
+      {
+        "title": "選手コメント",
+        "message": "ご挨拶遅れて申し訳ありません！よろしくお願いします"
+      }
+    ],
+    "image": "images/news/news13.png"
+  },
+  {
+    "id": "news_number13",
+    "date": "2024/02/02",
+    "title": "リーフ Ra VIRDYより完全移籍加入のお知らせ",
+    "summary": "この度、リーフがRa VIRDYより完全移籍で加入することが決まりましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "選手詳細",
+        "message": "■ 名前：リーフ\n■ PSID：Leaf-N-A\n■ 希望ポジ：CB、SB\n■ 可能ポジ：無し\n■ 所属クラブ経歴：FC Apricot → Ra VIRDY → Principale"
+      },
+      {
+        "title": "選手コメント",
+        "message": "下手くそですが、よろしくお願い致します"
+      }
+    ],
+    "image": "images/news/news12.png"
+  },
+  {
+    "id": "news_number11",
+    "date": "2024/01/31",
+    "title": "もときち Esprite Clusterより完全移籍加入のお知らせ",
+    "summary": "この度、もときちがEsprite Clusterより完全移籍で加入することが決まりましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "選手詳細",
+        "message": "■ 名前：もときち\n■ PSID：GOD_GK_motokichi\n■ 希望ポジ：CB、SB\n■ 可能ポジ：GK\n■ 所属クラブ経歴：Esprite Cluster → Principale"
+      },
+      {
+        "title": "選手コメント",
+        "message": "下手くそですが指摘された所は精一杯取り組む所存です。"
+      }
+    ],
+    "image": "images/news/news11.png"
+  },
+  {
+    "id": "news_number10",
+    "date": "2024/01/29",
+    "title": "らーく Esprite Clusterより完全移籍加入のお知らせ",
+    "summary": "この度、らーくがEsprite Clusterより完全移籍で加入することが決まりましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "選手詳細",
+        "message": "■ 名前：らーく\n■ PSID：lark6v\n■ 希望ポジ：ST\n■ 可能ポジ：GK以外\n■ 所属クラブ経歴：FC RayBan → LA VOⒶGUE → Esprite Cluster → Principale"
+      },
+      {
+        "title": "選手コメント",
+        "message": "7大会連続得点王でイキリ散らかしてました。\n対戦よろしくお願いします"
+      }
+    ],
+    "image": "images/news/news10.png"
+  },
+  {
     "id": "news_number9",
     "date": "2024/01/29",
     "title": "ぽんぞう JOKERSより完全移籍加入のお知らせ",
