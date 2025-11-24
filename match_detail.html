@@ -97,6 +97,11 @@ Promise.all([
   const card = document.getElementById('match-card');
   card.innerHTML = `
   <div class="flex flex-col gap-6">
+    <div class="text-center">
+      <span class="text-xs font-bold px-2 py-1 bg-blue-500 text-white">
+        ${match.home_away}
+      </span>
+    </div>
     <div class="flex flex-col md:flex-row justify-center items-center gap-20">
       <div class="flex flex-col items-center">
         <img src="${match.home.team_logo}" class="w-24 h-24 mb-4">
