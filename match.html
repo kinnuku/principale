@@ -110,11 +110,19 @@ fetch('data/matches.json')
             <div class="relative flex justify-center items-center h-32">
               <!-- 中央情報 -->
               <div class="flex flex-col justify-center items-center text-center z-10">
-                <p class="text-sm font-medium text-gray-600">${dateFormatted}</p>
-                <p class="text-sm font-medium text-gray-600">${match.time}</p>
+                <!-- H&A -->
+                <p class="text-center mt-1 mb-1">
+                  <span class="text-xs font-bold px-2 py-1 bg-blue-500 text-white">
+                    ${match.home_away}
+                  </span>
+                </p>
+                <p class="text-sm font-medium text-gray-600">${dateFormatted} ${match.time}</p>
                 <p class="text-4xl font-bold text-gray-900 my-2">${match.score}</p>
                 <span class="text-xs font-bold px-2 py-1 ${labelColor}">${resultLabel}</span>
               </div>
+              
+
+
 
               <!-- 自チーム -->
               <div class="absolute left-0 top-1/2 transform -translate-y-1/2 flex flex-col items-center text-center px-2">
