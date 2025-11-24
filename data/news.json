@@ -1,0 +1,351 @@
+[
+  {
+    "id": "news_number21",
+    "date": "2024/03/01",
+    "title": "クラブ公式戦初得点のお知らせ",
+    "summary": "この度、公式戦においてクラブ初得点を達成しましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "",
+        "message": "COPA RAL 24 Spring GroupB 1節 PROGRESSO戦において、前半9分にロンがPKで得点を決め、クラブ初得点を達成しました。"
+      },
+      {
+        "title": "選手コメント",
+        "message": "まぁ先にGKが動いてくれたんで、簡単でしたね。笑"
+      }
+    ],
+    "image": "images/news/news21.png"
+  },
+  {
+    "id": "news_number20",
+    "date": "2024/03/01",
+    "title": "クラブ公式戦初勝利のお知らせ",
+    "summary": "この度、公式戦においてクラブ初勝利を達成しましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "",
+        "message": "COPA RAL 24 Spring GroupB 1節において、PROGRESSOに8-1と大勝し、クラブ初勝利を収めました。"
+      },
+      {
+        "title": "監督コメント",
+        "message": "何事も最初が難しいですが、本当に幸先の良いスタートを決めれたと思います。\n頑張ってくれた選手を称えつつも次戦に向けて準備を進めていきます。\n次戦以降も引き続き熱い応援をよろしくお願いします！"
+      }
+    ],
+    "image": "images/news/news20.png"
+  },
+  {
+    "id": "news_number19",
+    "date": "2024/02/28",
+    "title": "みらい Esprite Clusterより完全移籍加入のお知らせ",
+    "summary": "この度、みらいがEsprite Clusterより完全移籍で加入することが決まりましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "選手詳細",
+        "message": "■ 名前：みらい\n■ PSID：mirai-3-3\n■ 希望ポジ：CB、GK以外\n■ 可能ポジ：無し\n■ 所属クラブ経歴：FC Pikachu → Esprite Cluster → Principale"
+      },
+      {
+        "title": "選手コメント",
+        "message": "サポメンで入ることになりました！\nよろしくお願いします！！"
+      }
+    ],
+    "image": "images/news/news19.png"
+  },
+  {
+    "id": "news_number18",
+    "date": "2024/02/27",
+    "title": "COPA RAL 24 Spring対戦相手決定のお知らせ",
+    "summary": "この度、COPA RAL 24 Springの組み合わせ抽選が行われ、対戦相手決定しましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "",
+        "message": "Principaleは、グループBに入り、以下のクラブとH&A形式の総当たりを行います。\n上位2クラブに入れば、決勝トーナメントに進出することができます。\n・PROGRESSO（2部）\n・El Maverick（新規参入）\n・Analitycs（1部）\n\n引き続き熱い声援をよろしくお願いします！"
+      }
+    ],
+    "image": "images/news/news18.png"
+  },
+  {
+    "id": "news_number17",
+    "date": "2024/02/19",
+    "title": "なうビーチ 完全移籍加入のお知らせ",
+    "summary": "この度、なうビーチが加入することが決まりましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "選手詳細",
+        "message": "■ 名前：なうビーチ\n■ PSID：TRADER_JOES99\n■ 希望ポジ：CAM\n■ 可能ポジ：SB、CM、ST\n■ 所属クラブ経歴：無所属 → Principale"
+      },
+      {
+        "title": "選手コメント",
+        "message": "以前から体験で参加させていただいていたなうビーチと申します。\nチームに所属するのは初めてで不慣れな部分もありますが、よろしくお願いします。"
+      }
+    ],
+    "image": "images/news/news17.png"
+  },
+  {
+    "id": "news_number16",
+    "date": "2024/02/18",
+    "title": "リンギオ Esprite Clusterより完全移籍加入のお知らせ",
+    "summary": "この度、リンギオがEsprite Clusterより完全移籍で加入することが決まりましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "選手詳細",
+        "message": "■ 名前：リンギオ\n■ PSID：ringhio33\n■ 希望ポジ：CB、SB\n■ 可能ポジ：GK以外\n■ 所属クラブ経歴：Galbe UD → Guanchale United → Keseran Pasaran → Hookar → Esprite Cluster → Principale"
+      },
+      {
+        "title": "選手コメント",
+        "message": "サポメンで入団しました。\nお声がけいただきありがとうございました。\n仕事忙しくて死にそうです。"
+      }
+    ],
+    "image": "images/news/news16.png"
+  },
+  {
+    "id": "news_number15",
+    "date": "2024/02/13",
+    "title": "かなまる Ra VIRDYより完全移籍加入のお知らせ",
+    "summary": "この度、かなまるがRa VIRDYより完全移籍で加入することが決まりましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "選手詳細",
+        "message": "■ 名前：かなまる\n■ PSID：KANAMARUU\n■ 希望ポジ：アンカー\n■ 可能ポジ：GK以外\n■ 所属クラブ経歴：FC Apricot → Ra VIRDY → Principale"
+      },
+      {
+        "title": "選手コメント",
+        "message": "サポメンで入団しました。\nよろしくお願い致します。"
+      }
+    ],
+    "image": "images/news/news15.png"
+  },
+  {
+    "id": "news_number14",
+    "date": "2024/02/07",
+    "title": "りく Esprite Clusterより完全移籍加入のお知らせ",
+    "summary": "この度、りくがEsprite Clusterより完全移籍で加入することが決まりましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "選手詳細",
+        "message": "■ 名前：りく\n■ PSID：riku6qwe\n■ 希望ポジ：DF\n■ 可能ポジ：無し\n■ 所属クラブ経歴：redēmarrage → Esprite Cluster → Principale"
+      },
+      {
+        "title": "選手コメント",
+        "message": "よろしくお願いします"
+      }
+    ],
+    "image": "images/news/news14.png"
+  },
+  {
+    "id": "news_number13",
+    "date": "2024/02/05",
+    "title": "ねこぷ PECORANERAより完全移籍加入のお知らせ",
+    "summary": "この度、ねこぷがPECORANERAより完全移籍で加入することが決まりましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "選手詳細",
+        "message": "■ 名前：ねこぷ\n■ PSID：Nekop_one\n■ 希望ポジ：GK、中盤より前ならどこでも\n■ 可能ポジ：SB\n■ 所属クラブ経歴：Ahura Mazda → PECORANERA → FC Onions → Esprite Cluster → KARAS → PECORANERA → Principale"
+      },
+      {
+        "title": "選手コメント",
+        "message": "ご挨拶遅れて申し訳ありません！よろしくお願いします"
+      }
+    ],
+    "image": "images/news/news13.png"
+  },
+  {
+    "id": "news_number12",
+    "date": "2024/02/02",
+    "title": "リーフ Ra VIRDYより完全移籍加入のお知らせ",
+    "summary": "この度、リーフがRa VIRDYより完全移籍で加入することが決まりましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "選手詳細",
+        "message": "■ 名前：リーフ\n■ PSID：Leaf-N-A\n■ 希望ポジ：CB、SB\n■ 可能ポジ：無し\n■ 所属クラブ経歴：FC Apricot → Ra VIRDY → Principale"
+      },
+      {
+        "title": "選手コメント",
+        "message": "下手くそですが、よろしくお願い致します"
+      }
+    ],
+    "image": "images/news/news12.png"
+  },
+  {
+    "id": "news_number11",
+    "date": "2024/01/31",
+    "title": "もときち Esprite Clusterより完全移籍加入のお知らせ",
+    "summary": "この度、もときちがEsprite Clusterより完全移籍で加入することが決まりましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "選手詳細",
+        "message": "■ 名前：もときち\n■ PSID：GOD_GK_motokichi\n■ 希望ポジ：CB、SB\n■ 可能ポジ：GK\n■ 所属クラブ経歴：Esprite Cluster → Principale"
+      },
+      {
+        "title": "選手コメント",
+        "message": "下手くそですが指摘された所は精一杯取り組む所存です。"
+      }
+    ],
+    "image": "images/news/news11.png"
+  },
+  {
+    "id": "news_number10",
+    "date": "2024/01/29",
+    "title": "らーく Esprite Clusterより完全移籍加入のお知らせ",
+    "summary": "この度、らーくがEsprite Clusterより完全移籍で加入することが決まりましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "選手詳細",
+        "message": "■ 名前：らーく\n■ PSID：lark6v\n■ 希望ポジ：ST\n■ 可能ポジ：GK以外\n■ 所属クラブ経歴：FC RayBan → LA VOⒶGUE → Esprite Cluster → Principale"
+      },
+      {
+        "title": "選手コメント",
+        "message": "7大会連続得点王でイキリ散らかしてました。\n対戦よろしくお願いします"
+      }
+    ],
+    "image": "images/news/news10.png"
+  },
+  {
+    "id": "news_number9",
+    "date": "2024/01/29",
+    "title": "ぽんぞう JOKERSより完全移籍加入のお知らせ",
+    "summary": "この度、ぽんぞうがJOKERSより完全移籍で加入することが決まりましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "選手詳細",
+        "message": "■ 名前：ぽんぞう\n■ PSID：pon-zoucity\n■ 希望ポジ：CAM、CM、ST\n■ 可能ポジ：SB、CB\n■ 所属クラブ経歴：JOKERS → Principale"
+      },
+      {
+        "title": "選手コメント",
+        "message": "ばむに誘ってもらいました。\nのほほんと頑張ります。\nよろしくお願いします。"
+      }
+    ],
+    "image": "images/news/news9.png"
+  },
+  {
+    "id": "news_number8",
+    "date": "2024/01/28",
+    "title": "9 Esprite Clusterより完全移籍加入のお知らせ",
+    "summary": "この度、9がEsprite Clusterより完全移籍で加入することが決まりましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "選手詳細",
+        "message": "■ 名前：9\n■ PSID：cyberdog009\n■ 希望ポジ：CAM、CM、CDM\n■ 可能ポジ：WG、WB\n■ 所属クラブ経歴：ROBOKOP → OKUTAMA FC → Esprite Cluster → Principale"
+      },
+      {
+        "title": "選手コメント",
+        "message": "vaamさんから誘って頂きました。\nベイルさんに殺されるその時まで、よろしくお願いします！"
+      }
+    ],
+    "image": "images/news/news8.png"
+  },
+  {
+    "id": "news_number7",
+    "date": "2024/01/27",
+    "title": "clim Ra VIRDYより完全移籍加入のお知らせ",
+    "summary": "この度、climがRa VIRDYより完全移籍で加入することが決まりましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "選手詳細",
+        "message": "■ 名前：くりむ\n■ PSID：climelt-39\n■ 希望ポジ：CM、CDM\n■ 可能ポジ：SB、WB\n■ 所属クラブ経歴：FC Apricot → Pampers → FV Bambini → Ra VIRDY → Principale"
+      },
+      {
+        "title": "選手コメント",
+        "message": "まなやんに誘ってもらいました。\nちゃんとした活動は久々ですが頑張ります。\nよろしくお願いします。"
+      }
+    ],
+    "image": "images/news/news7.png"
+  },
+  {
+    "id": "news_number6",
+    "date": "2024/01/27",
+    "title": "まなやん Esprite Clusterより完全移籍加入のお知らせ",
+    "summary": "この度、まなやんがEsprite Clusterより完全移籍で加入することが決まりましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "選手詳細",
+        "message": "■ 名前：まなやん\n■ PSID：Birdie99\n■ 希望ポジ：SB\n■ 可能ポジ：一列目より後ろなら\n■ 所属クラブ経歴：FC Apricot → FV Bambini → Ra VIRDY → Esprite Cluster → Principale"
+      },
+      {
+        "title": "選手コメント",
+        "message": "バム、ベイルさんの友達です。"
+      }
+    ],
+    "image": "images/news/news6.png"
+  },
+  {
+    "id": "news_number5",
+    "date": "2024/01/27",
+    "title": "ガンバロン KOHARA OUTより助っ人加入のお知らせ",
+    "summary": "この度、ガンバロンがKOHARA OUTより助っ人加入することが決まりましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "選手詳細",
+        "message": "■ 名前：ガンバロン\n■ PSID：GAMBALON39\n■ 希望ポジ：前線\n■ 可能ポジ：どこでも\n■ 所属クラブ経歴：FC Pikachu → KOHARA OUT（掛け持ち） → Principale"
+      },
+      {
+        "title": "選手コメント",
+        "message": "KHRと掛け持ちになります。\nよろしくお願いします。"
+      }
+    ],
+    "image": "images/news/news5.png"
+  },
+  {
+    "id": "news_number4",
+    "date": "2024/01/20",
+    "title": "ババ Hookarより完全移籍加入のお知らせ",
+    "summary": "この度、ババがHookarより完全移籍で加入することが決まりましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "選手詳細",
+        "message":"■ 名前：ババ\n■ PSID：syachiku-syatiku\n■ 希望ポジ：GK\n■ 可能ポジ：どこでもやります！\n■ 所属クラブ経歴：YASHIO JETS → DOGSO → Esprite Cluster → Hookar → Principale"
+      },
+      {
+        "title": "選手コメント",
+        "message": "エスプリとフーカーに初タイトルをもたらしたのは俺です。"
+      }
+    ],
+    "image": "images/news/news4.png"
+  },
+  {
+    "id": "news_number3",
+    "date": "2024/01/20",
+    "title": "ベイル Esprite Clusterより完全移籍加入のお知らせ",
+    "summary": "この度、ベイルがEsprite Clusterより完全移籍で加入することが決まりましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "選手詳細",
+        "message": "■ 名前：ベイル\n■ PSID：garethbale0318\n■ 希望ポジ：SB、CB\n■ 可能ポジ：CDM、RW\n■ 所属クラブ経歴：FC RayBan → LA VOⒶGUE → Esprite Cluster → Principale"
+      },
+      {
+        "title": "選手コメント",
+        "message": "よろしくお願いします。"
+      }
+    ],
+    "image": "images/news/news3.png"
+  },
+  {
+    "id": "news_number2",
+    "date": "2024/01/20",
+    "title": "ばむ Esprite Clusterより完全移籍加入のお知らせ",
+    "summary": "この度、ばむがEsprite Clusterより完全移籍で加入することが決まりましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "選手詳細",
+        "message": "■ 名前：ばむ\n■ PSID：xox-v-rn7\n■ 希望ポジ：FW、MF\n■ 可能ポジ：GK以外\n■ 所属クラブ経歴：JOKERS → Esprite Cluster → Principale"
+      },
+      {
+        "title": "選手コメント",
+        "message": "僕のわがままにお付き合い頂きありがとうございます。\n考えてる人数まで、一緒にやりたいなとか、上手いよ、この人！みたいな方いれば誘ってください！"
+      }
+    ],
+    "image": "images/news/news2.png"
+  },
+  {
+    "id": "news_number1",
+    "date": "2024/01/20",
+    "title": "プロクラブチーム Principale設立のお知らせ",
+    "summary": "この度、Principaleを設立することが決まりましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "運営体制",
+        "message": "■ キャプテン：ばむ\n■ 副キャプテン：ベイル\n■ 主務：ババ\n\nRALでリーグ戦・カップ戦の優勝を目標に活動します。"
+      }
+    ],
+    "image": "images/news/news1.png"
+  }
+]
