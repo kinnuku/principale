@@ -59,7 +59,7 @@
 
           // セクション作成（背景色なし）
           const section = document.createElement('div');
-          section.className = "px-4 py-6 rounded-lg shadow-md"; // 背景色削除
+          section.className = "px-4 py-6 rounded-lg shadow-md";
 
           // ポジションタイトル
           const title = document.createElement('h2');
@@ -74,15 +74,24 @@
           group.forEach(player => {
             const card = document.createElement('a');
             card.href = `player_detail.html?id=${player.psid}`;
-            card.className = "block w-1/3 sm:w-1/4 md:w-1/5 p-3 no-underline";
+            card.className = "block basis-1/2 sm:basis-1/3 md:basis-1/5 p-3 no-underline";
 
             card.innerHTML = `
-              <div class="bg-white p-4 rounded-lg shadow-md hover:-translate-y-1 hover:shadow-xl transition-transform duration-300 text-center">
-                <img src="${player.image}" alt="${player.name}" class="w-24 h-24 mx-auto mb-2 rounded-full object-cover">
-                <h2 class="text-lg font-bold">${player.number}</h2>
-                <p class="text-sm text-gray-500">${player.psid}</p>
-                <h3 class="text-md mt-1 font-medium text-gray-900">${player.name}</h3>
-                <p class="text-sm text-gray-600 mt-1">${player.position}</p>
+              <div class="bg-white p-4 rounded-xl border border-gray-200 shadow-sm
+                          hover:-translate-y-1 hover:shadow-md transition duration-300 text-center">
+                
+                <img src="${player.image}" alt="${player.name}"
+                  class="w-28 h-28 mx-auto mb-3 object-cover rounded-lg bg-gray-100">
+
+                <h2 class="text-xl font-extrabold tracking-tight">${player.number}</h2>
+
+                <h3 class="text-base font-semibold mt-1 text-gray-900 leading-tight">
+                  ${player.name}
+                </h3>
+
+                <p class="text-xs text-gray-500 mt-1">${player.psid}</p>
+
+                <p class="text-sm text-gray-600 mt-1 font-medium">${player.position}</p>
               </div>
             `;
             cardsContainer.appendChild(card);

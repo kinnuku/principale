@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Principale | 個人成績</title>
+  <link rel="icon" href="images/logo/Principale.png" type="image/png">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-50 font-sans">
+
+  <div id="header" class="pt-24"></div>
+
+  <main class="px-5 py-24 max-w-7xl mx-auto">
+
+    <h1 class="text-3xl font-black text-center mb-10">TEAM STATS</h1>
+
+    <!-- ▼ チーム成績（大会で分けない） -->
+    <div id="team-summary" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 mb-12"></div>
+
+    <h1 class="text-3xl font-black text-center mb-10">PLAYER STATS</h1>
+
+    <!-- ▼ フィルター（大会） -->
+    <div class="text-center mb-10">
+      <select id="tournament-filter" class="border text-lg px-4 py-2 rounded-lg shadow">
+        <option value="all">全大会</option>
+      </select>
+    </div>
+
+    <!-- ▼ ランキング表示 -->
+    <div id="stats-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10"></div>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    // ヘッダー フッター読み込み
+    fetch('header.html').then(r => r.text()).then(html => header.innerHTML = html);
+    fetch('footer.html').then(r => r.text()).then(html => footer.innerHTML = html);
+
+    fetch('data/matches.json')
+      .then(r => r.json())
+      .then(matches => {
+
+        /* ============================
+           ▼ 1. チーム成績（全大会）
+        ============================ */
+        let totalGoals = 0;
+        let totalConceded = 0;
+        let cleanSheets = 0;
+        let wins = 0;
+        let losses = 0;
+        let draws = 0;
+
+        matches.forEach(m => {
+          const [g, c] = m.score.split('-').map(Number);
+
+          totalGoals += g;
+          totalConceded += c;
+
+          if (c === 0) cleanSheets++;
+
+          if (g > c) wins++;
+          else if (g < c) losses++;
+          else draws++;
+        });
+
+        document.getElementById("team-summary").innerHTML = `
+          <div class="bg-white shadow rounded-xl p-4 text-center"><p class="text-sm text-gray-500">勝利</p><p class="text-xl font-bold">${wins}</p></div>
+          <div class="bg-white shadow rounded-xl p-4 text-center"><p class="text-sm text-gray-500">敗北</p><p class="text-xl font-bold">${losses}</p></div>
+          <div class="bg-white shadow rounded-xl p-4 text-center"><p class="text-sm text-gray-500">引き分け</p><p class="text-xl font-bold">${draws}</p></div>
+          <div class="bg-white shadow rounded-xl p-4 text-center"><p class="text-sm text-gray-500">得点</p><p class="text-xl font-bold">${totalGoals}</p></div>
+          <div class="bg-white shadow rounded-xl p-4 text-center"><p class="text-sm text-gray-500">失点</p><p class="text-xl font-bold">${totalConceded}</p></div>
+          <div class="bg-white shadow rounded-xl p-4 text-center"><p class="text-sm text-gray-500">無失点</p><p class="text-xl font-bold">${cleanSheets}</p></div>
+        `;
+
+
+        /* ============================
+           ▼ 2. 大会一覧
+        ============================ */
+        const tournaments = [...new Set(matches.map(m => m.tournament))];
+        const filterSelect = document.getElementById("tournament-filter");
+
+        tournaments.forEach(t => {
+          const op = document.createElement("option");
+          op.value = t;
+          op.textContent = t;
+          filterSelect.appendChild(op);
+        });
+
+
+        /* ============================
+           ▼ 3. ランキング生成
+        ============================ */
+        function renderStats(tournament = "all") {
+
+          const stats = {};
+
+          matches.forEach(match => {
+            if (tournament !== "all" && match.tournament !== tournament) return;
+
+            match.home.players.forEach(p => {
+              if (!stats[p.name])
+                stats[p.name] = { goals: 0, assists: 0, ratingSum: 0, games: 0 };
+
+              stats[p.name].goals += p.goals;
+              stats[p.name].assists += p.assists;
+              stats[p.name].ratingSum += p.rating;
+              stats[p.name].games += 1;
+            });
+          });
+
+          const container = document.getElementById("stats-container");
+          container.innerHTML = "";
+
+
+          /* ▼ ランキング関数（数値降順 → 同値ならID昇順） */
+          function createRanking(title, key, isRating = false, hideZero = false) {
+
+            let sorted = Object.entries(stats).map(([name, data]) => ({
+              name,
+              value: isRating ? (data.ratingSum / data.games) : data[key]
+            }));
+
+            if (hideZero) sorted = sorted.filter(p => Number(p.value) > 0);
+
+            sorted.sort((a, b) => {
+              if (b.value === a.value) {
+                return a.name.localeCompare(b.name, 'ja'); // 同値 → ID昇順
+              }
+              return b.value - a.value; // 数値降順
+            });
+
+            const section = document.createElement("div");
+            section.innerHTML = `
+              <div class="bg-white rounded-xl shadow p-5">
+                <h2 class="text-xl font-bold mb-4 text-center">${title}</h2>
+                <table class="w-full">
+                  <tbody>
+                    ${sorted.map((p, i) => `
+                      <tr class="text-center border-b last:border-none">
+                        <td class="py-2 font-bold">${i + 1}</td>
+                        <td>${p.name}</td>
+                        <td class="font-bold">${isRating ? p.value.toFixed(2) : p.value}</td>
+                      </tr>
+                    `).join("")}
+                  </tbody>
+                </table>
+              </div>
+            `;
+
+            container.appendChild(section);
+          }
+
+          // ▼ ランキング生成
+          createRanking("得点ランキング", "goals", false, true);
+          createRanking("アシストランキング", "assists", false, true);
+          createRanking("平均評価点ランキング", "rating", true, false);
+          createRanking("出場試合数ランキング", "games", false, false);
+        }
+
+        renderStats("all");
+
+        filterSelect.addEventListener("change", () => {
+          renderStats(filterSelect.value);
+        });
+
+      });
+  </script>
+
+</body>
+</html>
