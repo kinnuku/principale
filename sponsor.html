@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Principale | Sponsor</title>
+  <link rel="icon" href="images/logo/Principale.png" type="image/png">
+</head>
+
+<body class="bg-gray-50">
+  <!-- header -->
+  <div id="header" class="pt-24"></div>
+
+  <main>
+    <section class="text-gray-600 body-font">
+        <div class="w-3/4 mx-auto px-5 py-24">
+        <div class="text-center mb-12">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">スポンサー紹介</h1>
+            <p class="text-base leading-relaxed mx-auto text-gray-500">
+            当ページでは、Principaleを支援してくださっているスポンサー企業をご紹介します。
+            </p>
+        </div>
+
+        <div id="sponsor-container" class="flex flex-col gap-12">
+            <!-- JSでランクごとにここに追加 -->
+        </div>
+        </div>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <div id="footer" class="pt-4"></div>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<script>
+  // header/footer読み込み
+  fetch('header.html').then(res => res.text()).then(html => document.getElementById('header').innerHTML = html);
+  fetch('footer.html').then(res => res.text()).then(html => document.getElementById('footer').innerHTML = html);
+
+  // sponsor.json読み込み
+  fetch('data/sponsor.json')
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById('sponsor-container');
+
+      // ランクごとにグループ化
+      const ranks = [...new Set(data.map(d => d.rank))];
+
+      ranks.forEach(rank => {
+        const sponsors = data.filter(d => d.rank === rank);
+
+        // ランク見出し
+        const rankDiv = document.createElement('div');
+        const rankTitle = document.createElement('h2');
+        rankTitle.textContent = rank;
+        rankTitle.className = "text-xl font-bold mb-4 text-gray-900";
+        rankDiv.appendChild(rankTitle);
+
+        // スポンサーグリッド
+        const grid = document.createElement('div');
+        grid.className = "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6";
+        
+        sponsors.forEach(s => {
+          const card = document.createElement('div');
+          card.className = "bg-white shadow-md rounded-lg p-4 flex flex-col items-center text-center";
+
+          const img = document.createElement('img');
+          img.src = s.companyImage;
+          img.alt = s.companyName;
+          img.className = "w-32 h-32 object-contain mb-2";
+
+          const name = document.createElement('p');
+          name.textContent = s.companyName;
+          name.className = "text-gray-800 font-medium";
+
+          card.appendChild(img);
+          card.appendChild(name);
+          grid.appendChild(card);
+        });
+
+        rankDiv.appendChild(grid);
+        container.appendChild(rankDiv);
+      });
+    });
+</script>
