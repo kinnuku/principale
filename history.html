@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Principale | 沿革</title>
+  <link rel="icon" href="images/logo/Principale.png" type="image/png">
+</head>
+
+<body class="bg-gray-50">
+  <!-- header -->
+  <div id="header" class="pt-24"></div>
+
+  <main>
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-24 mx-auto flex flex-wrap">
+        <div class="flex flex-wrap w-full justify-center">
+          <div id="timeline">
+            <!-- JSでここに履歴を追加 -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <div id="footer" class="pt-4"></div>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<!-- header読み込み -->
+<script>
+  fetch('header.html')
+    .then(res => res.text())
+    .then(html => document.getElementById('header').innerHTML = html);
+</script>
+
+<!-- footer読み込み -->
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(html => document.getElementById('footer').innerHTML = html);
+</script>
+
+<!-- タイムライン生成 -->
+<script>
+fetch("data/history.json")
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById("timeline");
+
+    data.history.forEach((item, index) => {
+      container.innerHTML += `
+        <div class="flex relative pb-12 opacity-0 translate-y-8 transition-all duration-700 ease-out">
+          <div class="h-full w-8 absolute inset-0 flex items-center justify-center">
+            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+          </div>
+            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-white inline-flex items-center justify-center relative z-10 border-4 border-[#72bce6]">
+              <div class="w-4 h-4 rounded-full bg-[#72bce6]"></div>
+            </div>
+
+          <div class="flex-grow pl-4">
+            <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">${item.date}</h2>
+            <p class="leading-relaxed">${item.text}</p>
+          </div>
+        </div>
+      `;
+    });
+
+    const items = document.querySelectorAll('#timeline > div');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+          entry.target.classList.remove('opacity-0', 'translate-y-8');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    items.forEach(item => observer.observe(item));
+  });
+</script>
