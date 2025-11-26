@@ -1,5 +1,52 @@
 [
   {
+    "id": "news_number24",
+    "date": "2024/03/15",
+    "title": "COPA RAL 24 Spring 準々決勝 対戦相手決定のお知らせ",
+    "summary": "この度、COPA RAL 24 Spring 1回戦の結果を受け、準々決勝の対戦相手決定しましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "",
+        "message": "1回戦 1stLegを1-1、2ndLegを3-0の合計4-1でWaltz SCを下し、準々決勝に進出することができました！\n決勝ラウンド準々決勝の相手は、1部所属のJOKERSとなりました。\n▼次戦のお知らせ\n・日時：2024/03/22 23:00～\n・対戦相手：JOKERS（グループD1位）\n\n引き続き熱い声援をよろしくお願いします！"
+      }
+    ],
+    "image": "images/news/news24.png"
+  },
+  {
+    "id": "news_number23",
+    "date": "2024/03/12",
+    "title": "ばむ、ねこぷCOPA RAL 24 Spring TOGS選出のお知らせ",
+    "summary": "この度、COPA RAL 24 Spring TOGSにばむ、ねこぷが選出されましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "",
+        "message": "グループステージの活躍を受け、ばむ、ねこぷの2選手がTOGSに選出されました！\n・ばむ成績：6試合6ゴール4アシスト\n・ねこぷ成績：6試合4ゴール4アシスト"
+      },
+      {
+        "title": "ばむコメント",
+        "message": "俺が一番上手いので、文句なしの結果です。"
+      },
+      {
+        "title": "ねこぷコメント",
+        "message": "あれ？なんで俺だけ金色なんだ・・？"
+      }
+    ],
+    "image": "images/news/news23.png"
+  },
+  {
+    "id": "news_number22",
+    "date": "2024/03/09",
+    "title": "COPA RAL 24 Spring 1回戦 対戦相手決定のお知らせ",
+    "summary": "この度、COPA RAL 24 Spring グループステージの結果を受け、1回戦の対戦相手決定しましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "",
+        "message": "グループBを5勝1分で首位通過し、決勝ラウンドに進出することができました！\n決勝ラウンド1回戦の相手は、2部所属のWaltz SCとなりました。\n▼次戦のお知らせ\n・日時：2024/03/15 23:00～\n・対戦相手：Waltz SC（グループA2位）\n\n引き続き熱い声援をよろしくお願いします！"
+      }
+    ],
+    "image": "images/news/news22.png"
+  },
+  {
     "id": "news_number21",
     "date": "2024/03/01",
     "title": "クラブ公式戦初得点のお知らせ",
@@ -53,8 +100,8 @@
   {
     "id": "news_number18",
     "date": "2024/02/27",
-    "title": "COPA RAL 24 Spring対戦相手決定のお知らせ",
-    "summary": "この度、COPA RAL 24 Springの組み合わせ抽選が行われ、対戦相手決定しましたので、お知らせいたします。",
+    "title": "COPA RAL 24 Spring グループステージ 対戦相手決定のお知らせ",
+    "summary": "この度、COPA RAL 24 Springの組み合わせ抽選が行われ、グループステージの対戦相手決定しましたので、お知らせいたします。",
     "content": [
       {
         "title": "",
