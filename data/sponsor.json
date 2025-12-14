@@ -1,63 +1,123 @@
 [
   {
-    "rank": "プラチナパートナー",
+    "rank": "ダイヤモンドパートナー",
     "companyName": "山本ホールディングス 株式会社",
     "companyImage": "images/sponsor/山本ホールディングス 株式会社.png"
   },
   {
-    "rank": "プラチナパートナー",
+    "rank": "ダイヤモンドパートナー",
     "companyName": "黒田法律事務所",
     "companyImage": "images/sponsor/黒田法律事務所.png"
   },
   {
-    "rank": "プラチナパートナー",
+    "rank": "ダイヤモンドパートナー",
     "companyName": "西川商事",
     "companyImage": "images/sponsor/西川商事.png"
   },
   {
-    "rank": "ゴールドパートナー",
+    "rank": "プラチナパートナー",
     "companyName": "葛西工務店",
     "companyImage": "images/sponsor/葛西工務店.png"
   },
   {
-    "rank": "ゴールドパートナー",
-    "companyName": "ラーメン ねこぷ",
-    "companyImage": "images/sponsor/ラーメン ねこぷ.png"
-  },
-  {
-    "rank": "ゴールドパートナー",
-    "companyName": "九九旅館",
-    "companyImage": "images/sponsor/九九旅館.png"
-  },
-  {
-    "rank": "シルバーパートナー",
-    "companyName": "Café clim",
-    "companyImage": "images/sponsor/Café clim.png"
-  },
-  {
-    "rank": "シルバーパートナー",
+    "rank": "プラチナパートナー",
     "companyName": "カラオケ リーフ",
     "companyImage": "images/sponsor/カラオケ リーフ.png"
   },
   {
-    "rank": "シルバーパートナー",
+    "rank": "プラチナパートナー",
+    "companyName": "ラーメン ねこぷ",
+    "companyImage": "images/sponsor/ラーメン ねこぷ.png"
+  },
+  {
+    "rank": "プラチナパートナー",
+    "companyName": "九九旅館",
+    "companyImage": "images/sponsor/九九旅館.png"
+  },
+  {
+    "rank": "ゴールドパートナー",
+    "companyName": "Café clim",
+    "companyImage": "images/sponsor/Café clim.png"
+  },
+  {
+    "rank": "ゴールドパートナー",
     "companyName": "株式会社 金丸",
     "companyImage": "images/sponsor/株式会社 金丸.png"
   },
   {
-    "rank": "シルバーパートナー",
+    "rank": "ゴールドパートナー",
     "companyName": "陸宅急便",
     "companyImage": "images/sponsor/陸宅急便.png"
   },
   {
-    "rank": "ブロンズパートナー",
+    "rank": "シルバーパートナー",
+    "companyName": "みらい書店",
+    "companyImage": "images/sponsor/みらい書店.png"
+  },
+  {
+    "rank": "シルバーパートナー",
+    "companyName": "元吉電工 株式会社",
+    "companyImage": "images/sponsor/Motokichi Electrician.png"
+  },
+  {
+    "rank": "シルバーパートナー",
+    "companyName": "Ponzou Cafe",
+    "companyImage": "images/sponsor/Ponzou Cafe.png"
+  },
+  {
+    "rank": "シルバーパートナー",
+    "companyName": "海の宿 なうビーチ",
+    "companyImage": "images/sponsor/海の宿 なうビーチ.png"
+  },
+  {
+    "rank": "シルバーパートナー",
     "companyName": "PIZZA KURODA",
     "companyImage": "images/sponsor/PIZZA KURODA.png"
   },
   {
-    "rank": "ブロンズパートナー",
+    "rank": "シルバーパートナー",
     "companyName": "喫茶 とまにも",
     "companyImage": "images/sponsor/喫茶 とまにも.png"
+  },
+  {
+    "rank": "ブロンズパートナー",
+    "companyName": "PCショップ まなやん",
+    "companyImage": "images/sponsor/PC MANAYAN.png"
+  },
+  {
+    "rank": "ブロンズパートナー",
+    "companyName": "株式会社 オリンギ",
+    "companyImage": "images/sponsor/株式会社 オリンギ.png"
+  },
+  {
+    "rank": "ブロンズパートナー",
+    "companyName": "饂飩屋 まきな",
+    "companyImage": "images/sponsor/饂飩屋 まきな.png"
+  },
+  {
+    "rank": "ブロンズパートナー",
+    "companyName": "焼肉 みっけん",
+    "companyImage": "images/sponsor/焼肉 みっけん.png"
+  },
+  {
+    "rank": "ブロンズパートナー",
+    "companyName": "生活雑貨 まつ",
+    "companyImage": "images/sponsor/生活雑貨 まつ.png"
+  },
+  {
+    "rank": "ブロンズパートナー",
+    "companyName": "スタジオ ゴリ",
+    "companyImage": "images/sponsor/スタジオ ゴリ.png"
+  },
+  {
+    "rank": "ブロンズパートナー",
+    "companyName": "居酒屋 ポルンガ",
+    "companyImage": "images/sponsor/居酒屋 ポルンガ.png"
+  },
+  {
+    "rank": "ブロンズパートナー",
+    "companyName": "Cake Marshmallow",
+    "companyImage": "images/sponsor/cake marshmallow.png"
   },
   {
     "rank": "パートナー",

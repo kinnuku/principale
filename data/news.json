@@ -1,7 +1,320 @@
 [
   {
-    "id": "news_number24",
+    "id": "news_number44",
+    "date": "2024/05/31",
+    "category": "選手記録",
+    "title": "ばむ クラブ通算10ゴール達成のお知らせ",
+    "summary": "この度、ばむがクラブ通算10ゴールを達成しましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "",
+        "message": "【達成試合】\n・日時：2024/05/31(金) 23:30\n・大会名：RAL 12th 1部 2節\n・対戦相手：FANDANGO 2nd\n\n【通算記録】\n・COPA RAL 24 Spring：13試合8ゴール8アシスト\n・RAL 12th 1部：2試合2ゴール0アシスト"
+      },
+      {
+        "title": "ばむコメント",
+        "message": "CF頑張る。"
+      }
+    ],
+    "image": "images/news/news44.png"
+  },
+  {
+    "id": "news_number43",
+    "date": "2024/05/31",
+    "category": "選手記録",
+    "title": "らーく クラブ通算10ゴール達成のお知らせ",
+    "summary": "この度、らーくがクラブ通算10ゴールを達成しましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "",
+        "message": "【達成試合】\n・日時：2024/05/31(金) 23:00\n・大会名：RAL 12th 1部 1節\n・対戦相手：Fc fumée\n\n【通算記録】\n・COPA RAL 24 Spring：7試合7ゴール1アシスト\n・RAL 12th 1部：1試合3ゴール1アシスト"
+      },
+      {
+        "title": "らーくコメント",
+        "message": "10ゴール嬉しい！"
+      }
+    ],
+    "image": "images/news/news43.png"
+  },
+  {
+    "id": "news_number42",
+    "date": "2024/05/30",
+    "category": "リーグ戦",
+    "title": "RAL 12th 1部 1～2節対戦相手のお知らせ",
+    "summary": "2024/5/31(金)に実施されます、RAL 12th 1部 1～2節の対戦カードをお知らせいたします。",
+    "content": [
+      {
+        "title": "第1節",
+        "message": "・日時：2024/05/31(金) 23:00\n・対戦相手：Fc fumée\n\n【直近3大会成績】\nCOPA RAL 24 Spring：ベスト16\nRAL 11th 1部：9位\nCOPA RAL 23 Summer：未出場"
+      },
+      {
+        "title": "第2節",
+        "message": "・日時：2024/05/31(金) 23:30\n・対戦相手：FANDANGO 2nd\n\n【直近3大会成績】\nCOPA RAL 24 Spring：ベスト8\nRAL 11th 1部：未出場\nCOPA RAL 23 Summer：未出場"
+      }
+    ],
+    "image": "images/news/news42.png"
+  },
+  {
+    "id": "news_number41",
+    "date": "2024/05/28",
+    "category": "日本代表",
+    "title": "りく 日本代表選出のお知らせ",
+    "summary": "この度、EFA WORLD CUP 2024の日本代表チームにりくが選出されましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "",
+        "message": "2024/6/1に開幕するEFA WORLD CUP 2024の日本代表チームにりくが選出されました！\nPrincipaleとして初の快挙です。世界の強豪相手に堂々のプレーを見せてほしいです！"
+      },
+      {
+        "title": "りくコメント",
+        "message": "頑張ります！"
+      }
+    ],
+    "image": "images/news/news41.png"
+  },
+  {
+    "id": "news_number40",
+    "date": "2024/05/25",
+    "category": "練習試合",
+    "title": "練習試合実施のお知らせ",
+    "summary": "この度 FANTASMAと練習試合を実施しましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "■ 第1試合：2-1",
+        "message": "失点 (24')\nxox-v-rn7 (46')\nOG (90')"
+      }
+    ],
+    "image": "images/news/news40.png"
+  },
+  {
+    "id": "news_number39",
+    "date": "2024/05/25",
+    "category": "練習試合",
+    "title": "練習試合実施のお知らせ",
+    "summary": "この度 FC Glänzと練習試合を実施しましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "■ 第1試合：2-0",
+        "message": "xox-v-rn7 (58')\ncyberdog009 (90+1')"
+      }
+    ],
+    "image": "images/news/news39.png"
+  },
+  {
+    "id": "news_number38",
+    "date": "2024/05/24",
+    "category": "練習試合",
+    "title": "練習試合実施のお知らせ",
+    "summary": "この度 FC NoiRと練習試合を実施しましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "■ 第1試合：3-0",
+        "message": "TRADER_JOES99 (11')\nlark6v (29')\nTRADER_JOES99 (80')"
+      }
+    ],
+    "image": "images/news/news38.png"
+  },
+  {
+    "id": "news_number37",
+    "date": "2024/05/24",
+    "category": "練習試合",
+    "title": "練習試合実施のお知らせ",
+    "summary": "この度、UpsetOdyssey CFと練習試合を実施しましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "■ 第1試合：4-0",
+        "message": "xox-v-rn7 (16')\nxox-v-rn7 (23')\nTRADER_JOES99 (43')\nTRADER_JOES99 (62')"
+      }
+    ],
+    "image": "images/news/news37.png"
+  },
+  {
+    "id": "news_number36",
+    "date": "2024/05/24",
+    "category": "リーグ戦",
+    "title": "RAL 12th 1部確定&日程のお知らせ",
+    "summary": "この度、RAL 12th 1部参入&日程が決定しましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "",
+        "message": "開幕まで1週間となりましたが、ようやくRAL 12thの1部確定と日程が発表されました。\n1部のチームから不満が出ているようですが、結果で黙らせましょう！"
+      }
+    ],
+    "image": "images/news/news36.png"
+  },
+  {
+    "id": "news_number35",
+    "date": "2024/05/20",
+    "category": "練習試合",
+    "title": "練習試合実施のお知らせ",
+    "summary": "この度、The Drifters FCと練習試合を実施しましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "■ 第1試合：3-0",
+        "message": "lark6v (8')\nlark6v (32')\nmirai-3-3 (67')"
+      },
+      {
+        "title": "■ 第2試合：2-1",
+        "message": "lark6v (12')\n失点 (31')\nlark6v (56')"
+      }
+    ],
+    "image": "images/news/news35.png"
+  },
+  {
+    "id": "news_number34",
+    "date": "2024/05/16",
+    "category": "練習試合",
+    "title": "練習試合実施のお知らせ",
+    "summary": "この度、Fc fuméeと練習試合を実施しましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "■ 第1試合：1-0",
+        "message": "lark6v (31')"
+      },
+      {
+        "title": "■ 第2試合：0-0",
+        "message": ""
+      },
+      {
+        "title": "■ 第2試合：1-1",
+        "message": "失点 (58')\nTRADER_JOES99 (88')"
+      }
+    ],
+    "image": "images/news/news34.png"
+  },
+  {
+    "id": "news_number33",
+    "date": "2024/05/08",
+    "category": "リーグ戦",
+    "title": "RAL 12th 開幕延期のお知らせ",
+    "summary": "この度、RAL 12th 開幕が延期となりましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "",
+        "message": "運営都合により、RAL 12thの開幕が2024/5/31(金)に延期となりました。\n我々は、BRACOの独断で決定した判断を強く非難いたします。"
+      },
+      {
+        "title": "まなやんコメント",
+        "message": "プライベートがあるのは納得やけど、もっと早よわかったやろ笑"
+      }
+    ],
+    "image": "images/news/news33.png"
+  },
+  {
+    "id": "news_number32",
+    "date": "2024/04/07",
+    "category": "優秀選手",
+    "title": "ロン、ねこぷ、ベイル、リーフCOPA RAL 24 Spring TOTS選出のお知らせ",
+    "summary": "この度、COPA RAL 24 Spring TOTSにロン、ねこぷ、ベイル、リーフが選出されましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "",
+        "message": "COPA RAL 24 Springの活躍を受け、ロン、ねこぷ、ベイル、リーフの4選手がTOTSに選出されました！\n・ロン成績：13試合7ゴール6アシスト\n・ねこぷ成績：13試合8ゴール5アシスト\n・ベイル成績：13試合3クリーンシート\n・リーフ成績：13試合3クリーンシート"
+      },
+      {
+        "title": "ロンコメント",
+        "message": "ばむより俺のほうが上手いです。"
+      },
+      {
+        "title": "ねこぷコメント",
+        "message": "あれ？またなんで俺だけ金色なんだ・・？"
+      },
+      {
+        "title": "ベイルコメント",
+        "message": "ありがとうございます。"
+      },
+      {
+        "title": "リーフコメント",
+        "message": ""
+      }
+    ],
+    "image": "images/news/news32.png"
+  },
+  {
+    "id": "news_number31",
+    "date": "2024/03/30",
+    "category": "カップ戦",
+    "title": "COPA RAL 24 Spring 3位入賞のお知らせ",
+    "summary": "この度、COPA RAL 24 Spring 3位決定戦の結果を受け、3位入賞を果たしましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "",
+        "message": "3位決定戦を2-1でKemari Fcを下し、3位入賞を果たすことができました！\n準決勝で対戦したRa VIRDYが優勝を果たしました。優勝おめでとうございます！これでCOPA RAL 24 Springは閉幕となります。\n▼次回リーグ戦のお知らせ\n2024/5/17(金)開幕予定（1部参入の可能性）"
+      }
+    ],
+    "image": "images/news/news31.png"
+  },
+  {
+    "id": "news_number30",
+    "date": "2024/03/29",
+    "category": "カップ戦",
+    "title": "COPA RAL 24 Spring 3位決定戦 対戦相手決定のお知らせ",
+    "summary": "この度、COPA RAL 24 Spring 準決勝の結果を受け、3位決定戦の対戦相手決定しましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "",
+        "message": "準決勝 1stLegを0-2、2ndLegを1-2の合計1-4でRa VIRDYの前に敗退し、3位決定戦に進むことになりました。\n決勝ラウンド3位決定戦の相手は、1部所属のKemari FCとなりました。\n▼次戦のお知らせ\n・日時：2024/03/30 00:00～\n・対戦相手：Kemari FC（グループC1位）\n\n悔しい結果となりましたが、引き続き熱い声援をよろしくお願いします！"
+      }
+    ],
+    "image": "images/news/news30.png"
+  },
+  {
+    "id": "news_number29",
+    "date": "2024/03/26",
+    "category": "練習試合",
+    "title": "練習試合実施のお知らせ",
+    "summary": "この度、FC NoiRと練習試合を実施しましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "■ 第1試合：5-1",
+        "message": "KANAMARUU (22')\nKANAMARUU (29')\nKANAMARUU (47')\nlark6v (62')\nxox-v-rn7 (69')\n失点 (82')"
+      },
+      {
+        "title": "■ 第2試合：1-0",
+        "message": "KANAMARUU (74')"
+      }
+    ],
+    "image": "images/news/news29.png"
+  },
+  {
+    "id": "news_number28",
+    "date": "2024/03/22",
+    "category": "カップ戦",
+    "title": "COPA RAL 24 Spring 準決勝 対戦相手決定のお知らせ",
+    "summary": "この度、COPA RAL 24 Spring 準々決勝の結果を受け、準決勝の対戦相手決定しましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "",
+        "message": "準々決勝 1stLegを1-0、2ndLegを6-1の合計7-1でJOKERSを下し、準決勝に進出することができました！\n決勝ラウンド準決勝の相手は、eS1部所属のRa VIRDYとなりました。\n▼次戦のお知らせ\n・日時：2024/03/29 23:00～\n・対戦相手：Ra VIRDY（グループF1位）\n\n引き続き熱い声援をよろしくお願いします！"
+      }
+    ],
+    "image": "images/news/news28.png"
+  },
+  {
+    "id": "news_number27",
+    "date": "2024/03/21",
+    "category": "カップ戦",
+    "title": "練習試合実施のお知らせ",
+    "summary": "この度、Aplastar CFと練習試合を実施しましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "■ 第1試合：1-1",
+        "message": "失点 (20')\nGAMBALON39 (67')"
+      },
+      {
+        "title": "■ 第2試合：2-2",
+        "message": "lark6v (63')\nlark6v (75')\n失点 (78')\n失点 (87')"
+      },
+      {
+        "title": "■ 第3試合：3-4",
+        "message": "失点 (13')\n失点 (46')\nBirdie99 (58')\nlark6v (68')\n失点 (70')\nlark6v (82')\n失点 (120+1')"
+      }
+    ],
+    "image": "images/news/news27.png"
+  },
+  {
+    "id": "news_number26",
     "date": "2024/03/15",
+    "category": "カップ戦",
     "title": "COPA RAL 24 Spring 準々決勝 対戦相手決定のお知らせ",
     "summary": "この度、COPA RAL 24 Spring 1回戦の結果を受け、準々決勝の対戦相手決定しましたので、お知らせいたします。",
     "content": [
@@ -10,17 +323,18 @@
         "message": "1回戦 1stLegを1-1、2ndLegを3-0の合計4-1でWaltz SCを下し、準々決勝に進出することができました！\n決勝ラウンド準々決勝の相手は、1部所属のJOKERSとなりました。\n▼次戦のお知らせ\n・日時：2024/03/22 23:00～\n・対戦相手：JOKERS（グループD1位）\n\n引き続き熱い声援をよろしくお願いします！"
       }
     ],
-    "image": "images/news/news24.png"
+    "image": "images/news/news26.png"
   },
   {
-    "id": "news_number23",
+    "id": "news_number25",
     "date": "2024/03/12",
-    "title": "ばむ、ねこぷCOPA RAL 24 Spring TOGS選出のお知らせ",
-    "summary": "この度、COPA RAL 24 Spring TOGSにばむ、ねこぷが選出されましたので、お知らせいたします。",
+    "category": "優秀選手",
+    "title": "ばむ、ねこぷCOPA RAL 24 Spring TOTGS選出のお知らせ",
+    "summary": "この度、COPA RAL 24 Spring TOTGSにばむ、ねこぷが選出されましたので、お知らせいたします。",
     "content": [
       {
         "title": "",
-        "message": "グループステージの活躍を受け、ばむ、ねこぷの2選手がTOGSに選出されました！\n・ばむ成績：6試合6ゴール4アシスト\n・ねこぷ成績：6試合4ゴール4アシスト"
+        "message": "グループステージの活躍を受け、ばむ、ねこぷの2選手がTOTGSに選出されました！\n・ばむ成績：6試合6ゴール4アシスト\n・ねこぷ成績：6試合4ゴール4アシスト"
       },
       {
         "title": "ばむコメント",
@@ -31,11 +345,12 @@
         "message": "あれ？なんで俺だけ金色なんだ・・？"
       }
     ],
-    "image": "images/news/news23.png"
+    "image": "images/news/news25.png"
   },
   {
-    "id": "news_number22",
+    "id": "news_number24",
     "date": "2024/03/09",
+    "category": "カップ戦",
     "title": "COPA RAL 24 Spring 1回戦 対戦相手決定のお知らせ",
     "summary": "この度、COPA RAL 24 Spring グループステージの結果を受け、1回戦の対戦相手決定しましたので、お知らせいたします。",
     "content": [
@@ -44,11 +359,12 @@
         "message": "グループBを5勝1分で首位通過し、決勝ラウンドに進出することができました！\n決勝ラウンド1回戦の相手は、2部所属のWaltz SCとなりました。\n▼次戦のお知らせ\n・日時：2024/03/15 23:00～\n・対戦相手：Waltz SC（グループA2位）\n\n引き続き熱い声援をよろしくお願いします！"
       }
     ],
-    "image": "images/news/news22.png"
+    "image": "images/news/news24.png"
   },
   {
-    "id": "news_number21",
+    "id": "news_number23",
     "date": "2024/03/01",
+    "category": "チーム情報",
     "title": "クラブ公式戦初得点のお知らせ",
     "summary": "この度、公式戦においてクラブ初得点を達成しましたので、お知らせいたします。",
     "content": [
@@ -61,11 +377,12 @@
         "message": "まぁ先にGKが動いてくれたんで、簡単でしたね。笑"
       }
     ],
-    "image": "images/news/news21.png"
+    "image": "images/news/news23.png"
   },
   {
-    "id": "news_number20",
+    "id": "news_number22",
     "date": "2024/03/01",
+    "category": "チーム情報",
     "title": "クラブ公式戦初勝利のお知らせ",
     "summary": "この度、公式戦においてクラブ初勝利を達成しましたので、お知らせいたします。",
     "content": [
@@ -78,11 +395,34 @@
         "message": "何事も最初が難しいですが、本当に幸先の良いスタートを決めれたと思います。\n頑張ってくれた選手を称えつつも次戦に向けて準備を進めていきます。\n次戦以降も引き続き熱い応援をよろしくお願いします！"
       }
     ],
-    "image": "images/news/news20.png"
+    "image": "images/news/news22.png"
   },
   {
-    "id": "news_number19",
+    "id": "news_number21",
+    "date": "2024/02/29",
+    "category": "練習試合",
+    "title": "練習試合実施のお知らせ",
+    "summary": "この度、Ra VIRDYと練習試合を実施しましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "■ 第1試合：0-3",
+        "message": "失点 (15')\n失点 (86')\n失点 (90')"
+      },
+      {
+        "title": "■ 第2試合：0-4",
+        "message": "失点 (20')\n失点 (28')\n失点 (36')\n失点 (57')"
+      },
+      {
+        "title": "■ 第3試合：1-4",
+        "message": "失点 (20')\n失点 (27')\nxox-v-rn7 (37')\n失点 (54')\n失点 (61')"
+      }
+    ],
+    "image": "images/news/news21.png"
+  },
+  {
+    "id": "news_number20",
     "date": "2024/02/28",
+    "category": "移籍情報",
     "title": "みらい Esprite Clusterより完全移籍加入のお知らせ",
     "summary": "この度、みらいがEsprite Clusterより完全移籍で加入することが決まりましたので、お知らせいたします。",
     "content": [
@@ -95,11 +435,12 @@
         "message": "サポメンで入ることになりました！\nよろしくお願いします！！"
       }
     ],
-    "image": "images/news/news19.png"
+    "image": "images/news/news20.png"
   },
   {
-    "id": "news_number18",
+    "id": "news_number19",
     "date": "2024/02/27",
+    "category": "カップ戦",
     "title": "COPA RAL 24 Spring グループステージ 対戦相手決定のお知らせ",
     "summary": "この度、COPA RAL 24 Springの組み合わせ抽選が行われ、グループステージの対戦相手決定しましたので、お知らせいたします。",
     "content": [
@@ -108,11 +449,34 @@
         "message": "Principaleは、グループBに入り、以下のクラブとH&A形式の総当たりを行います。\n上位2クラブに入れば、決勝トーナメントに進出することができます。\n・PROGRESSO（2部）\n・El Maverick（新規参入）\n・Analitycs（1部）\n\n引き続き熱い声援をよろしくお願いします！"
       }
     ],
+    "image": "images/news/news19.png"
+  },
+  {
+    "id": "news_number18",
+    "date": "2024/02/20",
+    "category": "練習試合",
+    "title": "練習試合実施のお知らせ",
+    "summary": "この度、Ra VIRDYと練習試合を実施しましたので、お知らせいたします。",
+    "content": [
+      {
+        "title": "■ 第1試合：2-0",
+        "message": "climelt-39 (18')\nxox-v-rn7 (58')"
+      },
+      {
+        "title": "■ 第2試合：2-0",
+        "message": "GAMBALON39 (28')\nGAMBALON39 (47')"
+      },
+      {
+        "title": "■ 第3試合：2-1",
+        "message": "OG (22')\nxox-v-rn7 (51')\n失点 (62')"
+      }
+    ],
     "image": "images/news/news18.png"
   },
   {
     "id": "news_number17",
     "date": "2024/02/19",
+    "category": "移籍情報",
     "title": "なうビーチ 完全移籍加入のお知らせ",
     "summary": "この度、なうビーチが加入することが決まりましたので、お知らせいたします。",
     "content": [
@@ -130,6 +494,7 @@
   {
     "id": "news_number16",
     "date": "2024/02/18",
+    "category": "移籍情報",
     "title": "リンギオ Esprite Clusterより完全移籍加入のお知らせ",
     "summary": "この度、リンギオがEsprite Clusterより完全移籍で加入することが決まりましたので、お知らせいたします。",
     "content": [
@@ -147,6 +512,7 @@
   {
     "id": "news_number15",
     "date": "2024/02/13",
+    "category": "移籍情報",
     "title": "かなまる Ra VIRDYより完全移籍加入のお知らせ",
     "summary": "この度、かなまるがRa VIRDYより完全移籍で加入することが決まりましたので、お知らせいたします。",
     "content": [
@@ -164,6 +530,7 @@
   {
     "id": "news_number14",
     "date": "2024/02/07",
+    "category": "移籍情報",
     "title": "りく Esprite Clusterより完全移籍加入のお知らせ",
     "summary": "この度、りくがEsprite Clusterより完全移籍で加入することが決まりましたので、お知らせいたします。",
     "content": [
@@ -181,6 +548,7 @@
   {
     "id": "news_number13",
     "date": "2024/02/05",
+    "category": "移籍情報",
     "title": "ねこぷ PECORANERAより完全移籍加入のお知らせ",
     "summary": "この度、ねこぷがPECORANERAより完全移籍で加入することが決まりましたので、お知らせいたします。",
     "content": [
@@ -198,6 +566,7 @@
   {
     "id": "news_number12",
     "date": "2024/02/02",
+    "category": "移籍情報",
     "title": "リーフ Ra VIRDYより完全移籍加入のお知らせ",
     "summary": "この度、リーフがRa VIRDYより完全移籍で加入することが決まりましたので、お知らせいたします。",
     "content": [
@@ -215,6 +584,7 @@
   {
     "id": "news_number11",
     "date": "2024/01/31",
+    "category": "移籍情報",
     "title": "もときち Esprite Clusterより完全移籍加入のお知らせ",
     "summary": "この度、もときちがEsprite Clusterより完全移籍で加入することが決まりましたので、お知らせいたします。",
     "content": [
@@ -232,6 +602,7 @@
   {
     "id": "news_number10",
     "date": "2024/01/29",
+    "category": "移籍情報",
     "title": "らーく Esprite Clusterより完全移籍加入のお知らせ",
     "summary": "この度、らーくがEsprite Clusterより完全移籍で加入することが決まりましたので、お知らせいたします。",
     "content": [
@@ -249,6 +620,7 @@
   {
     "id": "news_number9",
     "date": "2024/01/29",
+    "category": "移籍情報",
     "title": "ぽんぞう JOKERSより完全移籍加入のお知らせ",
     "summary": "この度、ぽんぞうがJOKERSより完全移籍で加入することが決まりましたので、お知らせいたします。",
     "content": [
@@ -266,6 +638,7 @@
   {
     "id": "news_number8",
     "date": "2024/01/28",
+    "category": "移籍情報",
     "title": "9 Esprite Clusterより完全移籍加入のお知らせ",
     "summary": "この度、9がEsprite Clusterより完全移籍で加入することが決まりましたので、お知らせいたします。",
     "content": [
@@ -283,6 +656,7 @@
   {
     "id": "news_number7",
     "date": "2024/01/27",
+    "category": "移籍情報",
     "title": "clim Ra VIRDYより完全移籍加入のお知らせ",
     "summary": "この度、climがRa VIRDYより完全移籍で加入することが決まりましたので、お知らせいたします。",
     "content": [
@@ -300,6 +674,7 @@
   {
     "id": "news_number6",
     "date": "2024/01/27",
+    "category": "移籍情報",
     "title": "まなやん Esprite Clusterより完全移籍加入のお知らせ",
     "summary": "この度、まなやんがEsprite Clusterより完全移籍で加入することが決まりましたので、お知らせいたします。",
     "content": [
@@ -317,6 +692,7 @@
   {
     "id": "news_number5",
     "date": "2024/01/27",
+    "category": "移籍情報",
     "title": "ガンバロン KOHARA OUTより助っ人加入のお知らせ",
     "summary": "この度、ガンバロンがKOHARA OUTより助っ人加入することが決まりましたので、お知らせいたします。",
     "content": [
@@ -334,6 +710,7 @@
   {
     "id": "news_number4",
     "date": "2024/01/20",
+    "category": "移籍情報",
     "title": "ババ Hookarより完全移籍加入のお知らせ",
     "summary": "この度、ババがHookarより完全移籍で加入することが決まりましたので、お知らせいたします。",
     "content": [
@@ -351,6 +728,7 @@
   {
     "id": "news_number3",
     "date": "2024/01/20",
+    "category": "移籍情報",
     "title": "ベイル Esprite Clusterより完全移籍加入のお知らせ",
     "summary": "この度、ベイルがEsprite Clusterより完全移籍で加入することが決まりましたので、お知らせいたします。",
     "content": [
@@ -368,6 +746,7 @@
   {
     "id": "news_number2",
     "date": "2024/01/20",
+    "category": "移籍情報",
     "title": "ばむ Esprite Clusterより完全移籍加入のお知らせ",
     "summary": "この度、ばむがEsprite Clusterより完全移籍で加入することが決まりましたので、お知らせいたします。",
     "content": [
@@ -385,6 +764,7 @@
   {
     "id": "news_number1",
     "date": "2024/01/20",
+    "category": "チーム情報",
     "title": "プロクラブチーム Principale設立のお知らせ",
     "summary": "この度、Principaleを設立することが決まりましたので、お知らせいたします。",
     "content": [
